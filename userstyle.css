@@ -1,11 +1,12 @@
 /* ==UserStyle==
 @name           Tidal Light
-@namespace      tidal-light
-@version        0.1.0
+@namespace      https://github.com/InterstellarOne/Tidal-Light/
+@version        0.1.1
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
-@supportURL     https://github.com/InterstellarOne/Tidal-Light/issues
+@supportURL     https://github.com/InterstellarOne/Tidal-Light/issues 
+@license        MIT License
 ==/UserStyle== */
 @-moz-document domain("listen.tidal.com") {
     :root {
@@ -116,6 +117,14 @@
 
     .icon--nNXej {
         background: linear-gradient(180deg, #fdfdfd, #dbdbdb);
+    }
+
+    a.searchPill--ED7eQ.active--e_BIx {
+        background: var(--wave-color-opacity-contrast-fill-thin);
+    }
+
+    .css-10jmp6g {
+        color: var(--wave-color-text-secondary);
     }
 
     /*explict badge*/
