@@ -1,0 +1,365 @@
+/* ==UserStyle==
+@name           Tidal Light
+@namespace      tidal-light
+@version        0.1.0
+@description    A light theme for Tidal
+@author         Interstellar_One
+@homepageURL    https://github.com/InterstellarOne/Tidal-Light/
+@supportURL     https://github.com/InterstellarOne/Tidal-Light/issues
+==/UserStyle== */
+@-moz-document domain("listen.tidal.com") {
+    :root {
+        /*background color*/
+        --wave-color-solid-base-fill: white !important;
+        --wave-color-solid-base-brighter: #eaebeb !important;
+        --wave-color-solid-base-bright: #f1f1f1 !important;
+        --wave-color-opacity-base-bright-thick: #000 !important;
+
+        /*hover*/
+        --wave-color-solid-base-brightest: #e0e2e2 !important;
+        --wave-color-opacity-base-brightest-regular: #e5e5e5 !important;
+        --wave-color-opacity-contrast-fill-regular: #bbbebe !important;
+
+        /*border*/
+        --wave-color-opacity-contrast-fill-ultra-thin: #00000017 !important;
+
+        /*button color*/
+        --wave-color-opacity-contrast-fill-thin: #00000026 !important;
+        --wave-color-solid-accent-darker: #d5edeb !important;
+        --wave-color-solid-rainbow-red-darkest: #fa5656 !important;
+        --wave-color-solid-rainbow-red-darker: #d85959 !important;
+
+        /*accents*/
+        --wave-color-solid-accent-fill: #39afa5 !important;
+        --text-accent: #3bada3 !important;
+        [data-wave-color="textUrl"] {
+            color: var(--text-accent) !important;
+        }
+        --switch-accent: #3bafa5 !important;
+
+        /*primary text*/
+        [data-wave-color="textDefault"] {
+            color: #000 !important;
+        }
+        [data-wave-color="textWhite"] {
+            color: #000 !important;
+        }
+        /*secondary text*/
+        --wave-color-text-secondary: #434343 !important;
+        [data-wave-color="textSecondary"] {
+            color: #000000b3 !important;
+        }
+        --wave-color-solid-contrast-darker: #383838 !important;
+        --wave-color-opacity-contrast-fill-ultra-thick: #383838 !important;
+        /*icons*/
+        --wave-color-solid-contrast-fill: #000 !important;
+        --wave-color-opacity-contrast-fill-thick: #0000009a !important;
+
+        /*remove album gradients*/
+        --wave-color-opacity-base-fill-thick: #0009 --wave-color-solid-base-fill: #000/*search*/
+        --wave-color-opacity-base-brighter-ultra-thick: #c3c3c3 !important;
+        --search-background: #efefefe0 !important;
+
+        /*user profile image*/
+        --user-profile-linear-gradient: linear-gradient(160deg, #356e56 1.22%, #96a6af 40.51%, #cbcbcb 79.07%) !important;
+    }
+
+    body {
+        color: #000;
+    }
+
+    /*artist name*/
+    .css-5pl3ge {
+        color: #000000ab
+    }
+
+    /*icons*/
+    .icon--rmikT {
+        color: #000
+    }
+
+    /*player shadow*/
+    .player--gAOQG.notFullscreen--xbpBL {
+        box-shadow: 0 -6px 24px #a6a6a626;
+    }
+
+    /*accent text*/
+    ._wave-badge_1oxl7_1 {
+        color: var(--text-accent);
+    }
+
+    .wave-text-title-bold {
+        color: #fff !important;
+    }
+
+
+    /*shortcuts*/
+    .shortcutItem--jqBkc {
+        box-shadow: 0 16px 32px 0 #7c7c7c4d;
+    }
+
+    .shortcutItem--jqBkc:after {
+        background: linear-gradient(#0000, #fff9);
+    }
+
+    /*search*/
+    .container--cl4MJ,
+    div.searchField--fgDKc,
+    div.searchField--fgDKc:focus {
+        background-color: var(--search-background) !important;
+        border-color: var(--wave-color-opacity-contrast-fill-ultra-thin) !important;
+    }
+
+    .container--sRPa5 {
+        border-color: var(--wave-color-opacity-contrast-fill-ultra-thin);
+    }
+
+    .icon--nNXej {
+        background: linear-gradient(180deg, #fdfdfd, #dbdbdb);
+    }
+
+    /*explict badge*/
+    #explicit-badge,
+    explicitIcon--Brzju {
+        fill: #000;
+    }
+
+    .badge--caCNp {
+        filter: brightness(0.8) invert(0);
+    }
+
+    /*video badge*/
+    .videoBadge--Tpdav {
+        fill: var(--wave-color-text-secondary);
+        filter: brightness(0.3) invert(0);
+    }
+
+    /*canvas nav buttons*/
+    .viewAllButton--Nb87U,
+    .css-7l8ggf {
+        background: #e0e0e0;
+    }
+
+    .viewAllButton--Nb87U:hover,
+    .css-7l8ggf:hover {
+        background: #cbcbcb;
+    }
+
+    /*album hover*/
+    .overlay--ces1Z,
+    .overlay--Dn4ax,
+    .overlay--Cb6su,
+    .css-17bbmu3,
+    .css-ohr3gy {
+        background: linear-gradient(#0000, #ffffff9e);
+    }
+
+    .css-75d7zy {
+        background-color: #56565691;
+        transition: 100ms;
+    }
+
+    .css-75d7zy:hover {
+        background-color: var(--wave-color-solid-base-brighter);
+    }
+
+    button.button--W_J5g.gray--tvcIF.contextMenuButton--Bcnyd:hover {
+        background-size: 200%;
+    }
+
+    /*playlist hover*/
+    .css-1voubjj:hover {
+        background-color: var(--wave-color-solid-base-brighter);
+        border: 5px var(--wave-color-opacity-contrast-fill-ultra-thin);
+    }
+
+    /*queue popup*/
+    .bottomGradient--BngZe {
+        background-image: linear-gradient(180deg, #0000, #ededed);
+    }
+
+    #playQueueSidebar {
+        box-shadow: 0 20px 25px 5px #00000057;
+    }
+
+    /*PROGRESS BAR*/
+    .range--JNSfg {
+        background-color: #0000003d;
+    }
+
+    /*FULL VIEW*/
+    .activeTab--bqTiv {
+        background: #00000017;
+    }
+
+    .container--cl4MJ {
+        background: #fcfcfc63 !important;
+    }
+
+    .css-u7yq00 {
+        background: #ffffff75;
+    }
+
+    /*album*/
+    .albumImage--i2CqD {
+        box-shadow: 0 20px 50px 5px #b6b6b638, 0 20px 40px 0 #00000024;
+    }
+
+    /*track hover*/
+    .rowContainer--FBfWg:hover {
+        background: var(--wave-color-solid-base-brightest);
+    }
+
+    /*DIALOUGES*/
+    .ReactModal__Content {
+        background: #f1f1f1 !important;
+    }
+
+    .label--fycqD.unchecked--goEjz {
+        background-color: #ababab;
+    }
+
+    .label--fycqD.checked--RVmZV {
+        background-color: var(--switch-accent);
+    }
+
+    .primary--NLSX4 {
+        background-color: #d5d5d5;
+    }
+
+    .primary--NLSX4:hover {
+        background-color: var(--wave-color-opacity-contrast-fill-regular) !important;
+    }
+
+    .primary--NLSX4:disabled {
+        background-color: #e7e7e8;
+    }
+
+    .primary--NLSX4:disabled:hover {
+        background-color: #e7e7e8;
+    }
+
+    /*popups*/
+    .notification--hckxF,
+    .native-range {
+        box-shadow: 0 20px 50px 5px #0000002e;
+    }
+
+    .notification--hckxF.error--dLkS1 {
+        background: var(--wave-color-solid-rainbow-red-darker);
+    }
+
+    .errorIcon--VvndK {
+        fill: #000 !important;
+    }
+
+    /*PROFILE*/
+    .followingTag--CKRME,
+    .wave-text-footnote-medium {
+        color: var(--text-accent) !important;
+    }
+
+    ._wave-btn-rank-primary_1lao2_58:hover {
+        background-color: #8bd4cf
+    }
+
+    .profilePicture--yrdRB {
+        box-shadow: none;
+    }
+
+    /*my picks*/
+    #My\ favorite\ track\ on\ repeat,
+    .selectedPrompt--cLtd3[style*="--prompt-base-color: #97A1FF1A"] {
+        --prompt-base-color: #97a1ff !important;
+        --prompt-color: #5ecce3 !important;
+    }
+
+    #My\ major\ mood\ booster,
+    .selectedPrompt--cLtd3[style*="--prompt-base-color: #FF91531A"] {
+        --prompt-base-color: #f98f54 !important;
+        --prompt-color: #e6d165 !important;
+    }
+
+    #My\ go-to\ artist\ right\ now,
+    .selectedPrompt--cLtd3[style*="--prompt-base-color: #FF53531A"] {
+        --prompt-base-color: #ff5656 !important;
+        --prompt-color: #e860d2 !important;
+    }
+
+    #My\ top\ album\ recently,
+    .selectedPrompt--cLtd3[style*="--prompt-base-color: #53FF981A"] {
+        --prompt-base-color: #49c47a !important;
+        --prompt-color: #5deaa6 !important;
+    }
+
+    ._wave-btn-rank-clean_1lao2_127:hover {
+        color: #fff;
+        background-color: #6e6e6e38 !important;
+    }
+
+    #pick-promt-item-search-field {
+        color: #000;
+    }
+
+    /*artist page*/
+    .background--YwxVl::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ffffff4a;
+    }
+
+    .buttonText--LMsAT {
+        color: #fff !important;
+    }
+
+    .button--_0I_t {
+        background-color: #fff;
+    }
+
+
+    #player__play {
+        color: #000;
+    }
+
+    .primary--NLSX4:hover {
+        background-color: #dddde0;
+    }
+
+    /*SETTINGS*/
+    .container--Z6FVf.fillDark--NI17Q > div {
+        background-color: #f1f1f1;
+    }
+
+    .select--kTOQk {
+        background: var(--wave-color-solid-accent-darker) !important;
+    }
+
+    .licenseFrame--C_hup {
+        background: #29292a;
+    }
+
+    svg#lastfm path {
+        fill: #000;
+    }
+
+    /*scrollbars*/
+    ::-webkit-scrollbar {
+        background-color: transparent !important;
+        border: none !important;
+        width: 8px !important;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: var(--wave-color-solid-base-brighter) !important;
+        box-shadow: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #d4d4d4 !important;
+        border: none !important;
+    }
+}
