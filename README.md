@@ -6,19 +6,19 @@ A light theme for Tidal, to account for the lack of an official one. If you expe
 If you have any experience with CSS and have a moment, please check if you can solve any of the issues currently open.
 
 ## Installation
-# Browser
+### Browser
 1. Install the browser extension Stylus to be able to install userstyles. \
 [Firefox](https://addons.mozilla.org/en-CA/firefox/addon/styl-us/) | [Chrome (Edge, Opera, Brave etc.)](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
 2. Install the theme. \
    [Tidal Light](https://userstyles.world/style/21068/tidal-light)
 
-# Android (Web App)
+### Android (Web App)
 To Do
 
-# iOS (Safari)
+### iOS (Safari)
 To Do
 
-# Windows & MacOS Desktop App
+### Windows & MacOS Desktop App
 1. Run the [neptune](https://github.com/uwu/neptune) client mod installer. This makes it easy to add plugins and themes to the app. \
 [Download neptune installer](https://github.com/uwu/neptune-installer/releases)
 2. After installing, open Tidal, open the three-dot menu next to your profile, and click on neptune settings.
