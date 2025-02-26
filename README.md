@@ -7,7 +7,7 @@ If you have any experience with CSS and have a moment, please check if you can s
 
 ## Installation
 ### Browser
-1. Install the browser extension Stylus to be able to install userstyles. \
+1. Install the browser extension Stylus. \
 [Firefox](https://addons.mozilla.org/en-CA/firefox/addon/styl-us/) | [Chrome (Edge, Opera, Brave etc.)](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
 2. Install the theme. \
    [Tidal Light](https://userstyles.world/style/21068/tidal-light)
@@ -19,7 +19,7 @@ To Do
 To Do
 
 ### Windows & MacOS Desktop App
-1. Run the [neptune](https://github.com/uwu/neptune) client mod installer. This makes it easy to add plugins and themes to the app. \
+1. Run the [neptune](https://github.com/uwu/neptune) client mod installer. \
 [Download neptune installer](https://github.com/uwu/neptune-installer/releases)
 2. After installing, open Tidal, open the three-dot menu next to your profile, and click on neptune settings.
    ![Screenshot 2025-02-25 232733](https://github.com/user-attachments/assets/08bdf429-78ce-4b27-ae89-64be867ec6ae)
