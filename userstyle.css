@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        0.1.1
+@version        0.1.2
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
@@ -29,14 +29,16 @@
         --wave-color-solid-accent-darker: #d5edeb !important;
         --wave-color-solid-rainbow-red-darkest: #fa5656 !important;
         --wave-color-solid-rainbow-red-darker: #d85959 !important;
+        --button-light: #d9d9d9 !important;
 
         /*accents*/
         --wave-color-solid-accent-fill: #39afa5 !important;
-        --text-accent: #3bada3 !important;
+        --text-accent: #32938b !important;
         [data-wave-color="textUrl"] {
             color: var(--text-accent) !important;
         }
         --switch-accent: #3bafa5 !important;
+        --wave-color-solid-rainbow-yellow-fill: #d1a70d !important;
 
         /*primary text*/
         [data-wave-color="textDefault"] {
@@ -69,13 +71,22 @@
         color: #000;
     }
 
+    .isLoggedIn--CEJH_::after {
+        background: none;
+    }
+
+    /*hide playlist bg*/
+    .dataContainer--Qq_vv:before {
+    background-image: none;
+    }
+
     /*artist name*/
     .css-5pl3ge {
         color: #000000ab
     }
 
     /*icons*/
-    .icon--rmikT {
+    .icon--rmikT,icon--VV33E {
         color: #000
     }
 
@@ -84,8 +95,15 @@
         box-shadow: 0 -6px 24px #a6a6a626;
     }
 
-    /*accent text*/
-    ._wave-badge_1oxl7_1 {
+    /*ACCENT TEXT*/
+    /*yellow*/
+    ._wave-badge-color-max_1oxl7_22 {
+        color: #bc991e;
+        background-color: #ffd33238;
+    }
+
+    /*blue*/
+    ._wave-badge-color-high_1oxl7_17 {
         color: var(--text-accent);
     }
 
@@ -93,6 +111,15 @@
         color: #fff !important;
     }
 
+    /*none*/
+    ._wave-badge-color-default_1oxl7_7 {
+        background-color: #0000001a;
+        color: #000;
+    }
+
+    .smallHeader--rfQsR {
+        --img: url(https://blocks.astratic.com/img/general-img-landscape.png) !important;
+    }
 
     /*shortcuts*/
     .shortcutItem--jqBkc {
@@ -191,9 +218,13 @@
         box-shadow: 0 20px 25px 5px #00000057;
     }
 
-    /*PROGRESS BAR*/
+    /*PLAY BUTTONS*/
     .range--JNSfg {
         background-color: #0000003d;
+    }
+
+    :is(.player--gAOQG button).withBackground[aria-checked=true] {
+        background-color: #00000013;
     }
 
     /*FULL VIEW*/
@@ -212,6 +243,16 @@
     /*album*/
     .albumImage--i2CqD {
         box-shadow: 0 20px 50px 5px #b6b6b638, 0 20px 40px 0 #00000024;
+    }
+
+    /*playlist*/
+    .refreshButton--bRrPi{
+        color: #000;
+    }
+
+    /*tracks page*/
+    .variantPrimary--pjymy {
+        background-color: var(--button-light);
     }
 
     /*track hover*/
@@ -326,9 +367,12 @@
     }
 
     .button--_0I_t {
-        background-color: #fff;
+        background-color: var(--button-light);
     }
 
+    .button--_0I_t:hover {
+        background-color: var(--wave-color-opacity-contrast-fill-regular);
+    }
 
     #player__play {
         color: #000;
@@ -370,5 +414,16 @@
     ::-webkit-scrollbar-thumb {
         background-color: #d4d4d4 !important;
         border: none !important;
+    }
+
+    /*neptune*/
+    body > div.ReactModalPortal > div > div > div.modalBody--TFBWU.selectableText--UDUkZ.modalText--gCapb.subtitle--dYfEG > neptune-reactive-root > div > button,
+    #main > div.__NEPTUNE_PAGE > neptune-reactive-root > div > div > div:nth-child(2) > div > div.neptune-card > div > div:nth-child(2) > div:nth-child(1) > button:nth-child(1),
+    #main > div.__NEPTUNE_PAGE > neptune-reactive-root > div > div > div:nth-child(2) > div > div.neptune-card > div > div:nth-child(2) > div:nth-child(1) > button:nth-child(2) {
+        color: #000;
+    }
+
+    .neptune-switch::after {
+        background-color: #fff;
     }
 }
