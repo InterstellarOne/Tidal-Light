@@ -28,7 +28,7 @@ To Do
 https://inrixia.github.io/neptune-plugins/Themer
 ```
 4. Click the settings icon next to Themer, and click Open Editor.
-5. Go to https://github.com/InterstellarOne/Tidal-Light/blob/main/no-header.css, click the copy button to copy the theme, then paste that into the editor opened in the last step.
+5. Go to https://github.com/InterstellarOne/Tidal-Light/blob/main/no-header.css, click the copy button to copy the theme, then paste that into the editor opened in the previous step.
 ![image](https://github.com/user-attachments/assets/7f37ba29-8cc5-4268-940b-b38daf636213)
 
 # Linux App (Tidal Hi-Fi)
