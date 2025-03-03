@@ -1,4 +1,4 @@
-:root {
+ :root {
         /*background color*/
         --wave-color-solid-base-fill: white !important;
         --wave-color-solid-base-brighter: #eaebeb !important;
@@ -22,7 +22,7 @@
 
         /*accents*/
         --wave-color-solid-accent-fill: #39afa5 !important;
-        --text-accent: #32938b !important;
+        --text-accent: #3cb4aa !important;
         [data-wave-color="textUrl"] {
             color: var(--text-accent) !important;
         }
@@ -47,8 +47,7 @@
         --wave-color-solid-contrast-fill: #000 !important;
         --wave-color-opacity-contrast-fill-thick: #0000009a !important;
 
-        /*remove album gradients*/
-        --wave-color-opacity-base-fill-thick: #0009 --wave-color-solid-base-fill: #000/*search*/
+        /*search*/
         --wave-color-opacity-base-brighter-ultra-thick: #c3c3c3 !important;
         --search-background: #efefefe0 !important;
 
@@ -57,16 +56,24 @@
     }
 
     body {
-        color: #000;
+        background-color: #fff !important;
+    }
+
+    /*HOMEPAGE*/
+    /*artists*/
+    .overlay--MmvMx {
+        background: linear-gradient(#0000, #ffffffa6);
     }
 
     .isLoggedIn--CEJH_::after {
         background: none;
     }
 
-    /*hide playlist bg*/
-    .dataContainer--Qq_vv:before {
-    background-image: none;
+    /*hide album + playlist + mix bg*/
+    .dataContainer--Qq_vv:before,
+    .dataContainer--_YeGY::before,
+    .dataContainer--u94FB::before {
+        background-image: none;
     }
 
     /*artist name*/
@@ -75,7 +82,8 @@
     }
 
     /*icons*/
-    .icon--rmikT,icon--VV33E {
+    .icon--rmikT,
+    icon--VV33E {
         color: #000
     }
 
@@ -235,7 +243,7 @@
     }
 
     /*playlist*/
-    .refreshButton--bRrPi{
+    .refreshButton--bRrPi {
         color: #000;
     }
 
