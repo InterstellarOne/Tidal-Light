@@ -13,7 +13,14 @@ If you have any experience with CSS and have a moment, please check if you can s
    [Tidal Light](https://userstyles.world/style/21068/tidal-light)
 
 ### Android (Web App)
-To Do
+1. If you haven't already, install Firefox.
+2. Install Stylus.\
+   [Firefox Add-Ons](https://addons.mozilla.org/en-CA/android/addon/styl-us/)
+3. Install the theme. \
+   [Tidal Light](https://userstyles.world/style/21068/tidal-light)
+4. Navigate to listen.tidal.com.
+5. Press the menu button on the right side of the toolbar, then press *Add to Home screen*.
+6. Place the shortcut where you want it.
 
 ### iOS (Safari)
 To Do
