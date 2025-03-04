@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        0.1.3
+@version        0.2.0
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
@@ -81,9 +81,9 @@
     }
 
     /*hide album + playlist + mix bg*/
-    .dataContainer--Qq_vv:before,
-    .dataContainer--_YeGY::before,
-    .dataContainer--u94FB::before {
+    ._dataContainer_66f4f40::before,
+    ._dataContainer_5bb6028::before,
+    ._dataContainer_7feb4a2::before {
         background-image: none;
     }
 
@@ -141,7 +141,8 @@
     /*search*/
     .container--cl4MJ,
     div.searchField--fgDKc,
-    div.searchField--fgDKc:focus {
+    div.searchField--fgDKc:focus,
+    ._container_f1be359 {
         background-color: var(--search-background) !important;
         border-color: var(--wave-color-opacity-contrast-fill-ultra-thin) !important;
     }
@@ -168,7 +169,8 @@
         fill: #000;
     }
 
-    .badge--caCNp {
+    .badge--caCNp,
+    ._explicitBadge_b93510b {
         filter: brightness(0.8) invert(0);
     }
 
@@ -253,14 +255,23 @@
         box-shadow: 0 20px 50px 5px #b6b6b638, 0 20px 40px 0 #00000024;
     }
 
+    ._button_f1c7fcb {
+        background: var(--wave-color-solid-base-brighter);
+    }
+
     /*playlist*/
     .refreshButton--bRrPi {
         color: #000;
     }
 
     /*tracks page*/
-    .variantPrimary--pjymy {
+    .variantPrimary--pjymy,
+    ._button_3357ce6 {
         background-color: var(--button-light);
+    }
+
+    .wave-text-body-demi {
+        color: #000;
     }
 
     /*track hover*/
@@ -391,11 +402,12 @@
     }
 
     /*SETTINGS*/
-    .container--Z6FVf.fillDark--NI17Q > div {
-        background-color: #f1f1f1;
+    ._container_b4f1e20._fillDark_a1e5896 > div,
+    ._container_9a0abb9 {
+        background: #f1f1f1 !important;
     }
 
-    .select--kTOQk {
+    ._select_ef84104 {
         background: var(--wave-color-solid-accent-darker) !important;
     }
 
@@ -405,6 +417,10 @@
 
     svg#lastfm path {
         fill: #000;
+    }
+
+    ._button_94c5125 {
+        background: var(--wave-color-solid-base-brighter);
     }
 
     /*scrollbars*/
