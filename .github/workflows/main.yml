@@ -13,9 +13,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Download userstyle.css
-        run: wget -O userstyle.css https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/userstyle.css
-
       - name: Process CSS files
         run: python .github/scripts/process_css.py
 
@@ -29,4 +26,3 @@ jobs:
           git add no-header.css neptune.css
           git commit -m "$LAST_COMMIT_MSG" || echo "No changes to commit"
           git push
-
