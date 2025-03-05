@@ -1,3 +1,11 @@
+/*
+{
+  "name": "Tidal Light",
+  "author": "Interstellar_1",
+  "description": "A light theme for Tidal. v0.2.3"
+}
+*/
+
 :root {
         /*background color*/
         --wave-color-solid-base-fill: white !important;
@@ -61,10 +69,6 @@
 
     /*HOMEPAGE*/
     /*artists*/
-    .overlay--MmvMx {
-        background: linear-gradient(#0000, #ffffffa6);
-    }
-
     .isLoggedIn--CEJH_::after {
         background: none;
     }
@@ -83,9 +87,13 @@
 
     /*icons*/
     .icon--rmikT,
-    icon--VV33E {
+    .icon--VV33E {
         color: #000
     }
+    ._icon_77f3f89 {
+        fill: #000 !important;
+    }
+
 
     /*player shadow*/
     .player--gAOQG.notFullscreen--xbpBL {
@@ -160,7 +168,7 @@
 
     .badge--caCNp,
     ._explicitBadge_b93510b {
-        filter: brightness(0.8) invert(0);
+        filter: brightness(0.8) (0);
     }
 
     /*video badge*/
@@ -185,12 +193,17 @@
     .overlay--Dn4ax,
     .overlay--Cb6su,
     .css-17bbmu3,
-    .css-ohr3gy {
+    .css-ohr3gy,
+    ._overlay_3c15650,
+    ._overlay_aa1ee83,
+    ._overlay_62e2cfd,
+    ._overlay_e0e48ef {
         background: linear-gradient(#0000, #ffffff9e);
     }
 
+    /*play button hover*/
     .css-75d7zy {
-        background-color: #56565691;
+        background-color: #ffffffa6;
         transition: 100ms;
     }
 
@@ -222,8 +235,12 @@
         background-color: #0000003d;
     }
 
-    :is(.player--gAOQG button).withBackground[aria-checked=true] {
+    :is(._player_1d16b04 button).withBackground[aria-checked="true"] {
         background-color: #00000013;
+    }
+
+    ._range_ce0e571 {
+        background-color: var(--wave-color-opacity-contrast-fill-regular);
     }
 
     /*FULL VIEW*/
@@ -264,7 +281,7 @@
     }
 
     /*track hover*/
-    .rowContainer--FBfWg:hover {
+    ._rowContainer_ebb4cfc:hover {
         background: var(--wave-color-solid-base-brightest);
     }
 
@@ -360,7 +377,7 @@
     }
 
     /*artist page*/
-    .background--YwxVl::after {
+    ._background_4a10ea2::after {
         content: "";
         position: absolute;
         top: 0;
@@ -372,6 +389,10 @@
 
     .buttonText--LMsAT {
         color: #fff !important;
+    }
+
+    .css-10jmp6g {
+        color: #ffffffad;
     }
 
     .button--_0I_t {
