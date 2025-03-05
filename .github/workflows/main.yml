@@ -6,13 +6,12 @@ on:
 jobs:
   update-css:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.PAT }}
-          persist-credentials: false
 
       - name: Process CSS files
         run: python .github/scripts/process_css.py
@@ -27,3 +26,5 @@ jobs:
           git add no-header.css neptune.css
           git commit -m "$LAST_COMMIT_MSG" || echo "No changes to commit"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
