@@ -1,11 +1,6 @@
 name: Update CSS Files
 
 on:
-  push:
-    branches:
-      - main
-  schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight UTC
   workflow_dispatch: # Allows manual triggering
 
 jobs:
@@ -34,3 +29,4 @@ jobs:
           git add no-header.css neptune.css
           git commit -m "$LAST_COMMIT_MSG" || echo "No changes to commit"
           git push
+
