@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        0.2.3
+@version        0.2.4
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
@@ -20,16 +20,18 @@
         --wave-color-solid-base-brightest: #e0e2e2 !important;
         --wave-color-opacity-base-brightest-regular: #e5e5e5 !important;
         --wave-color-opacity-contrast-fill-regular: #bbbebe !important;
+        --wave-color-solid-contrast-dark: #e0e2e2 !important;
 
         /*border*/
         --wave-color-opacity-contrast-fill-ultra-thin: #00000017 !important;
 
         /*button color*/
-        --wave-color-opacity-contrast-fill-thin: #00000026 !important;
+        --wave-color-opacity-contrast-fill-thin: #0000001c !important;
         --wave-color-solid-accent-darker: #d5edeb !important;
         --wave-color-solid-rainbow-red-darkest: #fa5656 !important;
         --wave-color-solid-rainbow-red-darker: #d85959 !important;
         --button-light: #d9d9d9 !important;
+        --button-medium: #cbcbcb !important;
 
         /*accents*/
         --wave-color-solid-accent-fill: #39afa5 !important;
@@ -68,6 +70,16 @@
 
     body {
         background-color: #fff !important;
+    }
+    /*GENERAL*/
+    /*hide right shadow*/
+    #playQueueSidebar {
+        box-shadow: none !important;
+    }
+
+    /*buttons*/
+    ._activeTab_f47dafa {
+        background: #0000001c;
     }
 
     /*HOMEPAGE*/
@@ -125,6 +137,11 @@
         color: #000;
     }
 
+    svg._accentedIcon_d6d54e4 {
+        color: var(--wave-color-solid-accent-fill);
+        fill: var(--wave-color-solid-accent-fill) !important;
+    }
+
     .smallHeader--rfQsR {
         --img: url(https://blocks.astratic.com/img/general-img-landscape.png) !important;
     }
@@ -171,8 +188,14 @@
 
     .badge--caCNp,
     ._explicitBadge_b93510b {
-        filter: brightness(0.8) (0);
+        filter: brightness(0.8) (0) !important;
     }
+
+    ._badge_57d1ccb svg {
+        color: #cecece;
+    }
+
+
 
     /*video badge*/
     .videoBadge--Tpdav {
@@ -259,7 +282,28 @@
         background: #ffffff75;
     }
 
-    /*album*/
+    ._bottomGradient_5c344de {
+        background: none;
+    }
+
+    ._button_84b8ffe {
+        background-color: var(--wave-color-solid-base-brighter);
+    }
+
+    ._button_84b8ffe:hover {
+        background-color: var(--wave-color-solid-base-brightest);
+    }
+
+    ._baseButton_15fc215:focus {
+        background: #0003;
+    }
+
+    /*thumbnail*/
+    ._albumImageOverlay_2eabc2b {
+        background: #ffffff4f;
+    }
+
+    /*ALBUM*/
     .albumImage--i2CqD {
         box-shadow: 0 20px 50px 5px #b6b6b638, 0 20px 40px 0 #00000024;
     }
@@ -347,25 +391,25 @@
 
     /*my picks*/
     #My\ favorite\ track\ on\ repeat,
-    .selectedPrompt--cLtd3[style*="--prompt-base-color: #97A1FF1A"] {
+    ._selectedPrompt_dac4cfc[style*="--prompt-base-color: #97A1FF1A"] {
         --prompt-base-color: #97a1ff !important;
         --prompt-color: #5ecce3 !important;
     }
 
     #My\ major\ mood\ booster,
-    .selectedPrompt--cLtd3[style*="--prompt-base-color: #FF91531A"] {
+    ._selectedPrompt_dac4cfc[style*="--prompt-base-color: #FF91531A"] {
         --prompt-base-color: #f98f54 !important;
         --prompt-color: #e6d165 !important;
     }
 
     #My\ go-to\ artist\ right\ now,
-    .selectedPrompt--cLtd3[style*="--prompt-base-color: #FF53531A"] {
+    ._selectedPrompt_dac4cfc[style*="--prompt-base-color: #FF53531A"] {
         --prompt-base-color: #ff5656 !important;
         --prompt-color: #e860d2 !important;
     }
 
     #My\ top\ album\ recently,
-    .selectedPrompt--cLtd3[style*="--prompt-base-color: #53FF981A"] {
+    ._selectedPrompt_dac4cfc[style*="--prompt-base-color: #53FF981A"] {
         --prompt-base-color: #49c47a !important;
         --prompt-color: #5deaa6 !important;
     }
@@ -395,7 +439,7 @@
     }
 
     .css-10jmp6g {
-        color: #ffffffad;
+        color: #2a2a2a;
     }
 
     .button--_0I_t {
@@ -414,6 +458,26 @@
         background-color: #dddde0;
     }
 
+    /*producer discography*/
+    .css-1thhtwd {
+        background: var(--wave-color-solid-base-brighter);
+    }
+
+    .css-1thhtwd:hover {
+        background: var(--wave-color-opacity-contrast-fill-regular)
+    }
+
+    ._buttonActive_5125b72 {
+        background: var(--button-light);
+    }
+
+    ._buttonActive_5125b72:hover {
+        background: var(--wave-color-opacity-contrast-fill-regular)
+    }
+
+    ._buttonActive_5125b72 > .wave-text-body-medium {
+        color: #000;
+    }
     /*SETTINGS*/
     ._container_b4f1e20._fillDark_a1e5896 > div,
     ._container_9a0abb9 {
