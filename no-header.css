@@ -2,11 +2,11 @@
 {
   "name": "Tidal Light",
   "author": "Interstellar_1",
-  "description": "A light theme for Tidal. v0.2.4"
+  "description": "A light theme for Tidal. v0.2.5"
 }
 */
 
-:root {
+   :root {
         /*background color*/
         --wave-color-solid-base-fill: white !important;
         --wave-color-solid-base-brighter: #eaebeb !important;
@@ -33,7 +33,7 @@
         /*accents*/
         --wave-color-solid-accent-fill: #39afa5 !important;
         --text-accent: #3cb4aa !important;
-        [data-wave-color="textUrl"] {
+        [data-w="textUrl"] {
             color: var(--text-accent) !important;
         }
         --switch-accent: #3bafa5 !important;
@@ -112,6 +112,7 @@
         box-shadow: 0 -6px 24px #a6a6a626;
     }
 
+
     /*ACCENT TEXT*/
     /*yellow*/
     ._wave-badge-color-max_1oxl7_22 {
@@ -178,20 +179,13 @@
     }
 
     /*explict badge*/
-    #explicit-badge,
-    explicitIcon--Brzju {
-        fill: #000;
-    }
-
-    .badge--caCNp,
     ._explicitBadge_b93510b {
-        filter: brightness(0.8) (0) !important;
+        filter: invert(40%) brightness(110%) contrast(140%);
     }
 
-    ._badge_57d1ccb svg {
-        color: #cecece;
+    #explicit-badge {
+        color: #000 !important;
     }
-
 
 
     /*video badge*/
@@ -220,7 +214,16 @@
     ._overlay_3c15650,
     ._overlay_aa1ee83,
     ._overlay_62e2cfd,
-    ._overlay_e0e48ef {
+    ._overlay_e0e48ef,
+    ._overlay_7fd73e6,
+    ._overlay_f627136,
+    .css-1ug9uri {
+        background: linear-gradient(#0000, #ffffff9e);
+    }
+
+    /*artist hover*/
+    .css-179fhoi,
+    .css-fvlky0 {
         background: linear-gradient(#0000, #ffffff9e);
     }
 
