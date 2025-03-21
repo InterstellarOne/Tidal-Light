@@ -1,5 +1,6 @@
 # Tidal Light
-![Screenshot 2025-02-24 at 21-51-25 Home - TIDAL](https://github.com/user-attachments/assets/728ce7ee-5790-45c2-a0cc-a4802f18a9ec)
+![Screenshot 2025-03-21 at 12-28-34 Home - TIDAL](https://github.com/user-attachments/assets/bf61c2f3-bee8-4893-8e9c-f472171d990a)
+
 
 A light theme for Tidal, to account for the lack of an official one. If you experience any bugs or find something that should be changed, please write a bug report in the Issues tab.
 
