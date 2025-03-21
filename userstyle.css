@@ -1,6 +1,173 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
+@version        0.2.5
+@description    A light theme for Tidal
+@author         Interstellar_One
+@homepageURL    https://github.com/InterstellarOne/Tidal-Light/
+@supportURL     https://github.com/InterstellarOne/Tidal-Light/issues 
+@license        MIT License
+==/UserStyle== */
+@-moz-document domain("listen.tidal.com") {
+    :root {
+        /*background color*/
+        --wave-color-solid-base-fill: white !important;
+        --wave-color-solid-base-brighter: #eaebeb !important;
+        --wave-color-solid-base-bright: #f1f1f1 !important;
+        --wave-color-opacity-base-bright-thick: #000 !important;
+
+        /*hover*/
+        --wave-color-solid-base-brightest: #e0e2e2 !important;
+        --wave-color-opacity-base-brightest-regular: #e5e5e5 !important;
+        --wave-color-opacity-contrast-fill-regular: #bbbebe !important;
+        --wave-color-solid-contrast-dark: #e0e2e2 !important;
+
+        /*border*/
+        --wave-color-opacity-contrast-fill-ultra-thin: #00000017 !important;
+
+        /*button color*/
+        --wave-color-opacity-contrast-fill-thin: #0000001c !important;
+        --wave-color-solid-accent-darker: #d5edeb !important;
+        --wave-color-solid-rainbow-red-darkest: #fa5656 !important;
+        --wave-color-solid-rainbow-red-darker: #d85959 !important;
+        --button-light: #d9d9d9 !important;
+        --button-medium: #cbcbcb !important;
+
+        /*accents*/
+        --wave-color-solid-accent-fill: #39afa5 !important;
+        --text-accent: #3cb4aa !important;
+        [data-w="textUrl"] {
+            color: var(--text-accent) !important;
+        }
+        --switch-accent: #3bafa5 !important;
+        --wave-color-solid-rainbow-yellow-fill: #d1a70d !important;
+
+        /*primary text*/
+        [data-wave-color="textDefault"] {
+            color: #000 !important;
+        }
+        [data-wave-color="textWhite"] {
+            color: #000 !important;
+        }
+        /*secondary text*/
+        --wave-color-text-secondary: #434343 !important;
+        [data-wave-color="textSecondary"] {
+            color: #000000b3 !important;
+        }
+        --wave-color-solid-contrast-darker: #383838 !important;
+        --wave-color-opacity-contrast-fill-ultra-thick: #383838 !important;
+        /*icons*/
+        --wave-color-solid-contrast-fill: #000 !important;
+        --wave-color-opacity-contrast-fill-thick: #0000009a !important;
+
+        /*search*/
+        --wave-color-opacity-base-brighter-ultra-thick: #c3c3c3 !important;
+        --search-background: #efefefe0 !important;
+
+        /*user profile image*/
+        --user-profile-linear-gradient: linear-gradient(160deg, #356e56 1.22%, #96a6af 40.51%, #cbcbcb 79.07%) !important;
+    }
+
+    body {
+        background-color: #fff !important;
+    }
+    /*GENERAL*/
+    /*hide right shadow*/
+    #playQueueSidebar {
+        box-shadow: none !important;
+    }
+
+    /*buttons*/
+    ._activeTab_f47dafa {
+        background: #0000001c;
+    }
+
+    /*HOMEPAGE*/
+    /*artists*/
+    .isLoggedIn--CEJH_::after {
+        background: none;
+    }
+
+    /*hide album + playlist + mix bg*/
+    ._dataContainer_66f4f40::before,
+    ._dataContainer_5bb6028::before,
+    ._dataContainer_7feb4a2::before {
+        background-image: none;
+    }
+
+    /*artist name*/
+    .css-5pl3ge {
+        color: #000000ab
+    }
+
+    /*icons*/
+    .icon--rmikT,
+    .icon--VV33E {
+        color: #000
+    }
+    ._icon_77f3f89 {
+        fill: #000 !important;
+    }
+
+
+    /*player shadow*/
+    .player--gAOQG.notFullscreen--xbpBL {
+        box-shadow: 0 -6px 24px #a6a6a626;
+    }
+
+
+    /*ACCENT TEXT*/
+    /*yellow*/
+    ._wave-badge-color-max_1oxl7_22 {
+        color: #bc991e;
+        background-color: #ffd33238;
+    }
+
+    /*blue*/
+    ._wave-badge-color-high_1oxl7_17 {
+        color: var(--text-accent);
+    }
+
+    .wave-text-title-bold {
+        color: #fff !important;
+    }
+
+    /*none*/
+    ._wave-badge-color-default_1oxl7_7 {
+        background-color: #0000001a;
+        color: #000;
+    }
+
+    svg._accentedIcon_d6d54e4 {
+        color: var(--wave-color-solid-accent-fill);
+        fill: var(--wave-color-solid-accent-fill) !important;
+    }
+
+    .smallHeader--rfQsR {
+        --img: url(https://blocks.astratic.com/img/general-img-landscape.png) !important;
+    }
+
+    /*shortcuts*/
+    .shortcutItem--jqBkc {
+        box-shadow: 0 16px 32px 0 #7c7c7c4d;
+    }
+
+    ._shortcutItem_6c8e7b4::after {
+        background: linear-gradient(#0000, #fff9);
+    }
+
+    /*search*/
+    .container--cl4MJ,
+    div.searchField--fgDKc,
+    div.searchField--fgDKc:focus,
+    ._container_f1be359 {
+        background-color: var(--search-background) !important;
+        border-color: var(--wave-color-opacity-contrast-fill-ultra-thin) !important;
+    }
+
+    .container--sRPa5 {/* ==UserStyle==
+@name           Tidal Light
+@namespace      https://github.com/InterstellarOne/Tidal-Light/
 @version        0.2.4
 @description    A light theme for Tidal
 @author         Interstellar_One
@@ -224,6 +391,371 @@
     ._overlay_aa1ee83,
     ._overlay_62e2cfd,
     ._overlay_e0e48ef {
+        background: linear-gradient(#0000, #ffffff9e);
+    }
+
+    /*play button hover*/
+    .css-75d7zy {
+        background-color: #ffffffa6;
+        transition: 100ms;
+    }
+
+    .css-75d7zy:hover {
+        background-color: var(--wave-color-solid-base-brighter);
+    }
+
+    button.button--W_J5g.gray--tvcIF.contextMenuButton--Bcnyd:hover {
+        background-size: 200%;
+    }
+
+    /*playlist hover*/
+    .css-1voubjj:hover {
+        background-color: var(--wave-color-solid-base-brighter);
+        border: 5px var(--wave-color-opacity-contrast-fill-ultra-thin);
+    }
+
+    /*queue popup*/
+    .bottomGradient--BngZe {
+        background-image: linear-gradient(180deg, #0000, #ededed);
+    }
+
+    #playQueueSidebar {
+        box-shadow: 0 20px 25px 5px #00000057;
+    }
+
+    /*PLAY BUTTONS*/
+    .range--JNSfg {
+        background-color: #0000003d;
+    }
+
+    :is(._player_1d16b04 button).withBackground[aria-checked="true"] {
+        background-color: #00000013;
+    }
+
+    ._range_ce0e571 {
+        background-color: var(--wave-color-opacity-contrast-fill-regular);
+    }
+
+    /*FULL VIEW*/
+    .activeTab--bqTiv {
+        background: #00000017;
+    }
+
+    .container--cl4MJ {
+        background: #fcfcfc63 !important;
+    }
+
+    .css-u7yq00 {
+        background: #ffffff75;
+    }
+
+    ._bottomGradient_5c344de {
+        background: none;
+    }
+
+    ._button_84b8ffe {
+        background-color: var(--wave-color-solid-base-brighter);
+    }
+
+    ._button_84b8ffe:hover {
+        background-color: var(--wave-color-solid-base-brightest);
+    }
+
+    ._baseButton_15fc215:focus {
+        background: #0003;
+    }
+
+    /*thumbnail*/
+    ._albumImageOverlay_2eabc2b {
+        background: #ffffff4f;
+    }
+
+    /*ALBUM*/
+    .albumImage--i2CqD {
+        box-shadow: 0 20px 50px 5px #b6b6b638, 0 20px 40px 0 #00000024;
+    }
+
+    ._button_f1c7fcb {
+        background: var(--wave-color-solid-base-brighter);
+    }
+
+    /*playlist*/
+    .refreshButton--bRrPi {
+        color: #000;
+    }
+
+    /*tracks page*/
+    .variantPrimary--pjymy,
+    ._button_3357ce6 {
+        background-color: var(--button-light);
+    }
+
+    .wave-text-body-demi {
+        color: #000;
+    }
+
+    /*track hover*/
+    ._rowContainer_ebb4cfc:hover {
+        background: var(--wave-color-solid-base-brightest);
+    }
+
+    /*DIALOUGES*/
+    .ReactModal__Content {
+        background: #f1f1f1 !important;
+    }
+
+    .label--fycqD.unchecked--goEjz {
+        background-color: #ababab;
+    }
+
+    .label--fycqD.checked--RVmZV {
+        background-color: var(--switch-accent);
+    }
+
+    .primary--NLSX4 {
+        background-color: #d5d5d5;
+    }
+
+    .primary--NLSX4:hover {
+        background-color: var(--wave-color-opacity-contrast-fill-regular) !important;
+    }
+
+    .primary--NLSX4:disabled {
+        background-color: #e7e7e8;
+    }
+
+    .primary--NLSX4:disabled:hover {
+        background-color: #e7e7e8;
+    }
+
+    /*popups*/
+    .notification--hckxF,
+    .native-range {
+        box-shadow: 0 20px 50px 5px #0000002e;
+    }
+
+    .notification--hckxF.error--dLkS1 {
+        background: var(--wave-color-solid-rainbow-red-darker);
+    }
+
+    .errorIcon--VvndK {
+        fill: #000 !important;
+    }
+
+    /*PROFILE*/
+    .followingTag--CKRME,
+    .wave-text-footnote-medium {
+        color: var(--text-accent) !important;
+    }
+
+    ._wave-btn-rank-primary_1lao2_58:hover {
+        background-color: #8bd4cf
+    }
+
+    .profilePicture--yrdRB {
+        box-shadow: none;
+    }
+
+    /*my picks*/
+    #My\ favorite\ track\ on\ repeat,
+    ._selectedPrompt_dac4cfc[style*="--prompt-base-color: #97A1FF1A"] {
+        --prompt-base-color: #97a1ff !important;
+        --prompt-color: #5ecce3 !important;
+    }
+
+    #My\ major\ mood\ booster,
+    ._selectedPrompt_dac4cfc[style*="--prompt-base-color: #FF91531A"] {
+        --prompt-base-color: #f98f54 !important;
+        --prompt-color: #e6d165 !important;
+    }
+
+    #My\ go-to\ artist\ right\ now,
+    ._selectedPrompt_dac4cfc[style*="--prompt-base-color: #FF53531A"] {
+        --prompt-base-color: #ff5656 !important;
+        --prompt-color: #e860d2 !important;
+    }
+
+    #My\ top\ album\ recently,
+    ._selectedPrompt_dac4cfc[style*="--prompt-base-color: #53FF981A"] {
+        --prompt-base-color: #49c47a !important;
+        --prompt-color: #5deaa6 !important;
+    }
+
+    ._wave-btn-rank-clean_1lao2_127:hover {
+        color: #fff;
+        background-color: #6e6e6e38 !important;
+    }
+
+    #pick-promt-item-search-field {
+        color: #000;
+    }
+
+    /*artist page*/
+    ._background_4a10ea2::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ffffff4a;
+    }
+
+    .buttonText--LMsAT {
+        color: #fff !important;
+    }
+
+    .css-10jmp6g {
+        color: #2a2a2a;
+    }
+
+    .button--_0I_t {
+        background-color: var(--button-light);
+    }
+
+    .button--_0I_t:hover {
+        background-color: var(--wave-color-opacity-contrast-fill-regular);
+    }
+
+    #player__play {
+        color: #000;
+    }
+
+    .primary--NLSX4:hover {
+        background-color: #dddde0;
+    }
+
+    /*producer discography*/
+    .css-1thhtwd {
+        background: var(--wave-color-solid-base-brighter);
+    }
+
+    .css-1thhtwd:hover {
+        background: var(--wave-color-opacity-contrast-fill-regular)
+    }
+
+    ._buttonActive_5125b72 {
+        background: var(--button-light);
+    }
+
+    ._buttonActive_5125b72:hover {
+        background: var(--wave-color-opacity-contrast-fill-regular)
+    }
+
+    ._buttonActive_5125b72 > .wave-text-body-medium {
+        color: #000;
+    }
+    /*SETTINGS*/
+    ._container_b4f1e20._fillDark_a1e5896 > div,
+    ._container_9a0abb9 {
+        background: #f1f1f1 !important;
+    }
+
+    ._select_ef84104 {
+        background: var(--wave-color-solid-accent-darker) !important;
+    }
+
+    .licenseFrame--C_hup {
+        background: #29292a;
+    }
+
+    svg#lastfm path {
+        fill: #000;
+    }
+
+    ._button_94c5125 {
+        background: var(--wave-color-solid-base-brighter);
+    }
+
+    /*scrollbars*/
+    ::-webkit-scrollbar {
+        background-color: transparent !important;
+        border: none !important;
+        width: 8px !important;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: var(--wave-color-solid-base-brighter) !important;
+        box-shadow: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #d4d4d4 !important;
+        border: none !important;
+    }
+
+    /*neptune*/
+    body > div.ReactModalPortal > div > div > div.modalBody--TFBWU.selectableText--UDUkZ.modalText--gCapb.subtitle--dYfEG > neptune-reactive-root > div > button,
+    #main > div.__NEPTUNE_PAGE > neptune-reactive-root > div > div > div:nth-child(2) > div > div.neptune-card > div > div:nth-child(2) > div:nth-child(1) > button:nth-child(1),
+    #main > div.__NEPTUNE_PAGE > neptune-reactive-root > div > div > div:nth-child(2) > div > div.neptune-card > div > div:nth-child(2) > div:nth-child(1) > button:nth-child(2) {
+        color: #000;
+    }
+
+    .neptune-switch::after {
+        background-color: #fff;
+    }
+}
+        border-color: var(--wave-color-opacity-contrast-fill-ultra-thin);
+    }
+
+    .icon--nNXej {
+        background: linear-gradient(180deg, #fdfdfd, #dbdbdb);
+    }
+
+    a.searchPill--ED7eQ.active--e_BIx {
+        background: var(--wave-color-opacity-contrast-fill-thin);
+    }
+
+    .css-10jmp6g {
+        color: var(--wave-color-text-secondary);
+    }
+
+    /*explict badge*/
+    ._explicitBadge_b93510b {
+        filter: invert(40%) brightness(110%) contrast(140%);
+    }
+
+    #explicit-badge {
+        color: #000 !important;
+    }
+
+
+    /*video badge*/
+    .videoBadge--Tpdav {
+        fill: var(--wave-color-text-secondary);
+        filter: brightness(0.3) invert(0);
+    }
+
+    /*canvas nav buttons*/
+    .viewAllButton--Nb87U,
+    .css-7l8ggf {
+        background: #e0e0e0;
+    }
+
+    .viewAllButton--Nb87U:hover,
+    .css-7l8ggf:hover {
+        background: #cbcbcb;
+    }
+
+    /*album hover*/
+    .overlay--ces1Z,
+    .overlay--Dn4ax,
+    .overlay--Cb6su,
+    .css-17bbmu3,
+    .css-ohr3gy,
+    ._overlay_3c15650,
+    ._overlay_aa1ee83,
+    ._overlay_62e2cfd,
+    ._overlay_e0e48ef,
+    ._overlay_7fd73e6,
+    ._overlay_f627136,
+    .css-1ug9uri {
+        background: linear-gradient(#0000, #ffffff9e);
+    }
+
+    /*artist hover*/
+    .css-179fhoi,
+    .css-fvlky0 {
         background: linear-gradient(#0000, #ffffff9e);
     }
 
