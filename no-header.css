@@ -6,9 +6,11 @@
 }
 */
 
-   :root {
+@-moz-document domain("listen.tidal.com") {
+    :root {
         /*background color*/
         --wave-color-solid-base-fill: white !important;
+        --wave-color-solid-accent-darkest: #f1f1f1 !important;
         --wave-color-solid-base-brighter: #eaebeb !important;
         --wave-color-solid-base-bright: #f1f1f1 !important;
         --wave-color-opacity-base-bright-thick: #000 !important;
@@ -221,6 +223,10 @@
         background: linear-gradient(#0000, #ffffff9e);
     }
 
+    :is(._dataContainer_66f4f40 ._coverArtContainer_2eafdf9) ._creditsOverlay_b234d8c {
+        background: #fdfdfd80;
+    }
+
     /*artist hover*/
     .css-179fhoi,
     .css-fvlky0 {
@@ -248,12 +254,18 @@
     }
 
     /*queue popup*/
-    .bottomGradient--BngZe {
-        background-image: linear-gradient(180deg, #0000, #ededed);
+    .bottomGradient--BngZe,
+    ._bottomGradient_104d99b {
+        background-image: none;
     }
 
     #playQueueSidebar {
         box-shadow: 0 20px 25px 5px #00000057;
+    }
+
+    /*audio quality popup*/
+    ._containerMax_611862e {
+        background-color: transparent;
     }
 
     /*PLAY BUTTONS*/
@@ -527,3 +539,4 @@
     .neptune-switch::after {
         background-color: #fff;
     }
+}
