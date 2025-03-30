@@ -2,7 +2,7 @@
 {
   "name": "Tidal Light",
   "author": "Interstellar_1",
-  "description": "A light theme for Tidal. v0.2.5"
+  "description": "A light theme for Tidal. v0.2.6"
 }
 */
 
@@ -525,5 +525,5 @@
     }
 
     .neptune-switch::after {
-        background-color: #fff;
+        background-color: #fff !important;
     }
