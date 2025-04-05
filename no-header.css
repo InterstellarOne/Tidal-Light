@@ -5,8 +5,6 @@
   "description": "A light theme for Tidal. v0.2.6"
 }
 */
-
-@-moz-document domain("listen.tidal.com") {
     :root {
         /*background color*/
         --wave-color-solid-base-fill: white !important;
@@ -539,4 +537,3 @@
     .neptune-switch::after {
         background-color: #fff;
     }
-}
