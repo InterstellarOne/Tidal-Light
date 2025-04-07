@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        0.2.6
+@version        0.2.7
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
@@ -270,7 +270,7 @@
         background-color: transparent;
     }
 
-    /*PLAY BUTTONS*/
+    /*PLAYER PANE*/
     .range--JNSfg {
         background-color: #0000003d;
     }
@@ -281,6 +281,11 @@
 
     ._range_ce0e571 {
         background-color: var(--wave-color-opacity-contrast-fill-regular);
+    }
+
+    /*album hover*/
+    ._notFullscreenOverlay_1442d60 {
+        background: linear-gradient(0deg, #ffffffa6, #ffffffa6);
     }
 
     /*FULL VIEW*/
@@ -312,6 +317,10 @@
         background: #0003;
     }
 
+    #nowPlaying {
+        background-image: none !important;
+    }
+
     /*thumbnail*/
     ._albumImageOverlay_2eabc2b {
         background: #ffffff4f;
@@ -324,6 +333,10 @@
 
     ._button_f1c7fcb {
         background: var(--wave-color-solid-base-brighter);
+    }
+
+    .artist-link {
+        color: #252525;
     }
 
     /*playlist*/
