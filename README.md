@@ -26,7 +26,11 @@ If you have any experience with CSS and have a moment, please check if you can s
 ### iOS (Safari)
 To Do
 
-### Windows & MacOS Desktop App
+### ~~Windows & MacOS Desktop App~~
+
+> [!WARNING] 
+> This might not work, as the neptune mod seems to be unmaintained.
+
 1. Run the [neptune](https://github.com/uwu/neptune) client mod installer. \
 [Download neptune installer](https://github.com/uwu/neptune-installer/releases)
 2. After installing, open Tidal, open the three-dot menu next to your profile, and click on neptune settings.
