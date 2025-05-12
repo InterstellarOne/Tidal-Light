@@ -26,21 +26,20 @@ If you have any experience with CSS and have a moment, please check if you can s
 ### iOS (Safari)
 To Do
 
-### ~~Windows & MacOS Desktop App~~
+### Windows & MacOS Desktop App
 
-> [!WARNING] 
-> This might not work, as the neptune mod seems to be unmaintained.
+1. Run the [Luna](https://github.com/Inrixia/TidaLuna) client mod installer. \
+[Download Luna installer](https://github.com/jxnxsdev/TidaLuna-Installer/releases)
+2. After installing, open Tidal, open the three-dot menu next to your profile, and click on Luna settings.
+   ![image](https://github.com/user-attachments/assets/fb9ca55a-644c-478e-bfe2-b02ebf53569c)
 
-1. Run the [neptune](https://github.com/uwu/neptune) client mod installer. \
-[Download neptune installer](https://github.com/uwu/neptune-installer/releases)
-2. After installing, open Tidal, open the three-dot menu next to your profile, and click on neptune settings.
-   ![Screenshot 2025-02-25 232733](https://github.com/user-attachments/assets/08bdf429-78ce-4b27-ae89-64be867ec6ae)
-3. Copy and paste the link below into where it says _Import plugin from URL_, and press enter.
+3. Click on the Plugin Store tab, then copy and paste the link below into where it says _Install from URL_, and press enter.
 ```
-https://inrixia.github.io/neptune-plugins/Themer
+https://github.com/Inrixia/neptune-plugins/releases/download/dev/store.json
 ```
-4. Click the settings icon next to Themer, and click Open Editor.
-5. Go to https://github.com/InterstellarOne/Tidal-Light/blob/main/no-header.css, click the copy button to copy the theme, then paste that into the editor opened in the previous step.
+4. Once the store has loaded, scroll down and click to install Themer.
+5. Go to the Plugins tab, and click *Open Editor*.
+6. Go to https://github.com/InterstellarOne/Tidal-Light/blob/main/no-header.css, click the copy button to copy the theme, then paste that into the editor opened in the previous step.
 ![image](https://github.com/user-attachments/assets/7f37ba29-8cc5-4268-940b-b38daf636213)
 
 ### Linux Desktop App (Tidal Hi-Fi)
