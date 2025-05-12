@@ -390,7 +390,11 @@
         box-shadow: 0 20px 50px 5px #0000002e;
     }
 
-    .notification--hckxF.error--dLkS1 {
+    ._notification_99c9c6e {
+        box-shadow: 0 16px 32px #0000;
+    }
+
+    ._notification_99c9c6e._error_0b778e5 {
         background: var(--wave-color-solid-rainbow-red-darker);
     }
 
@@ -540,7 +544,7 @@
         border: none !important;
     }
 
-    /*neptune*/
+    /*luna*/
     body > div.ReactModalPortal > div > div > div.modalBody--TFBWU.selectableText--UDUkZ.modalText--gCapb.subtitle--dYfEG > neptune-reactive-root > div > button,
     #main > div.__NEPTUNE_PAGE > neptune-reactive-root > div > div > div:nth-child(2) > div > div.neptune-card > div > div:nth-child(2) > div:nth-child(1) > button:nth-child(1),
     #main > div.__NEPTUNE_PAGE > neptune-reactive-root > div > div > div:nth-child(2) > div > div.neptune-card > div > div:nth-child(2) > div:nth-child(1) > button:nth-child(2) {
@@ -549,4 +553,18 @@
 
     .neptune-switch::after {
         background-color: #fff;
+    }
+
+    .css-16hze37 {
+        color: #e6e6ed;
+    }
+
+    #main > div:nth-child(3) > div > div.MuiContainer-root.MuiContainer-maxWidthLg.css-sot3eg > div > div:nth-child(2) > div.MuiStack-root.css-16a8gxx > div {
+        color: #e6e6ed;
+    }
+
+    .css-yc8597,
+    .css-pfqxe1,
+    .css-axw7ok {
+        color: #fff;
     }
