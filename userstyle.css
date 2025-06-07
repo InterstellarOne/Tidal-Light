@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        0.3.2
+@version        0.3.3
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
@@ -499,7 +499,7 @@
         content: "";
         filter: blur(5px) brightness(30%);
         inset: -20px 0;
-        mask-image: linear-gradient(0deg, #fff0 40%, #fff);
+        mask-image: linear-gradient(0deg, #fff0 43%, #fff);
         position: absolute;
     }
 
