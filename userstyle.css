@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        0.2.9
+@version        0.3.0
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
 @supportURL     https://github.com/InterstellarOne/Tidal-Light/issues 
 @license        MIT License
 ==/UserStyle== */
-@-moz-document domain("listen.tidal.com") {
+@-moz-document domain("tidal.com") {
     :root {
         /*background color*/
         --wave-color-solid-base-fill: white !important;
@@ -109,12 +109,19 @@
     ._icon_77f3f89 {
         fill: #000 !important;
     }
+    
+    /*SIDEBAR*/
+    ._active_3451dba:is(a._sidebarItem_730d27e, button._sidebarItem_730d27e) span {
+           color: var(--wave-color-solid-accent-fill) !important;
+    }
 
 
     /*player shadow*/
     .player--gAOQG.notFullscreen--xbpBL {
         box-shadow: 0 -6px 24px #a6a6a626;
     }
+    
+    
 
 
     /*ACCENT TEXT*/
@@ -149,8 +156,9 @@
     }
 
     /*shortcuts*/
-    .shortcutItem--jqBkc {
-        box-shadow: 0 16px 32px 0 #7c7c7c4d;
+    ._shortcutItem_6c8e7b4 {
+        box-shadow: 0 16px 32px #7c7c7c4d;
+        background-color: #fafafa;
     }
 
     ._shortcutItem_6c8e7b4::after {
@@ -416,8 +424,16 @@
         background-color: #8bd4cf
     }
 
+    ._button_94c5125 {
+        background-color: transparent !important;
+    }
+
     .profilePicture--yrdRB {
         box-shadow: none;
+    }
+
+    ._input_15c0d78:focus {
+        color: var(--wave-color-solid-contrast-darker);
     }
 
     /*my picks*/
@@ -465,6 +481,47 @@
         background-color: #ffffff4a;
     }
 
+    :is(._background_a548b6d ._image_7ba9b97)::before {
+        background-color: #ffffff21;
+        background-image: none;
+        background-blend-mode: normal
+    }
+
+    ._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97)::before {
+        content: '';
+        /* Required for pseudo-elements */
+        position: absolute;
+        /* Positions the gradient over the image */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    ._background_a548b6d {
+        background-image: linear-gradient(180deg, #fbfbfb66 0, #fff);
+    }
+
+    :is(._background_a548b6d ._image_7ba9b97)::after {
+        background-image: var(--img);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: "";
+        filter: blur(5px) brightness(30%);
+        inset: -20px 0;
+        mask-image: linear-gradient(0deg, #fff0 40%, #fff);
+        position: absolute;
+    }
+
+    ._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97)::after {
+        background-image: linear-gradient(to top, white, rgb(255, 255, 255));
+        mask-image: linear-gradient(180deg, #fff0 , #fff);
+        filter: brightness(100%);
+        height: 87%;
+        
+    }
+
     .buttonText--LMsAT {
         color: #fff !important;
     }
@@ -487,6 +544,10 @@
 
     .primary--NLSX4:hover {
         background-color: #dddde0;
+    }
+    
+    :is(._buttons_ff12873 ._following_657edad) ._icon_29252d0 {
+           fill: var(--wave-color-solid-accent-fill) !important;
     }
 
     /*producer discography*/
