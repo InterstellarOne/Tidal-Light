@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        0.3.0
+@version        0.3.1
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
@@ -109,10 +109,10 @@
     ._icon_77f3f89 {
         fill: #000 !important;
     }
-    
+
     /*SIDEBAR*/
     ._active_3451dba:is(a._sidebarItem_730d27e, button._sidebarItem_730d27e) span {
-           color: var(--wave-color-solid-accent-fill) !important;
+        color: var(--wave-color-solid-accent-fill) !important;
     }
 
 
@@ -120,8 +120,8 @@
     .player--gAOQG.notFullscreen--xbpBL {
         box-shadow: 0 -6px 24px #a6a6a626;
     }
-    
-    
+
+
 
 
     /*ACCENT TEXT*/
@@ -471,7 +471,7 @@
     }
 
     /*artist page*/
-    ._background_4a10ea2::after {
+    ._background_4a10ea2:after {
         content: "";
         position: absolute;
         top: 0;
@@ -481,28 +481,17 @@
         background-color: #ffffff4a;
     }
 
-    :is(._background_a548b6d ._image_7ba9b97)::before {
+    :is(._background_a548b6d ._image_7ba9b97):before {
         background-color: #ffffff21;
         background-image: none;
         background-blend-mode: normal
-    }
-
-    ._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97)::before {
-        content: '';
-        /* Required for pseudo-elements */
-        position: absolute;
-        /* Positions the gradient over the image */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
     }
 
     ._background_a548b6d {
         background-image: linear-gradient(180deg, #fbfbfb66 0, #fff);
     }
 
-    :is(._background_a548b6d ._image_7ba9b97)::after {
+    :is(._background_a548b6d ._image_7ba9b97):after {
         background-image: var(--img);
         background-position: center;
         background-repeat: no-repeat;
@@ -514,13 +503,13 @@
         position: absolute;
     }
 
-    ._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97)::after {
-        background-image: linear-gradient(to top, white, rgb(255, 255, 255));
-        mask-image: linear-gradient(180deg, #fff0 , #fff);
+    ._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97):after {
+        background-image: linear-gradient(to top, white, rgb(255, 255, 255)); /*remove this line for desktop*/
+        mask-image: linear-gradient(180deg, #fff0, #fff);
         filter: brightness(100%);
         height: 87%;
-        
     }
+
 
     .buttonText--LMsAT {
         color: #fff !important;
@@ -545,9 +534,9 @@
     .primary--NLSX4:hover {
         background-color: #dddde0;
     }
-    
+
     :is(._buttons_ff12873 ._following_657edad) ._icon_29252d0 {
-           fill: var(--wave-color-solid-accent-fill) !important;
+        fill: var(--wave-color-solid-accent-fill) !important;
     }
 
     /*producer discography*/
