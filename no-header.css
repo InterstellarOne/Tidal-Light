@@ -467,7 +467,7 @@
         color: #000;
     }
 
-    /*artist page*/
+    /*ARTIST PAGE*/
     ._background_4a10ea2:after {
         content: "" !important;
         position: absolute !important;
@@ -506,7 +506,6 @@
         height: 87% !important;
     }
 
-
     .buttonText--LMsAT {
         color: #fff !important;
     }
@@ -533,6 +532,11 @@
 
     :is(._buttons_ff12873 ._following_657edad) ._icon_29252d0 {
         fill: var(--wave-color-solid-accent-fill) !important;
+    }
+
+    /*bio*/
+    ._dialog_148b5df {
+        color: black;
     }
 
     /*producer discography*/
