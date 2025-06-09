@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        0.3.3
+@version        0.3.4
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
@@ -470,7 +470,7 @@
         color: #000;
     }
 
-    /*artist page*/
+    /*ARTIST PAGE*/
     ._background_4a10ea2:after {
         content: "";
         position: absolute;
@@ -504,7 +504,8 @@
     }
 
     ._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97):after {
-        background-image: linear-gradient(to top, white, rgb(255, 255, 255)); /*remove this line for desktop*/
+        background-image: linear-gradient(to top, white, rgb(255, 255, 255));
+        /*remove this line for desktop*/
         mask-image: linear-gradient(180deg, #fff0, #fff);
         filter: brightness(100%);
         height: 87%;
@@ -537,6 +538,11 @@
 
     :is(._buttons_ff12873 ._following_657edad) ._icon_29252d0 {
         fill: var(--wave-color-solid-accent-fill) !important;
+    }
+
+    /*bio*/
+    ._dialog_148b5df {
+        color: black;
     }
 
     /*producer discography*/
