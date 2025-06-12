@@ -2,7 +2,7 @@
 {
   "name": "Tidal Light",
   "author": "Interstellar_1",
-  "description": "A light theme for Tidal. v0.3.3"
+  "description": "A light theme for Tidal. v0.3.5"
   "license": "MIT License"
 }
 */
@@ -19,6 +19,7 @@
         --wave-color-opacity-base-brightest-regular: #e5e5e5 !important;
         --wave-color-opacity-contrast-fill-regular: #bbbebe !important;
         --wave-color-solid-contrast-dark: #e0e2e2 !important;
+        --transparent-play-hover: #e1e1e166 !important;
 
         /*border*/
         --wave-color-opacity-contrast-fill-ultra-thin: #00000017 !important;
@@ -154,8 +155,8 @@
 
     /*shortcuts*/
     ._shortcutItem_6c8e7b4 {
-        box-shadow: 0 16px 32px #7c7c7c4d;
-        background-color: #fafafa;
+        box-shadow: none !important;
+        background-color: var(--wave-color-solid-base-brighter) !important;
     }
 
     ._shortcutItem_6c8e7b4::after {
@@ -175,7 +176,8 @@
         border-color: var(--wave-color-opacity-contrast-fill-ultra-thin);
     }
 
-    .icon--nNXej {
+    .icon--nNXej,
+    ._icon_49dd0aa {
         background: linear-gradient(180deg, #fdfdfd, #dbdbdb);
     }
 
@@ -185,6 +187,11 @@
 
     .css-10jmp6g {
         color: var(--wave-color-text-secondary);
+    }
+
+    ._imageContainer_dfdf7bd::after,
+    ._imageContainer_23303c1::after {
+        background: var(--transparent-play-hover);
     }
 
     /*explict badge*/
@@ -227,7 +234,7 @@
     ._overlay_7fd73e6,
     ._overlay_f627136,
     .css-1ug9uri {
-        background: linear-gradient(#0000, #ffffff9e);
+        background: linear-gradient(#0000, #ffffff9e) !important;
     }
 
     :is(._dataContainer_66f4f40 ._coverArtContainer_2eafdf9) ._creditsOverlay_b234d8c {
@@ -342,6 +349,12 @@
 
     .artist-link {
         color: #252525;
+    }
+
+    /*remove bg image*/
+    [class^="_dataContainer_"]:before {
+        --img: none !important;
+        background-image: none !important;
     }
 
     /*playlist*/
@@ -602,23 +615,26 @@
     body > div.ReactModalPortal > div > div > div.modalBody--TFBWU.selectableText--UDUkZ.modalText--gCapb.subtitle--dYfEG > neptune-reactive-root > div > button,
     #main > div.__NEPTUNE_PAGE > neptune-reactive-root > div > div > div:nth-child(2) > div > div.neptune-card > div > div:nth-child(2) > div:nth-child(1) > button:nth-child(1),
     #main > div.__NEPTUNE_PAGE > neptune-reactive-root > div > div > div:nth-child(2) > div > div.neptune-card > div > div:nth-child(2) > div:nth-child(1) > button:nth-child(2) {
-        color: #000;
+        color: #000 !important;
     }
 
     .neptune-switch::after {
-        background-color: #fff;
+        background-color: #fff !important;
     }
 
-    .css-16hze37 {
-        color: #e6e6ed;
-    }
-
+    .css-16hze37,
     #main > div:nth-child(3) > div > div.MuiContainer-root.MuiContainer-maxWidthLg.css-sot3eg > div > div:nth-child(2) > div.MuiStack-root.css-16a8gxx > div {
-        color: #e6e6ed;
+        color: #e6e6ed !important;
     }
 
     .css-yc8597,
     .css-pfqxe1,
     .css-axw7ok {
-        color: #fff;
+        color: #fff !important;
     }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
