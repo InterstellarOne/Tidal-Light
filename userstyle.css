@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        0.3.4
+@version        0.3.5
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
@@ -22,6 +22,7 @@
         --wave-color-opacity-base-brightest-regular: #e5e5e5 !important;
         --wave-color-opacity-contrast-fill-regular: #bbbebe !important;
         --wave-color-solid-contrast-dark: #e0e2e2 !important;
+        --transparent-play-hover: #e1e1e166 !important;
 
         /*border*/
         --wave-color-opacity-contrast-fill-ultra-thin: #00000017 !important;
@@ -157,8 +158,8 @@
 
     /*shortcuts*/
     ._shortcutItem_6c8e7b4 {
-        box-shadow: 0 16px 32px #7c7c7c4d;
-        background-color: #fafafa;
+        box-shadow: none !important;
+        background-color: var(--wave-color-solid-base-brighter) !important;
     }
 
     ._shortcutItem_6c8e7b4::after {
@@ -178,7 +179,8 @@
         border-color: var(--wave-color-opacity-contrast-fill-ultra-thin);
     }
 
-    .icon--nNXej {
+    .icon--nNXej,
+    ._icon_49dd0aa {
         background: linear-gradient(180deg, #fdfdfd, #dbdbdb);
     }
 
@@ -189,6 +191,12 @@
     .css-10jmp6g {
         color: var(--wave-color-text-secondary);
     }
+
+    ._imageContainer_dfdf7bd::after,
+    ._imageContainer_23303c1::after {
+        background: var(--transparent-play-hover);
+    }
+
 
     /*explict badge*/
     ._explicitBadge_b93510b {
@@ -230,7 +238,7 @@
     ._overlay_7fd73e6,
     ._overlay_f627136,
     .css-1ug9uri {
-        background: linear-gradient(#0000, #ffffff9e);
+        background: linear-gradient(#0000, #ffffff9e) !important;
     }
 
     :is(._dataContainer_66f4f40 ._coverArtContainer_2eafdf9) ._creditsOverlay_b234d8c {
@@ -345,6 +353,12 @@
 
     .artist-link {
         color: #252525;
+    }
+
+    /*remove bg image*/
+    [class^="_dataContainer_"]:before {
+        --img: none !important;
+        background-image: none !important;
     }
 
     /*playlist*/
