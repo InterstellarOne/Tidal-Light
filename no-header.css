@@ -2,7 +2,7 @@
 {
   "name": "Tidal Light",
   "author": "Interstellar_1",
-  "description": "A light theme for Tidal. v0.3.6c"
+  "description": "A light theme for Tidal. v0.3.6d"
   "license": "MIT License"
 }
 */
@@ -240,7 +240,8 @@
     ._overlay_7fd73e6,
     ._overlay_f627136,
     .css-1ug9uri,
-    .css-u7yq00 {
+    .css-u7yq00,
+    ._creditsOverlay_b234d8c {
         background: linear-gradient(#0000, #ffffff9e) !important;
     }
 
