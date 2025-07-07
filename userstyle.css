@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        0.3.7
+@version        0.3.8
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
@@ -121,8 +121,6 @@
     .player--gAOQG.notFullscreen--xbpBL {
         box-shadow: 0 -6px 24px #a6a6a626;
     }
-
-
 
 
     /*ACCENT TEXT*/
@@ -361,12 +359,21 @@
         background-image: none !important;
     }
 
-    /*playlist*/
+    /*PLAYLIST*/
     .refreshButton--bRrPi {
         color: #000;
     }
 
-    /*tracks page*/
+    ._overlay_fc03b57 {
+        background-color: #fff9 !important;
+        border: 1px solid rgba(255, 255, 255, .85) !important;
+    }
+
+    ._dialog_148b5df {
+        background-color: var(--wave-color-solid-base-fill) !important;
+    }
+
+    /*TRACKS PAGE*/
     .variantPrimary--pjymy,
     ._button_3357ce6 {
         background-color: var(--button-light);
@@ -374,6 +381,15 @@
 
     .wave-text-body-demi {
         color: #000;
+    }
+
+    /*TRACK RADIO*/
+    ._subTitle_14ff73a {
+        color: var(--wave-color-opacity-contrast-fill-ultra-thick) !important;
+    }
+
+    ._coverArt_68a3984 img {
+        border: none !important;
     }
 
     /*VIDEOS*/
@@ -421,6 +437,11 @@
 
     .primary--NLSX4:disabled:hover {
         background-color: #e7e7e8;
+    }
+
+    /*𝕏*/
+    ._iconSize_1974b07 {
+        filter: brightness(0) !important;
     }
 
     /*popups*/
