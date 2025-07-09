@@ -2,7 +2,7 @@
 {
   "name": "Tidal Light",
   "author": "Interstellar_1",
-  "description": "A light theme for Tidal. v0.3.8"
+  "description": "A light theme for Tidal. v0.3.9"
   "license": "MIT License"
 }
 */
@@ -379,6 +379,10 @@
         background-color: var(--wave-color-solid-base-fill) !important;
     }
 
+    ._coverArt_88c4d74 {
+        border: none !important;
+    }
+
     /*TRACKS PAGE*/
     .variantPrimary--pjymy,
     ._button_3357ce6 {
@@ -414,6 +418,11 @@
     /*track hover*/
     ._rowContainer_ebb4cfc:hover {
         background: var(--wave-color-solid-base-brightest) !important;
+    }
+
+    /*letterboxes*/
+    video-view {
+        background: #000 !important;
     }
 
     /*DIALOUGES*/
