@@ -2,7 +2,7 @@
 {
   "name": "Tidal Light",
   "author": "Interstellar_1",
-  "description": "A light theme for Tidal. v0.3.13"
+  "description": "A light theme for Tidal. v0.3.14"
   "license": "MIT License"
 }
 */
@@ -493,10 +493,6 @@
         background-color: #e7e7e8;
     }
 
-    ._actionTextInner_a14f37c {
-        color: var(--text-accent) !important;
-    }
-
      /*𝕏*/
     ._iconSize_1974b07 {
         filter: brightness(0) !important;
@@ -746,8 +742,14 @@
         color: #fff !important;
     }
 
+    .css-yc8597.Mui-selected:focus .MuiTab-icon,
+    div.MuiStack-root.css-16a8gxx > div:nth-child(1) > div > div > span,
+    body > div:nth-child(9) > div > div > ul > div > button > span
+     {
+        color: var(--text-accent) !important;
+    }
+
   to {
     opacity: 1;
     transform: scale(1);
   }
-}
