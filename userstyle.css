@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        0.3.10
+@version        0.3.11
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
@@ -22,7 +22,11 @@
         --wave-color-opacity-base-brightest-regular: #e5e5e5 !important;
         --wave-color-opacity-contrast-fill-regular: #bbbebe !important;
         --wave-color-solid-contrast-dark: #e0e2e2 !important;
+        --icon-button-hover: #525252 !important;
         --transparent-play-hover: #e1e1e166 !important;
+        
+        /*selected*/
+        --wave-color-material-dark: #e0e2e2 !important;
 
         /*border*/
         --wave-color-opacity-contrast-fill-ultra-thin: #00000017 !important;
@@ -200,6 +204,12 @@
         background: var(--transparent-play-hover);
     }
 
+    /*heart button*/
+    ._button_c372e89 svg,
+    ._icon_77f3f89 svg,
+    _favorite_dfc455f {
+        fill: currentColor !important;
+    }
 
     /*explict badge*/
     ._explicitBadge_b93510b {
@@ -609,6 +619,23 @@
 
     :is(._buttons_ff12873 ._following_657edad) ._icon_29252d0 {
         fill: var(--wave-color-solid-accent-fill) !important;
+    }
+
+    .market-button {
+        border-radius: 12px;
+        color: #000;
+        background: var(--wave-color-solid-base-brighter) !important;
+    }
+
+    .market-button:hover {
+        background: var(--wave-color-solid-base-brightest) !important;
+    }
+
+    /*right-side buttons*/
+    ._buttons_ff12873 > ._button_b988d60:hover ._icon_77f3f89,
+    ._buttons_ff12873 > ._button_b988d60:hover ._text_0e64cb5 {
+        fill: var(--icon-button-hover) !important;
+        color: var(--icon-button-hover) !important;
     }
 
     /*bio*/
