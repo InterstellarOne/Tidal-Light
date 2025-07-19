@@ -2,10 +2,11 @@
 {
   "name": "Tidal Light",
   "author": "Interstellar_1",
-  "description": "A light theme for Tidal. v1.0.0"
+  "description": "A light theme for Tidal. v1.1.0"
   "license": "MIT License"
 }
 */
+@media (prefers-color-scheme: light) {
     :root {
         /*background color*/
         --background-default: #fff !important;
@@ -70,7 +71,7 @@
     }
 
     body {
-        background-color: (--background-default) !important;
+        background-color: var(--background-default) !important;
     }
     /*GENERAL*/
     /*hide right shadow*/
@@ -428,7 +429,6 @@
     }
 
     .market-button {
-        border-radius: 12px;
         color: var(--icon-solid);
         background: var(--wave-color-solid-base-brighter) !important;
     }
@@ -494,7 +494,6 @@
 
     ._button_f1c7fcb {
         background: var(--wave-color-solid-base-brighter) !important;
-        border-radius: 12px;
     }
 
     ._button_f1c7fcb:hover {
@@ -681,7 +680,7 @@
 
     ._input_15c0d78:focus {
         color: var(--wave-color-solid-contrast-darker);
-    }
+    }@media (prefers-color-scheme: light) {
 
     /*SETTINGS*/
     ._container_b4f1e20._fillDark_a1e5896 > div,
