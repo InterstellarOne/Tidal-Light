@@ -1,5 +1,6 @@
 # Tidal Light
-![image](https://github.com/user-attachments/assets/3b3889c0-ee72-49d6-9dde-0b32d431380e)
+<img width="1918" height="1011" alt="image" src="https://github.com/user-attachments/assets/2a658cd2-7577-47e6-9b74-4096f1dbe57c" />
+
 
 
 
