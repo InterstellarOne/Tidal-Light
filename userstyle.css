@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        0.3.11
+@version        1.0.0
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
@@ -11,11 +11,12 @@
 @-moz-document domain("tidal.com") {
     :root {
         /*background color*/
-        --wave-color-solid-base-fill: white !important;
+        --background-default: #fff !important;
         --wave-color-solid-accent-darkest: #f1f1f1 !important;
         --wave-color-solid-base-brighter: #eaebeb !important;
         --wave-color-solid-base-bright: #f1f1f1 !important;
         --wave-color-opacity-base-bright-thick: #000 !important;
+        --wave-color-solid-base-fill: var(--background-default) !important;
 
         /*hover*/
         --wave-color-solid-base-brightest: #e0e2e2 !important;
@@ -24,7 +25,7 @@
         --wave-color-solid-contrast-dark: #e0e2e2 !important;
         --icon-button-hover: #525252 !important;
         --transparent-play-hover: #e1e1e166 !important;
-        
+
         /*selected*/
         --wave-color-material-dark: #e0e2e2 !important;
 
@@ -42,29 +43,26 @@
         /*accents*/
         --wave-color-solid-accent-fill: #39afa5 !important;
         --text-accent: #3cb4aa !important;
-        [data-w="textUrl"] {
-            color: var(--text-accent) !important;
-        }
         --switch-accent: #3bafa5 !important;
         --wave-color-solid-rainbow-yellow-fill: #d1a70d !important;
 
         /*primary text*/
-        [data-wave-color="textDefault"] {
-            color: #000 !important;
-        }
-        [data-wave-color="textWhite"] {
-            color: #000 !important;
-        }
+        --text-default: #000 !important;
+
         /*secondary text*/
+        --text-secondary: #000000b3 !important;
+        --text-light: #fff !important;
         --wave-color-text-secondary: #434343 !important;
-        [data-wave-color="textSecondary"] {
-            color: #000000b3 !important;
-        }
         --wave-color-solid-contrast-darker: #383838 !important;
         --wave-color-opacity-contrast-fill-ultra-thick: #383838 !important;
+
         /*icons*/
-        --wave-color-solid-contrast-fill: #000 !important;
+        --icon-solid: #000 !important;
         --wave-color-opacity-contrast-fill-thick: #0000009a !important;
+        --wave-color-solid-contrast-fill: var(--icon-solid) !important;
+
+        /*shadow*/
+        --shadow: #000 !important;
 
         /*search*/
         --wave-color-opacity-base-brighter-ultra-thick: #c3c3c3 !important;
@@ -75,8 +73,9 @@
     }
 
     body {
-        background-color: #fff !important;
+        background-color: var(--background-default) !important;
     }
+
     /*GENERAL*/
     /*hide right shadow*/
     #playQueueSidebar {
@@ -85,10 +84,66 @@
 
     /*buttons*/
     ._activeTab_f47dafa {
-        background: #0000001c;
+        background: var(--wave-color-opacity-contrast-fill-thin);
+        color: var(--wave-color-solid-contrast-fill) !important;
     }
 
+    ._activeTab_f47dafa span {
+        color: var(--text-default) !important;
+    }
+
+    /*canvas nav buttons*/
+    .viewAllButton--Nb87U,
+    .css-7l8ggf {
+        background: #e0e0e0;
+    }
+
+    .viewAllButton--Nb87U:hover,
+    .css-7l8ggf:hover {
+        background: #cbcbcb;
+    }
+
+    /*heart button*/
+    ._button_c372e89 svg,
+    ._icon_77f3f89 svg,
+    ._favorite_dfc455f {
+        fill: currentColor !important;
+    }
+
+    /*explict badge*/
+    ._explicitBadge_b93510b {
+        filter: invert(40%) brightness(110%) contrast(140%);
+    }
+
+    #explicit-badge {
+        color: var(--icon-solid) !important;
+    }
+
+
+    /*video badge*/
+    .videoBadge--Tpdav,
+    ._videoBadge_56ccbcb {
+        filter: brightness(0.3);
+    }
+
+
     /*HOMEPAGE*/
+    /*shortcuts*/
+    ._shortcutItem_6c8e7b4 {
+        box-shadow: none !important;
+        background-color: var(--wave-color-solid-base-brighter) !important;
+    }
+
+    ._shortcutItem_6c8e7b4::after {
+        background: linear-gradient(#0000, #fff);
+    }
+
+    ._createdBy_0c4a82d,
+    ._artistLink_1bf9517 {
+        color: var(--text-secondary) !important;
+    }
+
+
     /*artists*/
     .isLoggedIn--CEJH_::after {
         background: none;
@@ -103,17 +158,18 @@
 
     /*artist name*/
     .css-5pl3ge {
-        color: #000000ab
+        color: var(--text-secondary);
     }
 
     /*icons*/
     .icon--rmikT,
-    .icon--VV33E {
-        color: #000
+    .icon--VV33E,
+    ._miniIcon_5938f33,
+    ._icon_fa5ce09 {
+        color: var(--icon-solid)
     }
-    ._icon_77f3f89 {
-        fill: #000 !important;
-    }
+
+
 
     svg#spotlighted-badge path {
         fill: #c39a05;
@@ -121,8 +177,18 @@
     }
 
     /*SIDEBAR*/
-    ._active_3451dba:is(a._sidebarItem_730d27e, button._sidebarItem_730d27e) span {
+    ._active_3451dba:is(a._sidebarItem_730d27e, button._sidebarItem_730d27e) span,
+    ._active_3451dba:is(a._sidebarItem_730d27e, button._sidebarItem_730d27e) ._icon_4656062 {
         color: var(--wave-color-solid-accent-fill) !important;
+        fill: var(--wave-color-solid-accent-fill) !important;
+    }
+
+    .wave-text-caption-demi {
+        color: var(--text-default) !important;
+    }
+
+    ._icon_4656062 {
+        color: var(--wave-color-solid-contrast-fill) !important;
     }
 
 
@@ -144,14 +210,10 @@
         color: var(--text-accent);
     }
 
-    .wave-text-title-bold {
-        color: #fff !important;
-    }
-
     /*none*/
     ._wave-badge-color-default_1oxl7_7 {
         background-color: #0000001a;
-        color: #000;
+        color: var(--text-default);
     }
 
     svg._accentedIcon_d6d54e4 {
@@ -163,17 +225,7 @@
         --img: url(https://blocks.astratic.com/img/general-img-landscape.png) !important;
     }
 
-    /*shortcuts*/
-    ._shortcutItem_6c8e7b4 {
-        box-shadow: none !important;
-        background-color: var(--wave-color-solid-base-brighter) !important;
-    }
-
-    ._shortcutItem_6c8e7b4::after {
-        background: linear-gradient(#0000, #fff9);
-    }
-
-    /*search*/
+    /*SEARCH*/
     .container--cl4MJ,
     div.searchField--fgDKc,
     div.searchField--fgDKc:focus,
@@ -195,6 +247,10 @@
         background: var(--wave-color-opacity-contrast-fill-thin);
     }
 
+    .wave-text-body-medium[data-wave-color="textSecondary"] {
+        color: var(--text-secondary) !important;
+    }
+
     .css-10jmp6g {
         color: var(--wave-color-text-secondary);
     }
@@ -204,40 +260,7 @@
         background: var(--transparent-play-hover);
     }
 
-    /*heart button*/
-    ._button_c372e89 svg,
-    ._icon_77f3f89 svg,
-    ._favorite_dfc455f {
-        fill: currentColor !important;
-    }
-
-    /*explict badge*/
-    ._explicitBadge_b93510b {
-        filter: invert(40%) brightness(110%) contrast(140%);
-    }
-
-    #explicit-badge {
-        color: #000 !important;
-    }
-
-
-    /*video badge*/
-    .videoBadge--Tpdav,
-    ._videoBadge_56ccbcb {
-        filter: brightness(0.3);
-    }
-
-    /*canvas nav buttons*/
-    .viewAllButton--Nb87U,
-    .css-7l8ggf {
-        background: #e0e0e0;
-    }
-
-    .viewAllButton--Nb87U:hover,
-    .css-7l8ggf:hover {
-        background: #cbcbcb;
-    }
-
+    /*HOVER*/
     /*album hover*/
     .overlay--ces1Z,
     .overlay--Dn4ax,
@@ -251,7 +274,7 @@
     ._overlay_7fd73e6,
     ._overlay_f627136,
     .css-1ug9uri {
-        background: linear-gradient(#0000, #ffffff9e) !important;
+        background: linear-gradient(#0000, #fff) !important;
     }
 
     :is(._dataContainer_66f4f40 ._coverArtContainer_2eafdf9) ._creditsOverlay_b234d8c {
@@ -261,12 +284,12 @@
     /*artist hover*/
     .css-179fhoi,
     .css-fvlky0 {
-        background: linear-gradient(#0000, #ffffff9e);
+        background: linear-gradient(#0000, #fff);
     }
 
     /*play button hover*/
     .css-75d7zy {
-        background-color: #ffffffa6;
+        background-color: var(--background-default);
         transition: 100ms;
     }
 
@@ -317,7 +340,7 @@
         background: linear-gradient(0deg, #ffffffa6, #ffffffa6);
     }
 
-    /*FULL VIEW*/
+    /*FULLSCREEN PLAYER*/
     .activeTab--bqTiv {
         background: #00000017;
     }
@@ -327,7 +350,7 @@
     }
 
     .css-u7yq00 {
-        background: #ffffff75;
+        background: var(--background-default);
     }
 
     ._bottomGradient_5c344de {
@@ -346,22 +369,152 @@
         background: #0003;
     }
 
+    ._tabItem_8436610:hover {
+        color: var(--wave-color-solid-contrast-fill) !important;
+    }
+
     #nowPlaying {
         background-image: none !important;
     }
 
     /*thumbnail*/
     ._albumImageOverlay_2eabc2b {
-        background: #ffffff4f;
+        background: var(--background-default);
+    }
+
+    /*ARTIST PAGE*/
+    ._background_4a10ea2:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--background-default);
+    }
+
+    :is(._background_a548b6d ._image_7ba9b97):before {
+        background-color: var(--background-default);
+        background-image: none;
+        background-blend-mode: normal
+    }
+
+    ._background_a548b6d {
+        background-image: linear-gradient(180deg, #fbfbfb66 0, #fff);
+    }
+
+    :is(._background_a548b6d ._image_7ba9b97):after {
+        background-image: var(--img);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: "";
+        filter: blur(5px) brightness(30%);
+        inset: -20px 0;
+        mask-image: linear-gradient(0deg, #fff0 43%, #fff);
+        position: absolute;
+    }
+
+    ._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97):after {
+        background-image: linear-gradient(to top, white, rgb(255, 255, 255));
+        mask-image: linear-gradient(180deg, #fff0, #fff);
+        filter: brightness(100%);
+        height: 87%;
+    }
+
+
+    .buttonText--LMsAT {
+        color: var(--text-light) !important;
+    }
+
+    .css-10jmp6g {
+        color: #2a2a2a;
+    }
+
+    .button--_0I_t {
+        background-color: var(--button-light);
+    }
+
+    .button--_0I_t:hover {
+        background-color: var(--wave-color-opacity-contrast-fill-regular);
+    }
+
+    #player__play {
+        color: var(--icon-solid);
+    }
+
+    .primary--NLSX4:hover {
+        background-color: #dddde0;
+    }
+
+    :is(._buttons_ff12873 ._following_657edad) ._icon_29252d0 {
+        fill: var(--wave-color-solid-accent-fill) !important;
+    }
+
+    .market-button {
+        border-radius: 12px;
+        color: var(--icon-solid);
+        background: var(--wave-color-solid-base-brighter) !important;
+    }
+
+    .market-button:hover {
+        background: var(--wave-color-solid-base-brightest) !important;
+    }
+
+    span._artistText_a1c7611._artistName_858426b._link_2adc42a > a {
+        color: var(--text-secondary) !important;
+    }
+
+    /*right-side buttons*/
+    ._buttons_ff12873 > ._button_b988d60:hover ._icon_77f3f89,
+    ._buttons_ff12873 > ._button_b988d60:hover ._text_0e64cb5 {
+        fill: var(--icon-button-hover) !important;
+        color: var(--icon-button-hover) !important;
+    }
+
+    /*bio*/
+    ._dialog_148b5df {
+        color: black;
+    }
+
+    /*producer discography*/
+    .css-1thhtwd {
+        background: var(--wave-color-solid-base-brighter);
+    }
+
+    .css-1thhtwd:hover {
+        background: var(--wave-color-opacity-contrast-fill-regular)
+    }
+
+    ._buttonActive_5125b72 {
+        background: var(--button-light);
+    }
+
+    ._buttonActive_5125b72:hover {
+        background: var(--wave-color-opacity-contrast-fill-regular)
+    }
+
+    ._buttonActive_5125b72 > .wave-text-body-medium {
+        color: var(--icon-solid);
     }
 
     /*ALBUM*/
+    .wave-text-title-bold {
+        color: var(--text-default) !important;
+    }
+
+    .artist-link,
+    .wave-text-capital-demi {
+        color: var(--text-secondary) !important;
+    }
+
+
     .albumImage--i2CqD {
         box-shadow: 0 20px 50px 5px #b6b6b638, 0 20px 40px 0 #00000024;
     }
 
     ._buttonText_4520f10 {
-        color: #000;
+        color: var(text-default);
     }
 
     ._button_f1c7fcb {
@@ -377,6 +530,11 @@
         color: #252525;
     }
 
+    /*albums page*/
+    ._icon_028d232 {
+        color: var(--icon-solid) !important;
+    }
+
     /*remove bg image*/
     [class^="_dataContainer_"]:before {
         --img: none !important;
@@ -385,11 +543,11 @@
 
     /*PLAYLIST*/
     .refreshButton--bRrPi {
-        color: #000;
+        color: var(--icon-solid) !important;
     }
 
     ._overlay_fc03b57 {
-        background-color: #fff9 !important;
+        background-color: var(--background-default) !important;
         border: 1px solid rgba(255, 255, 255, .85) !important;
     }
 
@@ -400,6 +558,20 @@
     ._coverArt_88c4d74 {
         border: none !important;
     }
+    ._subTitle_14ff73a,
+    ._artistCreatorText_b699bdf {
+        color: var(--text-secondary) !important;
+    }
+
+    /*edit playlist*/
+    textarea._textArea_2c6dc77 {
+        background-color: var(--wave-color-solid-base-fill) !important;
+    }
+
+    ._visibilityRow_0e30adb,
+    ._moderationRow_d5d378d {
+        background-color: var(--wave-color-solid-base-bright)
+    }
 
     /*TRACKS PAGE*/
     .variantPrimary--pjymy,
@@ -408,14 +580,10 @@
     }
 
     .wave-text-body-demi {
-        color: #000;
+        color: var(--text-default);
     }
 
     /*TRACK RADIO*/
-    ._subTitle_14ff73a {
-        color: var(--wave-color-opacity-contrast-fill-ultra-thick) !important;
-    }
-
     ._coverArt_68a3984 img {
         border: none !important;
     }
@@ -440,7 +608,7 @@
 
     /*letterboxes*/
     video-view {
-        background: #000 !important;
+        background: var(--wave-color-opacity-base-bright-thick) !important;
     }
 
     /*DIALOUGES*/
@@ -484,7 +652,7 @@
     }
 
     ._notification_99c9c6e {
-        box-shadow: 0 16px 32px #0000;
+        box-shadow: 0 16px 32px var(--shadow);
     }
 
     ._notification_99c9c6e._error_0b778e5 {
@@ -492,12 +660,15 @@
     }
 
     .errorIcon--VvndK {
-        fill: #000 !important;
+        fill: var(--icon-solid) !important;
     }
 
     /*PROFILE*/
-    .followingTag--CKRME,
-    .wave-text-footnote-medium {
+    ._createdBy_13b248a {
+        color: var(--text-secondary) !important;
+    }
+
+    .followingTag--CKRME {
         color: var(--text-accent) !important;
     }
 
@@ -517,152 +688,6 @@
         color: var(--wave-color-solid-contrast-darker);
     }
 
-    /*my picks*/
-    #My\ favorite\ track\ on\ repeat,
-    ._selectedPrompt_dac4cfc[style*="--prompt-base-color: #97A1FF1A"] {
-        --prompt-base-color: #97a1ff !important;
-        --prompt-color: #5ecce3 !important;
-    }
-
-    #My\ major\ mood\ booster,
-    ._selectedPrompt_dac4cfc[style*="--prompt-base-color: #FF91531A"] {
-        --prompt-base-color: #f98f54 !important;
-        --prompt-color: #e6d165 !important;
-    }
-
-    #My\ go-to\ artist\ right\ now,
-    ._selectedPrompt_dac4cfc[style*="--prompt-base-color: #FF53531A"] {
-        --prompt-base-color: #ff5656 !important;
-        --prompt-color: #e860d2 !important;
-    }
-
-    #My\ top\ album\ recently,
-    ._selectedPrompt_dac4cfc[style*="--prompt-base-color: #53FF981A"] {
-        --prompt-base-color: #49c47a !important;
-        --prompt-color: #5deaa6 !important;
-    }
-
-    ._wave-btn-rank-clean_1lao2_127:hover {
-        color: #fff;
-        background-color: #6e6e6e38 !important;
-    }
-
-    #pick-promt-item-search-field {
-        color: #000;
-    }
-
-    /*ARTIST PAGE*/
-    ._background_4a10ea2:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ffffff4a;
-    }
-
-    :is(._background_a548b6d ._image_7ba9b97):before {
-        background-color: #ffffff21;
-        background-image: none;
-        background-blend-mode: normal
-    }
-
-    ._background_a548b6d {
-        background-image: linear-gradient(180deg, #fbfbfb66 0, #fff);
-    }
-
-    :is(._background_a548b6d ._image_7ba9b97):after {
-        background-image: var(--img);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        content: "";
-        filter: blur(5px) brightness(30%);
-        inset: -20px 0;
-        mask-image: linear-gradient(0deg, #fff0 43%, #fff);
-        position: absolute;
-    }
-
-    ._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97):after {
-        background-image: linear-gradient(to top, white, rgb(255, 255, 255));
-        /*remove this line for desktop*/
-        mask-image: linear-gradient(180deg, #fff0, #fff);
-        filter: brightness(100%);
-        height: 87%;
-    }
-
-
-    .buttonText--LMsAT {
-        color: #fff !important;
-    }
-
-    .css-10jmp6g {
-        color: #2a2a2a;
-    }
-
-    .button--_0I_t {
-        background-color: var(--button-light);
-    }
-
-    .button--_0I_t:hover {
-        background-color: var(--wave-color-opacity-contrast-fill-regular);
-    }
-
-    #player__play {
-        color: #000;
-    }
-
-    .primary--NLSX4:hover {
-        background-color: #dddde0;
-    }
-
-    :is(._buttons_ff12873 ._following_657edad) ._icon_29252d0 {
-        fill: var(--wave-color-solid-accent-fill) !important;
-    }
-
-    .market-button {
-        border-radius: 12px;
-        color: #000;
-        background: var(--wave-color-solid-base-brighter) !important;
-    }
-
-    .market-button:hover {
-        background: var(--wave-color-solid-base-brightest) !important;
-    }
-
-    /*right-side buttons*/
-    ._buttons_ff12873 > ._button_b988d60:hover ._icon_77f3f89,
-    ._buttons_ff12873 > ._button_b988d60:hover ._text_0e64cb5 {
-        fill: var(--icon-button-hover) !important;
-        color: var(--icon-button-hover) !important;
-    }
-
-    /*bio*/
-    ._dialog_148b5df {
-        color: black;
-    }
-
-    /*producer discography*/
-    .css-1thhtwd {
-        background: var(--wave-color-solid-base-brighter);
-    }
-
-    .css-1thhtwd:hover {
-        background: var(--wave-color-opacity-contrast-fill-regular)
-    }
-
-    ._buttonActive_5125b72 {
-        background: var(--button-light);
-    }
-
-    ._buttonActive_5125b72:hover {
-        background: var(--wave-color-opacity-contrast-fill-regular)
-    }
-
-    ._buttonActive_5125b72 > .wave-text-body-medium {
-        color: #000;
-    }
     /*SETTINGS*/
     ._container_b4f1e20._fillDark_a1e5896 > div,
     ._container_9a0abb9 {
@@ -678,11 +703,15 @@
     }
 
     svg#lastfm path {
-        fill: #000;
+        color: var(--icon-solid);
     }
 
     ._button_94c5125 {
         background: var(--wave-color-solid-base-brighter);
+    }
+
+    ._tab_8819e3e {
+        color: var(--text-secondary) !important;
     }
 
     /*scrollbars*/
@@ -700,30 +729,5 @@
     ::-webkit-scrollbar-thumb {
         background-color: #d4d4d4 !important;
         border: none !important;
-    }
-
-    /*luna*/
-    body > div.ReactModalPortal > div > div > div.modalBody--TFBWU.selectableText--UDUkZ.modalText--gCapb.subtitle--dYfEG > neptune-reactive-root > div > button,
-    #main > div.__NEPTUNE_PAGE > neptune-reactive-root > div > div > div:nth-child(2) > div > div.neptune-card > div > div:nth-child(2) > div:nth-child(1) > button:nth-child(1),
-    #main > div.__NEPTUNE_PAGE > neptune-reactive-root > div > div > div:nth-child(2) > div > div.neptune-card > div > div:nth-child(2) > div:nth-child(1) > button:nth-child(2) {
-        color: #000;
-    }
-
-    .neptune-switch::after {
-        background-color: #fff;
-    }
-
-    .css-16hze37 {
-        color: #e6e6ed;
-    }
-
-    #main > div:nth-child(3) > div > div.MuiContainer-root.MuiContainer-maxWidthLg.css-sot3eg > div > div:nth-child(2) > div.MuiStack-root.css-16a8gxx > div {
-        color: #e6e6ed;
-    }
-
-    .css-yc8597,
-    .css-pfqxe1,
-    .css-axw7ok {
-        color: #fff;
     }
 }
