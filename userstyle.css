@@ -9,8 +9,8 @@
 @license        MIT License
 ==/UserStyle== */
 @-moz-document domain("tidal.com") {
-    :root {
-        @media (prefers-color-scheme: light) {
+    @media (prefers-color-scheme: light) {
+        :root {
             /*background color*/
             --background-default: #fff !important;
             --wave-color-solid-accent-darkest: #f1f1f1 !important;
