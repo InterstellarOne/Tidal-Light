@@ -83,7 +83,7 @@
             box-shadow: none !important;
         }
 
-        /*buttons*/
+        /*BUTTONS*/
         ._activeTab_f47dafa {
             background: var(--wave-color-opacity-contrast-fill-thin);
             color: var(--wave-color-solid-contrast-fill) !important;
@@ -172,7 +172,7 @@
         .icon--VV33E,
         ._miniIcon_5938f33,
         ._icon_fa5ce09 {
-            color: var(--icon-solid)
+            color: var(--icon-solid);
         }
 
 
@@ -500,7 +500,7 @@
 
         /*bio*/
         ._dialog_148b5df {
-            color: black;
+            color: var(--text-default);
         }
 
         /*producer discography*/
@@ -540,7 +540,7 @@
         }
 
         ._buttonText_4520f10 {
-            color: var(text-default);
+            color: var(--text-default);
         }
 
         ._button_f1c7fcb {
