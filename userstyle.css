@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        1.1.0
+@version        1.1.1
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
@@ -9,8 +9,8 @@
 @license        MIT License
 ==/UserStyle== */
 @-moz-document domain("tidal.com") {
-    @media (prefers-color-scheme: light) {
-        :root {
+    :root {
+        @media (prefers-color-scheme: light) {
             /*background color*/
             --background-default: #fff !important;
             --wave-color-solid-accent-darkest: #f1f1f1 !important;
@@ -83,7 +83,7 @@
             box-shadow: none !important;
         }
 
-        /*BUTTONS*/
+        /*buttons*/
         ._activeTab_f47dafa {
             background: var(--wave-color-opacity-contrast-fill-thin);
             color: var(--wave-color-solid-contrast-fill) !important;
@@ -105,10 +105,15 @@
         }
 
         /*heart button*/
-        ._button_c372e89 svg,
+        ._button_c372e89:not(:hover) svg,
         ._icon_77f3f89 svg,
         ._favorite_dfc455f {
             fill: currentColor !important;
+            transition: fill .15s ease;
+        }
+
+        ._button_c372e89:hover svg {
+            fill: #69bab3 !important;
         }
 
         /*explict badge*/
@@ -167,8 +172,10 @@
         .icon--VV33E,
         ._miniIcon_5938f33,
         ._icon_fa5ce09 {
-            color: var(--icon-solid);
+            color: var(--icon-solid)
         }
+
+
 
         svg#spotlighted-badge path {
             fill: #c39a05;
@@ -259,6 +266,15 @@
             background: var(--transparent-play-hover);
         }
 
+        ._button_98ab3d0[aria-checked="false"] ._icon_dc74fc7 {
+            fill: var(--wave-color-opacity-contrast-fill-thick) !important;
+            transition: fill .15s ease;
+        }
+
+        ._button_98ab3d0:hover svg {
+            fill: #69bab3 !important;
+        }
+
         /*HOVER*/
         /*album hover*/
         .overlay--ces1Z,
@@ -304,6 +320,21 @@
         .css-1voubjj:hover {
             background-color: var(--wave-color-solid-base-brighter);
             border: 5px var(--wave-color-opacity-contrast-fill-ultra-thin);
+        }
+
+        /*queue popup*/
+        .bottomGradient--BngZe,
+        ._bottomGradient_104d99b {
+            background-image: none;
+        }
+
+        #playQueueSidebar {
+            box-shadow: 0 20px 25px 5px #00000057;
+        }
+
+        /*audio quality popup*/
+        ._containerMax_611862e {
+            background-color: transparent;
         }
 
         /*PLAYER PANE*/
@@ -399,11 +430,23 @@
             position: absolute;
         }
 
-        ._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97):after {
-            background-image: linear-gradient(to top, white, rgb(255, 255, 255));
-            mask-image: linear-gradient(180deg, #fff0, #fff);
-            filter: brightness(100%);
-            height: 87%;
+        @media (min-width: 576px) {
+            ._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97):after {
+                background-image: linear-gradient(to top, white, rgb(255, 255, 255));
+                mask-image: linear-gradient(180deg, #fff0, #fff);
+                filter: brightness(100%);
+                height: 87%;
+            }
+        }
+
+        @media (max-width: 575px) {
+            ._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97):after {
+                margin-top: 80px;
+                background-image: linear-gradient(to top, white, rgb(255, 255, 255));
+                mask-image: linear-gradient(180deg, #fff0, #fff);
+                filter: brightness(100%);
+                height: 87%;
+            }
         }
 
 
@@ -457,7 +500,7 @@
 
         /*bio*/
         ._dialog_148b5df {
-            color: var(--text-default);
+            color: black;
         }
 
         /*producer discography*/
@@ -491,12 +534,13 @@
             color: var(--text-secondary) !important;
         }
 
+
         .albumImage--i2CqD {
             box-shadow: 0 20px 50px 5px #b6b6b638, 0 20px 40px 0 #00000024;
         }
 
         ._buttonText_4520f10 {
-            color: var(--text-default);
+            color: var(text-default);
         }
 
         ._button_f1c7fcb {
@@ -509,6 +553,10 @@
 
         .artist-link {
             color: #252525;
+        }
+
+        ._buttonStates_91bed47[aria-checked="true"] ._buttonTextOffset_a700b81 {
+            color: var(--text-accent) !important;
         }
 
         /*albums page*/
@@ -551,7 +599,7 @@
 
         ._visibilityRow_0e30adb,
         ._moderationRow_d5d378d {
-            background-color: var(--wave-color-solid-base-bright);
+            background-color: var(--wave-color-solid-base-bright)
         }
 
         /*TRACKS PAGE*/
@@ -626,22 +674,7 @@
             filter: brightness(0) !important;
         }
 
-        /*POPUPS*/
-        /*queue popup*/
-        .bottomGradient--BngZe,
-        ._bottomGradient_104d99b {
-            background-image: none;
-        }
-
-        #playQueueSidebar {
-            box-shadow: 0 20px 25px 5px #00000057;
-        }
-
-        /*audio quality popup*/
-        ._containerMax_611862e {
-            background-color: transparent;
-        }
-
+        /*popups*/
         .notification--hckxF,
         .native-range {
             box-shadow: 0 20px 50px 5px #0000002e;
