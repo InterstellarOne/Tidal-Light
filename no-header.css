@@ -2,7 +2,7 @@
 {
   "name": "Tidal Light",
   "author": "Interstellar_1",
-  "description": "A light theme for Tidal. v1.1.0"
+  "description": "A light theme for Tidal. v1.1.1"
   "license": "MIT License"
 }
 */
@@ -106,10 +106,15 @@
     }
 
     /*heart button*/
-    ._button_c372e89 svg,
+    ._button_c372e89:not(:hover) svg,
     ._icon_77f3f89 svg,
     ._favorite_dfc455f {
         fill: currentColor !important;
+        transition: fill .15s ease;
+    }
+
+    ._button_c372e89:hover svg {
+            fill: #69bab3 !important;
     }
 
     /*explict badge*/
@@ -256,6 +261,15 @@
         background: var(--transparent-play-hover) !important;
     }
 
+    ._button_98ab3d0[aria-checked="false"] ._icon_dc74fc7 {
+        fill: var(--wave-color-opacity-contrast-fill-thick) !important;
+        transition: fill .15s ease;
+    }
+
+    ._button_98ab3d0:hover svg {
+        fill: #69bab3 !important;
+    }
+
     /*HOVER*/
     /*album hover*/
     .overlay--ces1Z,
@@ -303,6 +317,21 @@
     .css-1voubjj:hover {
         background-color: var(--wave-color-solid-base-brighter) !important;
         border: 5px var(--wave-color-opacity-contrast-fill-ultra-thin) !important;
+    }
+
+    /*queue popup*/
+    .bottomGradient--BngZe,
+    ._bottomGradient_104d99b {
+        background-image: none;
+    }
+
+    #playQueueSidebar {
+        box-shadow: 0 20px 25px 5px #00000057;
+    }
+
+    /*audio quality popup*/
+    ._containerMax_611862e {
+        background-color: transparent;
     }
 
     /*PLAYER PANE*/
@@ -502,6 +531,10 @@
 
     .artist-link {
         color: #252525;
+    }
+
+    ._buttonStates_91bed47[aria-checked="true"] ._buttonTextOffset_a700b81 {
+        color: var(--text-accent) !important;
     }
 
     /*albums page*/
