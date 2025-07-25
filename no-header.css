@@ -2,7 +2,7 @@
 {
   "name": "Tidal Light",
   "author": "Interstellar_1",
-  "description": "A light theme for Tidal. v1.1.1"
+  "description": "A light theme for Tidal. v1.1.2"
   "license": "MIT License"
 }
 */
@@ -73,6 +73,16 @@
     body {
         background-color: var(--background-default) !important;
     }
+
+     /*WINDOWS TITLEBAR*/
+    [class^="_bar_"] {
+        background-color: var(--wave-color-solid-base-brighter) !important;
+    }
+
+    ._button_8536ec0 svg {
+        fill: black !important;
+    }
+  
     /*GENERAL*/
     /*hide right shadow*/
     #playQueueSidebar {
