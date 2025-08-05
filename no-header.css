@@ -1,9 +1,9 @@
 /*
-{
-  "name": "Tidal Light",
-  "author": "Interstellar_1",
-  "description": "A light theme for Tidal. v1.1.2"
-  "license": "MIT License"
+ { *
+ "name": "Tidal Light",
+"author": "Interstellar_1",
+"description": "A light theme for Tidal. v1.1.4"
+"license": "MIT License"
 }
 */
 @media (prefers-color-scheme: light) {
@@ -35,6 +35,8 @@
         --wave-color-solid-accent-darker: #d5edeb !important;
         --wave-color-solid-rainbow-red-darkest: #fa5656 !important;
         --wave-color-solid-rainbow-red-darker: #d85959 !important;
+        --button-disabled: #ececec !important;
+        --button-lighter: #e0e0e0 !important;
         --button-light: #d9d9d9 !important;
         --button-medium: #cbcbcb !important;
 
@@ -58,9 +60,10 @@
         --icon-solid: #000 !important;
         --wave-color-opacity-contrast-fill-thick: #0000009a !important;
         --wave-color-solid-contrast-fill: var(--icon-solid) !important;
+        --wave-color-solid-warning-fill: var(--icon-solid) !important;
 
         /*shadow*/
-        --shadow: #000 !important;
+        --shadow: #00000052 !important;
 
         /*search*/
         --wave-color-opacity-base-brighter-ultra-thick: #c3c3c3 !important;
@@ -74,7 +77,7 @@
         background-color: var(--background-default) !important;
     }
 
-     /*WINDOWS TITLEBAR*/
+    /*WINDOWS TITLEBAR*/
     [class^="_bar_"] {
         background-color: var(--wave-color-solid-base-brighter) !important;
     }
@@ -82,11 +85,11 @@
     ._button_8536ec0 svg {
         fill: black !important;
     }
-  
+
     /*GENERAL*/
     /*hide right shadow*/
     #playQueueSidebar {
-        box-shadow: none !important;
+    box-shadow: none !important;
     }
 
     /*updates*/
@@ -124,7 +127,7 @@
     }
 
     ._button_c372e89:hover svg {
-            fill: #69bab3 !important;
+        fill: #69bab3 !important;
     }
 
     /*explict badge*/
@@ -133,7 +136,7 @@
     }
 
     #explicit-badge {
-        color: var(--icon-solid) !important;
+    color: var(--icon-solid) !important;
     }
 
     /*video badge*/
@@ -156,6 +159,24 @@
     ._createdBy_0c4a82d,
     ._artistLink_1bf9517 {
         color: var(--text-secondary) !important;
+    }
+
+    /*carousel buttons*/
+
+    .css-7l8ggf[disabled] {
+        background: var(--button-disabled) !important;
+    }
+
+    .css-7l8ggf {
+        background: var(--button-lighter) !important;
+    }
+
+    .css-7l8ggf[disabled]:hover {
+        background: var(--wave-color-solid-base-brightest) !important;
+    }
+
+    .css-7l8ggf:hover {
+        background: var(--wave-color-opacity-contrast-fill-regular) !important;
     }
 
     /*artists*/
@@ -336,7 +357,7 @@
     }
 
     #playQueueSidebar {
-        box-shadow: 0 20px 25px 5px #00000057;
+    box-shadow: 0 20px 25px 5px #00000057;
     }
 
     /*audio quality popup*/
@@ -392,7 +413,7 @@
     }
 
     #nowPlaying {
-        background-image: none !important;
+    background-image: none !important;
     }
 
     /*thumbnail*/
@@ -456,7 +477,7 @@
     }
 
     #player__play {
-        color: var(--icon-solid);
+    color: var(--icon-solid);
     }
 
     .primary--NLSX4:hover {
@@ -467,20 +488,21 @@
         fill: var(--wave-color-solid-accent-fill) !important;
     }
 
-    .market-button {
-        color: var(--icon-solid);
-        background: var(--wave-color-solid-base-brighter) !important;
-    }
-
-    .market-button:hover {
-        background: var(--wave-color-solid-base-brightest) !important;
-    }
-
     span._artistText_a1c7611._artistName_858426b._link_2adc42a > a {
         color: var(--text-secondary) !important;
     }
 
-    /*right-side buttons*/
+    /*left side buttons*/
+    ._marketButton_124rt_1, _label_124rt_1 {
+        color: var(--icon-solid) !important;
+        background: var(--wave-color-solid-base-brighter) !important;
+    }
+
+    ._marketButton_124rt_1:hover {
+        background: var(--wave-color-solid-base-brightest) !important;
+    }
+
+    /*right side buttons*/
     ._buttons_ff12873 > ._button_b988d60:hover ._icon_77f3f89,
     ._buttons_ff12873 > ._button_b988d60:hover ._text_0e64cb5 {
         fill: var(--icon-button-hover) !important;
@@ -591,6 +613,10 @@
         background-color: var(--wave-color-solid-base-bright) !important;
     }
 
+    ._button_94c5125 {
+        color: var(--text-default) !important;
+    }
+
     /*TRACKS PAGE*/
     .variantPrimary--pjymy,
     ._button_3357ce6 {
@@ -662,14 +688,15 @@
         background-color: #e7e7e8;
     }
 
-     /*𝕏*/
+    /*𝕏*/
     ._iconSize_1974b07 {
         filter: brightness(0) !important;
     }
 
     /*POPUPS*/
     .notification--hckxF,
-    .native-range {
+    .native-range,
+    ._notificationWrapper_62e8cad:nth-child(1) {
         box-shadow: 0 20px 50px 5px #0000002e;
     }
 
@@ -692,7 +719,7 @@
     }
 
     #playQueueSidebar {
-        box-shadow: 0 20px 25px 5px #00000057;
+    box-shadow: 0 20px 25px 5px #00000057;
     }
 
     /*audio quality popup*/
@@ -713,85 +740,89 @@
         background-color: #8bd4cf
     }
 
-    ._button_94c5125 {
-        background-color: transparent !important;
-    }
-
     .profilePicture--yrdRB {
         box-shadow: none;
     }
 
     ._input_15c0d78:focus {
         color: var(--wave-color-solid-contrast-darker);
-    }@media (prefers-color-scheme: light) {
-
-    /*SETTINGS*/
-    ._container_b4f1e20._fillDark_a1e5896 > div,
-    ._container_9a0abb9 {
-        background: #f1f1f1 !important;
     }
 
-    ._select_ef84104 {
-        background: var(--wave-color-solid-accent-darker) !important;
+    #main > div.for-cypress__react-router--loaded.mainContent > div > div._wrapper_88ee7cb._header_b1aed07 > div._headerContainer_d8ee9b4 > div._actionContainer_7bd364b > div._buttons_ff12873 > button {
+    background: transparent !important;
     }
 
-    .licenseFrame--C_hup {
-        background: #29292a;
-    }
+        /*SETTINGS*/
+        ._container_b4f1e20._fillDark_a1e5896 > div,
+        ._container_9a0abb9 {
+            background: #f1f1f1 !important;
+        }
 
-    svg#lastfm path {
-        fill: var(--icon-solid);
-    }
+        ._select_ef84104 {
+            background: var(--wave-color-solid-accent-darker) !important;
+        }
 
-    ._button_94c5125 {
-        background: var(--wave-color-solid-base-brighter);
-    }#fff
+        .licenseFrame--C_hup {
+            background: #29292a;
+        }
 
-    ._tab_8819e3e {
-        color: var(--text-secondary) !important;
-    }
+        svg#lastfm path {
+            fill: var(--icon-solid);
+        }
 
-    /*scrollbars*/
-    ::-webkit-scrollbar {
-        background-color: transparent !important;
-        border: none !important;
-        width: 8px !important;
-    }
+        ._button_94c5125 {
+            background: #000c2212 !important;
+        }
 
-    ::-webkit-scrollbar-track {
-        background-color: var(--wave-color-solid-base-brighter) !important;
-        box-shadow: none;
-    }
+        ._button_94c5125:hover {
+            background: #000c221c !important;
+        }
 
-    ::-webkit-scrollbar-thumb {
-        background-color: #d4d4d4 !important;
-        border: none !important;
-    }
+        ._tab_8819e3e {
+            color: var(--text-secondary) !important;
+        }
 
-    /*luna*/
-    body > div.ReactModalPortal > div > div > div.modalBody--TFBWU.selectableText--UDUkZ.modalText--gCapb.subtitle--dYfEG > neptune-reactive-root > div > button,
-    #main > div.__NEPTUNE_PAGE > neptune-reactive-root > div > div > div:nth-child(2) > div > div.neptune-card > div > div:nth-child(2) > div:nth-child(1) > button:nth-child(1),
-    #main > div.__NEPTUNE_PAGE > neptune-reactive-root > div > div > div:nth-child(2) > div > div.neptune-card > div > div:nth-child(2) > div:nth-child(1) > button:nth-child(2) {
+        /*scrollbars*/
+        ::-webkit-scrollbar {
+            background-color: transparent !important;
+            border: none !important;
+            width: 8px !important;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: var(--wave-color-solid-base-brighter) !important;
+            box-shadow: none;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #d4d4d4 !important;
+            border: none !important;
+        }
+
+        /*luna*/
+        body > div.ReactModalPortal > div > div > div.modalBody--TFBWU.selectableText--UDUkZ.modalText--gCapb.subtitle--dYfEG > neptune-reactive-root > div > button,
+        #main > div.__NEPTUNE_PAGE > neptune-reactive-root > div > div > div:nth-child(2) > div > div.neptune-card > div > div:nth-child(2) > div:nth-child(1) > button:nth-child(1),
+        #main > div.__NEPTUNE_PAGE > neptune-reactive-root > div > div > div:nth-child(2) > div > div.neptune-card > div > div:nth-child(2) > div:nth-child(1) > button:nth-child(2) {
         color: var(--icon-solid) !important;
-    }
+        }
 
-    .neptune-switch::after {
-        background-color: var(--background-default) !important;
-    }
+        .neptune-switch::after {
+            background-color: var(--background-default) !important;
+        }
 
-    .css-16hze37,
-    #main > div:nth-child(3) > div > div.MuiContainer-root.MuiContainer-maxWidthLg.css-sot3eg > div > div:nth-child(2) > div.MuiStack-root.css-16a8gxx > div {
+        .css-16hze37,
+        #main > div:nth-child(3) > div > div.MuiContainer-root.MuiContainer-maxWidthLg.css-sot3eg > div > div:nth-child(2) > div.MuiStack-root.css-16a8gxx > div {
         color: #e6e6ed !important;
-    }
+        }
 
-    .css-yc8597,
-    .css-pfqxe1,
-    .css-axw7ok {
-        color: var(--background-default) !important;
-    }
+        .css-yc8597,
+        .css-pfqxe1,
+        .css-axw7ok {
+            color: var(--background-default) !important;
+        }
 
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
