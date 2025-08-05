@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        1.1.3
+@version        1.1.4
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
@@ -61,6 +61,7 @@
             --icon-solid: #000 !important;
             --wave-color-opacity-contrast-fill-thick: #0000009a !important;
             --wave-color-solid-contrast-fill: var(--icon-solid) !important;
+            --wave-color-solid-warning-fill: var(--icon-solid) !important;
 
             /*shadow*/
             --shadow: #00000052 !important;
@@ -478,20 +479,22 @@
             fill: var(--wave-color-solid-accent-fill) !important;
         }
 
-        .market-button {
-            color: var(--icon-solid);
-            background: var(--wave-color-solid-base-brighter) !important;
-        }
-
-        .market-button:hover {
-            background: var(--wave-color-solid-base-brightest) !important;
-        }
-
         span._artistText_a1c7611._artistName_858426b._link_2adc42a > a {
             color: var(--text-secondary) !important;
         }
 
-        /*right-side buttons*/
+        /*left side buttons*/
+        ._marketButton_124rt_1,
+        _label_124rt_1 {
+            color: var(--icon-solid) !important;
+            background: var(--wave-color-solid-base-brighter) !important;
+        }
+
+        ._marketButton_124rt_1:hover {
+            background: var(--wave-color-solid-base-brightest) !important;
+        }
+
+        /*right side buttons*/
         ._buttons_ff12873 > ._button_b988d60:hover ._icon_77f3f89,
         ._buttons_ff12873 > ._button_b988d60:hover ._text_0e64cb5 {
             fill: var(--icon-button-hover) !important;
@@ -601,13 +604,13 @@
         ._moderationRow_d5d378d {
             background-color: var(--wave-color-solid-base-bright)
         }
-        
-        ._button_94c5125, ._button_538cfb3 {
-            background: var(--button-light) !important;
+
+        ._button_94c5125,
+        ._button_538cfb3 {
             color: var(--text-default) !important;
         }
-        
-            
+
+
         /*TRACKS PAGE*/
         .variantPrimary--pjymy,
         ._button_3357ce6 {
@@ -675,18 +678,20 @@
             background-color: #e7e7e8;
         }
 
-        /*𝕏*/
-        ._iconSize_1974b07 {
+        /*social icons*/
+        ._iconSize_1974b07,
+        ._socialIcon_9f6cee9 {
             filter: brightness(0) !important;
         }
 
         /*popups*/
         .notification--hckxF,
-        .native-range, ._notificationWrapper_62e8cad:nth-child(1) {
+        .native-range,
+        ._notificationWrapper_62e8cad:nth-child(1) {
             box-shadow: 0 20px 50px 5px #0000002e;
         }
 
-        ._notification_99c9c6e  {
+        ._notification_99c9c6e {
             box-shadow: 0 16px 32px var(--shadow);
         }
 
@@ -711,16 +716,16 @@
             background-color: #8bd4cf
         }
 
-        ._button_94c5125 {
-            background-color: transparent !important;
-        }
-
         .profilePicture--yrdRB {
             box-shadow: none;
         }
 
         ._input_15c0d78:focus {
             color: var(--wave-color-solid-contrast-darker);
+        }
+
+        #main > div.for-cypress__react-router--loaded.mainContent > div > div._wrapper_88ee7cb._header_b1aed07 > div._headerContainer_d8ee9b4 > div._actionContainer_7bd364b > div._buttons_ff12873 > button {
+            background: transparent !important;
         }
 
         /*SETTINGS*/
@@ -742,7 +747,11 @@
         }
 
         ._button_94c5125 {
-            background: var(--wave-color-solid-base-brighter);
+            background: #000c2212 !important;
+        }
+
+        ._button_94c5125:hover {
+            background: #000c221c !important;
         }
 
         ._tab_8819e3e {
