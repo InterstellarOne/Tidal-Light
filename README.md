@@ -20,9 +20,6 @@ A light theme for Tidal, to account for the lack of an official one. If you expe
 5. Press the menu button on the right side of the toolbar, then press *Add to Home screen*.
 6. Place the shortcut where you want it.
 
-### iOS (Safari)
-To Do
-
 ### Windows & MacOS Desktop App
 
 1. Run the [Luna](https://github.com/Inrixia/TidaLuna) client mod installer. \
