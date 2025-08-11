@@ -1,7 +1,20 @@
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
+></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+/>
 # Tidal Light
-<img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/fa8fefc0-8d9e-48ac-a33d-57f15695798e" />
 
-A light theme for Tidal, to account for the lack of an official one. If you experience any bugs or find something that should be changed, please write a bug report in the Issues tab.
+<img-comparison-slider>
+  <img slot="first" src="https://github.com/user-attachments/assets/7095847c-36ba-48ff-af84-4ee4b92bb154" />
+  <img slot="second" src="https://github.com/user-attachments/assets/bf8985ec-a74d-469e-abd6-cf62f4a86fe5" />
+</img-comparison-slider>
+
+A light theme for Tidal, to account for the lack of an official one. If you experience any bugs or![Uploading TIDAL_KQXlx7cUkd.png…]()
+ find something that should be changed, please write a bug report in the Issues tab.
 
 ## Installation
 ### Browser
