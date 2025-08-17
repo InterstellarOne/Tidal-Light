@@ -28,8 +28,8 @@ A simple light theme for Tidal. The theme will automatically toggle on and off w
    ![image](https://github.com/user-attachments/assets/fb9ca55a-644c-478e-bfe2-b02ebf53569c)
 
 3. Click on the Plugin Store tab, then scroll down and click to install Themer.
-4. Go to the Plugins tab, and click *Open Editor*.
-5. Go to https://github.com/InterstellarOne/Tidal-Light/blob/main/no-header.css, click the copy button to copy the theme, then paste that into the editor opened in the previous step.
+4. Press Ctrl+E to open the theme input. 
+5. Go to https://github.com/InterstellarOne/Tidal-Light/blob/main/no-header.css, click the copy button to copy the theme, then paste that into the window opened in the previous step.
 ![image](https://github.com/user-attachments/assets/7f37ba29-8cc5-4268-940b-b38daf636213)
 
 6. Close and reopen the app.
