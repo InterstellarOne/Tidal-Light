@@ -2,7 +2,7 @@
  { *
  "name": "Tidal Light",
 "author": "Interstellar_1",
-"description": "A light theme for Tidal. v1.1.4"
+"description": "A light theme for Tidal. v1.1.5"
 "license": "MIT License"
 }
 */
@@ -418,7 +418,7 @@
 
     /*thumbnail*/
     ._albumImageOverlay_2eabc2b {
-        background: var(--background-default);
+        background: #ffffffb0;
     }
 
     /*ARTIST PAGE*/
