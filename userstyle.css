@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        1.1.4
+@version        1.1.5
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light/
@@ -395,7 +395,7 @@
 
         /*thumbnail*/
         ._albumImageOverlay_2eabc2b {
-            background: var(--background-default);
+            background: #ffffffb0;
         }
 
         /*ARTIST PAGE*/
@@ -678,9 +678,8 @@
             background-color: #e7e7e8;
         }
 
-        /*social icons*/
-        ._iconSize_1974b07,
-        ._socialIcon_9f6cee9 {
+        /*𝕏*/
+        ._iconSize_1974b07 {
             filter: brightness(0) !important;
         }
 
