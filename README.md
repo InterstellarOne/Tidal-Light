@@ -1,7 +1,7 @@
 # Tidal Light
 <img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/fa8fefc0-8d9e-48ac-a33d-57f15695798e" />
 
-A light theme for Tidal, to account for the lack of an official one. If you experience any bugs or find something that should be changed, please write a bug report in the Issues tab.
+A simple light theme for Tidal. The theme will automatically toggle on and off with the system dark/light mode. 
 
 ## Installation
 ### Browser
