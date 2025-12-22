@@ -1,11 +1,11 @@
 /* ==UserStyle==
 @name           Tidal Light
-@namespace      https://github.com/InterstellarOne/Tidal-Light/
-@version        1.1.5
+@namespace      https://codeberg.org/Interstellar_1/Tidal-Light
+@version        2.0.0
 @description    A light theme for Tidal
 @author         Interstellar_One
-@homepageURL    https://github.com/InterstellarOne/Tidal-Light/
-@supportURL     https://github.com/InterstellarOne/Tidal-Light/issues 
+@homepageURL    https://codeberg.org/Interstellar_1/Tidal-Light/
+@supportURL     https://codeberg.org/Interstellar_1/Tidal-Light/issues 
 @license        MIT License
 ==/UserStyle== */
 @-moz-document domain("tidal.com") {
@@ -15,6 +15,7 @@
             --background-default: #fff !important;
             --wave-color-solid-accent-darkest: #f1f1f1 !important;
             --wave-color-solid-base-brighter: #eaebeb !important;
+            --market-core-fill-black-color: #eaebeb !important;
             --wave-color-solid-base-bright: #f1f1f1 !important;
             --wave-color-opacity-base-bright-thick: #000 !important;
             --wave-color-solid-base-fill: var(--background-default) !important;
@@ -23,12 +24,13 @@
             --wave-color-solid-base-brightest: #e0e2e2 !important;
             --wave-color-opacity-base-brightest-regular: #e5e5e5 !important;
             --wave-color-opacity-contrast-fill-regular: #bbbebe !important;
-            --wave-color-solid-contrast-dark: #e0e2e2 !important;
-            --icon-button-hover: #525252 !important;
+            --wave-color-solid-contrast-dark: var(--wave-color-solid-base-brightest) !important;
+            --icon-button-hover: #3d3d3d !important;
             --transparent-play-hover: #e1e1e166 !important;
 
             /*selected*/
             --wave-color-material-dark: #e0e2e2 !important;
+            --market-core-emphasis-40-color: #e0e2e2 !important;
 
             /*border*/
             --wave-color-opacity-contrast-fill-ultra-thin: #00000017 !important;
@@ -40,6 +42,7 @@
             --wave-color-solid-rainbow-red-darker: #d85959 !important;
             --button-light: #d9d9d9 !important;
             --button-medium: #cbcbcb !important;
+            --market-core-fill-white-color: #000 !important;
 
             /*accents*/
             --wave-color-solid-accent-fill: #39afa5 !important;
@@ -49,6 +52,7 @@
 
             /*primary text*/
             --text-default: #000 !important;
+            --market-field-normal-state-float-phase-label-color: #000 !important;
 
             /*secondary text*/
             --text-secondary: #000000b3 !important;
@@ -74,7 +78,8 @@
             --user-profile-linear-gradient: linear-gradient(160deg, #356e56 1.22%, #96a6af 40.51%, #cbcbcb 79.07%) !important;
         }
 
-        body {
+        body,
+        [class^="_main"] {
             background-color: var(--background-default) !important;
         }
 
@@ -92,6 +97,13 @@
 
         ._activeTab_f47dafa span {
             color: var(--text-default) !important;
+        }
+
+
+        ._playButtonContainer_5ab95ff {
+            color: var(--background-default) !important;
+            border-radius: 50%;
+            box-shadow: 0 0 10px 4px #0000000f
         }
 
         /*canvas nav buttons*/
@@ -133,6 +145,15 @@
             filter: brightness(0.3);
         }
 
+        /*FEED*/
+        ._marketText_1lyag_1 {
+            color: var(--text-default) !important;
+        }
+
+        ._sectionHeader_cdc6234 {
+            background: var(--background-default) !important;
+        }
+
 
         /*HOMEPAGE*/
         /*shortcuts*/
@@ -141,13 +162,19 @@
             background-color: var(--wave-color-solid-base-brighter) !important;
         }
 
-        ._shortcutItem_6c8e7b4::after {
+        ._shortcutItem_6c8e7b4::after,
+        ._container_b1b02cf::before {
             background: linear-gradient(#0000, #fff);
         }
 
         ._createdBy_0c4a82d,
-        ._artistLink_1bf9517 {
+        ._artistLink_1bf9517,
+        ._marketText_1lyag_1._text20_1lyag_291 {
             color: var(--text-secondary) !important;
+        }
+
+        ._marketText_1lyag_1._medium10_1lyag_210 {
+            color: #000 !important;
         }
 
 
@@ -176,21 +203,70 @@
             color: var(--icon-solid);
         }
 
-
-
         svg#spotlighted-badge path {
             fill: #c39a05;
             filter: contrast(150%);
         }
 
+        svg#uploaded-badge path {
+            filter: invert();
+        }
+
         /*SIDEBAR*/
         ._active_3451dba:is(a._sidebarItem_730d27e, button._sidebarItem_730d27e) span,
-        ._active_3451dba:is(a._sidebarItem_730d27e, button._sidebarItem_730d27e) ._icon_4656062 {
+        ._active_3451dba:is(a._sidebarItem_730d27e, button._sidebarItem_730d27e) ._icon_4656062,
+        ._selected_29027d1,
+        ._selected_81b1546 ._textContent_adfdee4 ._title_e3ea645,
+        ._selected_29027d1 ._icon_77f3f89,
+        ._selected_29027d1 > ._marketText_1lyag_1 {
             color: var(--wave-color-solid-accent-fill) !important;
             fill: var(--wave-color-solid-accent-fill) !important;
         }
 
-        .wave-text-caption-demi {
+        ._logoIcon_895f95f,
+        ._fallbackIcon_d13ffa3,
+        ._navigationItem_4e9deae:not(._selected_29027d1),
+        ._arrowRight_f57b400,
+        ._submenuItem_3d0e609,
+        ._icon_46e8aba {
+            color: var(--icon-solid) !important;
+            fill: var(--icon-solid) !important;
+        }
+
+
+        ._sidebar_54f18f3,
+        ._submenu_1951fe4,
+        ._contextMenu_8606b2d {
+            background: var(--wave-color-solid-base-bright) !important;
+        }
+        
+        ._newSidebar_f871cc1,
+        ._sectionHeader_5f11aab {
+            background: var(--wave-color-solid-base-brighter) !important;
+        }
+
+        ._active_3451dba:is(a._sidebarItem_730d27e, button._sidebarItem_730d27e),
+        ._selected_29027d1,
+        ._thumbnail_4ac432b,
+        ._actionList_1cd4298,
+        ._selected_81b1546 {
+            background: transparent !important;
+            background-color: transparent !important;
+        }
+
+        a._sidebarItem_730d27e:hover,
+        button._sidebarItem_730d27e:hover,
+        ._createNewPlaylist_7fe1ffe:hover,
+        ._profileLink_40a29ed:hover,
+        ._navigationItem_4e9deae:hover,
+        ._submenuItem_3d0e609:hover,
+        ._playlistNavigationItem_a7cfc49:hover,
+        ._actionList_1cd4298:hover {
+            background-color: var(--wave-color-solid-base-brightest) !important;
+        }
+
+        .wave-text-caption-demi,
+        ._plusIcon_b8f117a {
             color: var(--text-default) !important;
         }
 
@@ -198,47 +274,51 @@
             color: var(--wave-color-solid-contrast-fill) !important;
         }
 
-
-        /*player shadow*/
-        .player--gAOQG.notFullscreen--xbpBL {
-            box-shadow: 0 -6px 24px #a6a6a626;
+        ._sectionHeader_fec3951 {
+            color: var(--text-secondary) !important
         }
 
-
-        /*ACCENT TEXT*/
-        /*yellow*/
-        ._wave-badge-color-max_1oxl7_22 {
-            color: #bc991e;
-            background-color: #ffd33238;
+        /*expand sidebar*/
+        :is(._logoButton_50502fc._isCollapsed_f0db370:hover, ._logoButton_50502fc._isCollapsed_f0db370:active) ._expandIcon_66ba3b9 {
+            fill: var(--icon-solid) !important;
+            background: var(--wave-color-solid-base-brighter) !important;
+            width: 30px;
+            transition: background .2s var(--market-core-animation-enter-transition-easing);
         }
 
-        /*blue*/
-        ._wave-badge-color-high_1oxl7_17 {
-            color: var(--text-accent);
+        /*HEADER*/
+        ._header_3fe665f._solidHeader_2b3f298 {
+            background: var(--wave-color-solid-base-brighter) !important;
         }
 
-        /*none*/
-        ._wave-badge-color-default_1oxl7_7 {
-            background-color: #0000001a;
-            color: var(--text-default);
-        }
-
-        svg._accentedIcon_d6d54e4 {
-            color: var(--wave-color-solid-accent-fill);
-            fill: var(--wave-color-solid-accent-fill) !important;
-        }
-
-        .smallHeader--rfQsR {
-            --img: url(https://blocks.astratic.com/img/general-img-landscape.png) !important;
-        }
-
-        /*SEARCH*/
+        /*search*/
         .container--cl4MJ,
         div.searchField--fgDKc,
         div.searchField--fgDKc:focus,
         ._container_f1be359 {
-            background-color: var(--search-background) !important;
-            border-color: var(--wave-color-opacity-contrast-fill-ultra-thin) !important;
+            background-color: #ffffffba !important;
+            box-shadow: none
+        }
+
+        ._container_79ca9c5 {
+            border: none;
+            box-shadow: 0 4px 20px #0000004d;
+        }
+
+        ._searchField_4b7fbda,
+        ._active_5dd5be1,
+        ._searchField_b2eb7f7 ._small_1vfro_11,
+        ._collapseButton_1c3c5e5[aria-expanded="true"],
+        ._searchField_4b7fbda::placeholder,
+        ._searchField_4b7fbda::-moz-placeholder,
+        ._icon_3618b7a {
+            fill: var(--icon-solid) !important;
+            color: var(--icon-solid) !important;
+        }
+
+        ._searchField_4b7fbda::placeholder,
+        ._searchField_4b7fbda::-moz-placeholder {
+            opacity: 0.7
         }
 
         .container--sRPa5 {
@@ -275,6 +355,49 @@
         ._button_98ab3d0:hover svg {
             fill: #69bab3 !important;
         }
+        
+        /*search page*/
+        .wave-text-body-medium[data-wave-color="textBlack"] {
+            color: var(--text-default)
+        }
+
+        /*player shadow*/
+        .player--gAOQG.notFullscreen--xbpBL {
+            box-shadow: 0 -6px 24px #a6a6a626;
+        }
+
+
+        /*ACCENT TEXT*/
+        /*yellow*/
+        ._wave-badge-color-max_1oxl7_22 {
+            color: #bc991e;
+            background-color: #ffd33238;
+        }
+
+        /*blue*/
+        ._wave-badge-color-high_1oxl7_17 {
+            color: var(--text-accent);
+        }
+
+        /*none*/
+        ._wave-badge-color-default_1oxl7_7 {
+            background-color: #0000001a;
+            color: var(--text-default);
+        }
+
+        svg._accentedIcon_d6d54e4 {
+            color: var(--wave-color-solid-accent-fill);
+            fill: var(--wave-color-solid-accent-fill) !important;
+        }
+
+        .smallHeader--rfQsR {
+            --img: url(https://blocks.astratic.com/img/general-img-landscape.png) !important;
+        }
+
+        /*UPDATES*/
+        ._descriptionText_f6de630 {
+            color: var(--text-default);
+        }
 
         /*HOVER*/
         /*album hover*/
@@ -289,12 +412,24 @@
         ._overlay_e0e48ef,
         ._overlay_7fd73e6,
         ._overlay_f627136,
-        .css-1ug9uri {
+        .css-1ug9uri,
+        ._albumImageOverlay_2eabc2b,
+        ._overlay_91ba65b {
             background: linear-gradient(#0000, #fff) !important;
         }
 
-        :is(._dataContainer_66f4f40 ._coverArtContainer_2eafdf9) ._creditsOverlay_b234d8c {
-            background: #fdfdfd80;
+        :is(._dataContainer_66f4f40 ._coverArtContainer_2eafdf9) ._creditsOverlay_b234d8c,
+        .css-u7yq00 {
+            background: #fdfdfd80 !important;
+        }
+
+        /*hamburger menu hover*/
+        .css-103674d:hover {
+            background: var(--wave-color-solid-base-brighter);
+        }
+
+        .css-bzw2lh:hover {
+            background: #ffffff96
         }
 
         /*artist hover*/
@@ -304,12 +439,14 @@
         }
 
         /*play button hover*/
-        .css-75d7zy {
+        .css-75d7zy,
+        ._playButtonContainer_5ab95ff > button {
             background-color: var(--background-default);
             transition: 100ms;
         }
 
-        .css-75d7zy:hover {
+        .css-75d7zy:hover,
+        ._playButtonContainer_5ab95ff > button:hover {
             background-color: var(--wave-color-solid-base-brighter);
         }
 
@@ -321,6 +458,27 @@
         .css-1voubjj:hover {
             background-color: var(--wave-color-solid-base-brighter);
             border: 5px var(--wave-color-opacity-contrast-fill-ultra-thin);
+        }
+
+        /*arrows*/
+        ._button_6808704:not([disabled]) {
+            color: var(--icon-solid) !important;
+            fill: var(--icon-solid) !important;
+        }
+
+        ._button_6808704[disabled] {
+            color: var(--button-light) !important
+        }
+
+        ._button_6808704:hover::after,
+        .css-1xlzpjd:hover {
+            background-color: var(--wave-color-solid-base-brightest) !important
+        }
+
+        /*homepage carosel buttons*/
+        ._marketText_1lyag_1._text20_1lyag_291:hover {
+            color: var(--text-default) !important;
+            fill: var(--text-default) !important;
         }
 
         /*queue popup*/
@@ -395,7 +553,7 @@
 
         /*thumbnail*/
         ._albumImageOverlay_2eabc2b {
-            background: #ffffffb0;
+            background: var(--background-default);
         }
 
         /*ARTIST PAGE*/
@@ -409,15 +567,13 @@
             background-color: var(--background-default);
         }
 
-        :is(._background_a548b6d ._image_7ba9b97):before {
+        :is(._background_a548b6d ._image_7ba9b97):before,
+        ._smallHeader_383424b._solidBackground_a62a269::before {
             background-color: var(--background-default);
             background-image: none;
             background-blend-mode: normal
         }
 
-        ._background_a548b6d {
-            background-image: linear-gradient(180deg, #fbfbfb66 0, #fff);
-        }
 
         :is(._background_a548b6d ._image_7ba9b97):after {
             background-image: var(--img);
@@ -467,6 +623,16 @@
             background-color: var(--wave-color-opacity-contrast-fill-regular);
         }
 
+        ._button_b988d60 {
+            background: var(--wave-color-solid-base-bright) !important;
+        }
+
+        ._link_6a45a19,
+        ._button_b988d60,
+        ._smallHeader_f2c3791._solidBackground_dfbd8db::before {
+            background: transparent !important;
+        }
+
         #player__play {
             color: var(--icon-solid);
         }
@@ -485,25 +651,37 @@
 
         /*left side buttons*/
         ._marketButton_124rt_1,
-        _label_124rt_1 {
+        _label_124rt_1,
+        ._marketButtovn_1l1bl_1._primary_1l1bl_6._medium_1l1bl_4._button_b988d60,
+        ._marketButton_1l1bl_1._secondary_1l1bl_7._medium_1l1bl_4._button_b988d60,
+        ._button_f1c7fcb {
             color: var(--icon-solid) !important;
             background: var(--wave-color-solid-base-brighter) !important;
         }
 
-        ._marketButton_124rt_1:hover {
+        ._marketButton_124rt_1:hover,
+        ._marketButton_1l1bl_1._primary_1l1bl_6._medium_1l1bl_4._button_b988d60:hover,
+        ._marketButton_1l1bl_1._secondary_1l1bl_7._medium_1l1bl_4._button_b988d60:hover {
             background: var(--wave-color-solid-base-brightest) !important;
         }
 
         /*right side buttons*/
         ._buttons_ff12873 > ._button_b988d60:hover ._icon_77f3f89,
+        ._buttons_ff12873 > ._button_b988d60:hover .wave-text-body-medium,
         ._buttons_ff12873 > ._button_b988d60:hover ._text_0e64cb5 {
             fill: var(--icon-button-hover) !important;
             color: var(--icon-button-hover) !important;
         }
 
         /*bio*/
-        ._dialog_148b5df {
+        ._dialog_148b5df,
+        ._text_zmuq1_1 {
             color: var(--text-default);
+        }
+
+        ._biography_3066ef2 .wave-text-body-demi p,
+        ._medium_zmuq1_4 {
+            color: var(--text-secondary) !important;
         }
 
         /*producer discography*/
@@ -528,7 +706,8 @@
         }
 
         /*ALBUM*/
-        .wave-text-title-bold {
+        .wave-text-title-bold,
+        ._marketText_1lyag_1._medium20_1lyag_192 {
             color: var(--text-default) !important;
         }
 
@@ -608,8 +787,13 @@
         ._button_94c5125,
         ._button_538cfb3 {
             color: var(--text-default) !important;
+            background-color: var(--button-light) !important;
         }
-
+        
+        ._primary_7ac4b44:disabled {
+            background-color: var(--wave-color-opacity-contrast-fill-thin) !important;
+            color: var(--text-secondary) !important;
+        }
 
         /*TRACKS PAGE*/
         .variantPrimary--pjymy,
@@ -678,8 +862,9 @@
             background-color: #e7e7e8;
         }
 
-        /*𝕏*/
-        ._iconSize_1974b07 {
+        /*social icons*/
+        ._iconSize_1974b07,
+        ._socialIcon_9f6cee9 {
             filter: brightness(0) !important;
         }
 
@@ -698,8 +883,19 @@
             background: var(--wave-color-solid-rainbow-red-darker);
         }
 
-        .errorIcon--VvndK {
+        .errorIcon--VvndK,
+        ._container_d9f78fd ._icon_77f3f89 {
             fill: var(--icon-solid) !important;
+        }
+
+        ._actionList_1cd4298:hover {
+            background: transparent !important;
+        }
+
+        ._actionItem_e0c1e65:hover,
+        ._contextMenu_8606b2d,
+        ._subMenu_706d970 {
+            background: var(--wave-color-solid-base-brighter) !important;
         }
 
         /*PROFILE*/
@@ -727,6 +923,48 @@
             background: transparent !important;
         }
 
+        ._profilePictureRow_1232a1c,
+        ._marketInputContainer_dxnz5_1 {
+            background: var(--background-default) !important;
+            border: 1px solid var(--wave-color-solid-base-brightest);
+        }
+
+        ._label_dxnz5_1,
+        ._control_dxnz5_1,
+        ._title_c5glt_18 {
+            color: var(--text-default) !important;
+        }
+        ._view_775222a ._fieldGroup_c7b9dd8 ._marketCard_6d5394c,
+        ._interactive_tc11s_4,
+        ._marketRowBase_tc11s_9 ._marketCard_6d5394c ._marketRow_hxhcj_3 ._medium_tc11s_6 ._interactive_tc11s_4 {
+            background-color: var(--button-light) !important;
+        }
+
+        ._title_tc11s_18 {
+            color: var(--text-default) !important;
+        }
+
+        ._interactiveTrigger_tc11s_10:hover {
+            background-color: var(--button-medium) !important;
+        }
+
+        #EDIT_ARTIST > section > div > div._saveRow_e832f5e > button:hover {
+            background-color: var(--button-light) !important;
+        }
+
+        ._view_775222a ._fieldGroup_c7b9dd8 ._marketCard_6d5394c:hover {
+            background-color: var(--wave-color-opacity-contrast-fill-regular) !important;
+        }
+
+        #main > div.for-cypress__react-router--loaded.mainContent > div > div._wrapper_88ee7cb._header_b1aed07 > div._headerContainer_d8ee9b4 > div._dataContainer_108ce86 > div > div._metaText_9f5231f > span {
+            color: #000000b5
+        }
+
+        /*MOBILE*/
+        ._logo_be7e755 svg {
+            fill: var(--icon-solid) !Important;
+        }
+
         /*SETTINGS*/
         ._container_b4f1e20._fillDark_a1e5896 > div,
         ._container_9a0abb9 {
@@ -745,16 +983,12 @@
             color: var(--icon-solid);
         }
 
-        ._button_94c5125 {
-            background: #000c2212 !important;
-        }
-
-        ._button_94c5125:hover {
-            background: #000c221c !important;
-        }
-
         ._tab_8819e3e {
             color: var(--text-secondary) !important;
+        }
+
+        body > pre {
+            color: var(--text-default) !important;
         }
 
         /*scrollbars*/
