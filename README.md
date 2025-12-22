@@ -1,4 +1,3 @@
-# Moved to codeberg https://codeberg.org/Interstellar_1/Tidal-Light
 <img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/fa8fefc0-8d9e-48ac-a33d-57f15695798e" />
 
 A simple light theme for Tidal. The theme will automatically toggle on and off with the system dark/light mode. 
