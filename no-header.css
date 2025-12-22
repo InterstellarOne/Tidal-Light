@@ -2,7 +2,7 @@
  * { *
  * "name": "Tidal Light",
  * "author": "Interstellar_1",
- * "description": "A light theme for Tidal. v2.0.0"
+ * "description": "A light theme for Tidal. v2.0.2"
  * "license": "MIT License"
  * }
  */
@@ -567,61 +567,66 @@
 
     /*ARTIST PAGE*/
     ._background_4a10ea2:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: var(--background-default);
+        content: "" !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        background-color: var(--background-default) !important;
     }
 
-    :is(._background_a548b6d ._image_7ba9b97):before,
-    ._smallHeader_383424b._solidBackground_a62a269::before {
-        background-color: var(--background-default);
-        background-image: none;
-        background-blend-mode: normal
+    :is(._background_a548b6d ._image_7ba9b97):not(._mainImage_433f1ff):before,
+    ._smallHeader_383424b._solidBackground_a62a269:not(._mainImage_433f1ff)::before {
+        background-color: var(--background-default) !important;
+        background-image: none !important;
+        background-blend-mode: normal !important;
     }
 
 
     :is(._background_a548b6d ._image_7ba9b97):after {
-        background-image: var(--img);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        content: "";
-        filter: blur(5px) brightness(30%);
-        inset: -20px 0;
-        mask-image: linear-gradient(0deg, #fff0 43%, #fff);
-        position: absolute;
+        background-image: var(--img) !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        content: "" !important;
+        filter: blur(5px) brightness(30%) !important;
+        inset: -20px 0 !important;
+        mask-image: linear-gradient(0deg, #fff0 43%, #fff) !important;
+        position: absolute !important;
     }
 
     @media (min-width: 576px) {
         ._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97):after {
-            background-image: linear-gradient(to top, white, rgb(255, 255, 255));
-            mask-image: linear-gradient(180deg, #fff0, #fff);
-            filter: brightness(100%);
-            height: 87%;
+            background-image: linear-gradient(to top, white, rgb(255, 255, 255)) !important;
+            mask-image: linear-gradient(180deg, #fff0, #fff) !important;
+            filter: brightness(100%) !important;
+            height: 87% !important;
         }
     }
 
     @media (max-width: 575px) {
         ._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97):after {
-            margin-top: 80px;
-            background-image: linear-gradient(to top, white, rgb(255, 255, 255));
-            mask-image: linear-gradient(180deg, #fff0, #fff);
-            filter: brightness(100%);
-            height: 87%;
+            margin-top: 80px !important;
+            background-image: linear-gradient(to top, white, rgb(255, 255, 255)) !important;
+            mask-image: linear-gradient(180deg, #fff0, #fff) !important;
+            filter: brightness(100%) !important;
+            height: 87% !important;
         }
     }
 
+    ._background_a548b6d ._backgroundBlur_7bd6dbd,
+    ._background_a548b6d {
+        backdrop-filter: none !important;
+        background-image: none !important;
+    }
 
     .buttonText--LMsAT {
         color: var(--text-light) !important;
     }
 
     .css-10jmp6g {
-        color: #2a2a2a;
+        color: #2a2a2a !important;
     }
 
     .button--_0I_t {
