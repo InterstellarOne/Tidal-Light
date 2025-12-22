@@ -226,7 +226,8 @@
     ._navigationItem_4e9deae:not(._selected_29027d1),
     ._arrowRight_f57b400,
     ._submenuItem_3d0e609,
-    ._icon_46e8aba {
+    ._icon_46e8aba,
+    ._icon_77f3f89 {
         color: var(--icon-solid) !important;
         fill: var(--icon-solid) !important;
     }
