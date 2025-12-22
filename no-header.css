@@ -8,6 +8,7 @@
  */
 
 @media (prefers-color-scheme: light) {
+
     :root {
         /*background color*/
         --background-default: #fff !important;
@@ -766,7 +767,8 @@
     }
 
     /*PLAYLIST*/
-    .refreshButton--bRrPi {
+    .refreshButton--bRrPi,
+    ._miniIcon_5938f33 {
         color: var(--icon-solid) !important;
     }
 
@@ -786,6 +788,12 @@
     ._subTitle_14ff73a,
     ._artistCreatorText_b699bdf {
         color: var(--text-secondary) !important;
+    }
+
+    ._smallHeader_cb3dc61._solidBackground_6bc8f1e:before,
+    ._smallHeader_cb3dc61 {
+        background-color: #ffffff !important;
+        filter: blur(10px), brightness(100%) !important;
     }
 
     /*edit playlist*/
