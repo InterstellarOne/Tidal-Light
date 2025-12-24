@@ -2,7 +2,7 @@
  * { *
  * "name": "Tidal Light",
  * "author": "Interstellar_1",
- * "description": "A light theme for Tidal. v2.0.2"
+ * "description": "A light theme for Tidal. v2.0.3"
  * "license": "MIT License"
  * }
  */
@@ -305,6 +305,12 @@
         box-shadow: 0 4px 20px #0000004d;
     }
 
+    ._searchField_4b7fbda {
+        background: var(--text-default);
+        background-clip: text;
+        -webkit-text-fill-color: var(--text-default);
+    }
+
     ._searchField_4b7fbda,
     ._active_5dd5be1,
     ._searchField_b2eb7f7,
@@ -315,7 +321,8 @@
     ._icon_3618b7a,
     div._searchField_b2eb7f7>svg,
     :is(div._searchField_b2eb7f7 input),
-    :is(div._searchField_b2eb7f7 input):hover {
+    :is(div._searchField_b2eb7f7 input):hover,
+    ._icon_3618b7a._icon_77f3f89>use {
         fill: var(--icon-solid) !important;
         color: var(--icon-solid) !important;
     }
