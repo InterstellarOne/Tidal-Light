@@ -2,7 +2,7 @@
  * { *
  * "name": "Tidal Light",
  * "author": "Interstellar_1",
- * "description": "A light theme for Tidal. v2.0.3"
+ * "description": "A light theme for Tidal. v2.0.4"
  * "license": "MIT License"
  * }
  */
@@ -758,7 +758,8 @@
         color: #252525;
     }
 
-    ._buttonStates_91bed47[aria-checked="true"] ._buttonTextOffset_a700b81 {
+    ._buttonStates_91bed47[aria-checked="true"],
+    [data-test="favorite-button"] ._buttonTextOffset_a700b81 {
         color: var(--text-accent) !important;
     }
 
@@ -798,9 +799,13 @@
     }
 
     ._smallHeader_cb3dc61._solidBackground_6bc8f1e:before,
-    ._smallHeader_cb3dc61 {
+    ._smallHeader_1c02955._solidBackground_8bd3e3c:before {
         background-color: #ffffff !important;
-        filter: blur(10px), brightness(100%) !important;
+        filter: blur(70px) !important;
+    }
+
+    div._smallButtons_bdfda3f button._buttonStates_91bed47 div.tidal-ui__v-stack.css-j3v5ag svg._icon_77f3f89._accentedIcon_d6d54e4 {
+        fill: var(--icon-solid) !important;
     }
 
     /*edit playlist*/
@@ -1072,5 +1077,8 @@
         opacity: 1;
         transform: scale(1);
     }
+
+    /*miniplayer*/
+        #sidebar-content>button
 
 }
