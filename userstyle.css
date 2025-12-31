@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://codeberg.org/Interstellar_1/Tidal-Light
-@version        2.0.0
+@version        2.0.4
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://codeberg.org/Interstellar_1/Tidal-Light/
@@ -239,7 +239,7 @@
         ._contextMenu_8606b2d {
             background: var(--wave-color-solid-base-bright) !important;
         }
-        
+
         ._newSidebar_f871cc1,
         ._sectionHeader_5f11aab {
             background: var(--wave-color-solid-base-brighter) !important;
@@ -288,7 +288,7 @@
 
         /*HEADER*/
         ._header_3fe665f._solidHeader_2b3f298 {
-            background: var(--wave-color-solid-base-brighter) !important;
+            background: var(--wave-color-solid-base-brighter);
         }
 
         /*search*/
@@ -355,7 +355,7 @@
         ._button_98ab3d0:hover svg {
             fill: #69bab3 !important;
         }
-        
+
         /*search page*/
         .wave-text-body-medium[data-wave-color="textBlack"] {
             color: var(--text-default)
@@ -587,7 +587,7 @@
             position: absolute;
         }
 
-        @media (min-width: 576px) {
+        @media (min-width: 577px) {
             ._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97):after {
                 background-image: linear-gradient(to top, white, rgb(255, 255, 255));
                 mask-image: linear-gradient(180deg, #fff0, #fff);
@@ -596,7 +596,7 @@
             }
         }
 
-        @media (max-width: 575px) {
+        @media (max-width: 576px) {
             ._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97):after {
                 margin-top: 80px;
                 background-image: linear-gradient(to top, white, rgb(255, 255, 255));
@@ -647,6 +647,10 @@
 
         span._artistText_a1c7611._artistName_858426b._link_2adc42a > a {
             color: var(--text-secondary) !important;
+        }
+
+        div._smallButtons_bdfda3f button._buttonStates_91bed47 div.tidal-ui__v-stack.css-j3v5ag svg._icon_77f3f89._accentedIcon_d6d54e4 {
+            fill: var(--icon-solid) !important;
         }
 
         /*left side buttons*/
@@ -737,7 +741,8 @@
             color: #252525;
         }
 
-        ._buttonStates_91bed47[aria-checked="true"] ._buttonTextOffset_a700b81 {
+        ._buttonStates_91bed47[aria-checked="true"],
+        [data-test="favorite-button"] ._buttonTextOffset_a700b81 {
             color: var(--text-accent) !important;
         }
 
@@ -774,6 +779,14 @@
             color: var(--text-secondary) !important;
         }
 
+
+        ._smallHeader_cb3dc61._solidBackground_6bc8f1e:before,
+        ._smallHeader_1c02955._solidBackground_8bd3e3c:before {
+            background-color: #ffffff !important;
+            filter: blur(70px) !important;
+        }
+
+
         /*edit playlist*/
         textarea._textArea_2c6dc77 {
             background-color: var(--wave-color-solid-base-fill) !important;
@@ -789,7 +802,7 @@
             color: var(--text-default) !important;
             background-color: var(--button-light) !important;
         }
-        
+
         ._primary_7ac4b44:disabled {
             background-color: var(--wave-color-opacity-contrast-fill-thin) !important;
             color: var(--text-secondary) !important;
@@ -963,6 +976,16 @@
         /*MOBILE*/
         ._logo_be7e755 svg {
             fill: var(--icon-solid) !Important;
+        }
+
+        @media (max-width: 576px) {
+            ._player_1d16b04._notFullscreen_a82939e {
+                z-index: 0 !important;
+            }
+
+            ._header_3fe665f._solidHeader_2b3f298 {
+                background: var(--background-default) !important;
+            }
         }
 
         /*SETTINGS*/
