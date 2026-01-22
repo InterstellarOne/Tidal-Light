@@ -116,6 +116,11 @@
         background: #cbcbcb;
     }
 
+    ._header_3fe665f {
+        background: var(--wave-color-solid-base-brighter) !important;
+        background-color: var(--wave-color-solid-base-brighter) !important;
+    }
+
     /*heart button*/
     ._button_c372e89:not(:hover) svg,
     ._icon_77f3f89 svg,
@@ -220,6 +225,9 @@
     ._selected_29027d1>._marketText_1lyag_1 {
         color: var(--wave-color-solid-accent-fill) !important;
         fill: var(--wave-color-solid-accent-fill) !important;
+    }
+    ._sectionHeader_ca54638 {
+        background: var(--wave-color-solid-base-brighter) !important;
     }
 
     ._logoIcon_895f95f,
