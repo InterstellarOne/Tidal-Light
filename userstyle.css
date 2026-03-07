@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://codeberg.org/Interstellar_1/Tidal-Light
-@version        2.0.4
+@version        2.1.0
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://codeberg.org/Interstellar_1/Tidal-Light/
@@ -87,6 +87,10 @@
         /*hide right shadow*/
         #playQueueSidebar {
             box-shadow: none !important;
+        }
+
+        mainHeader {
+            margin-left: 1px !important;
         }
 
         /*BUTTONS*/
@@ -227,23 +231,9 @@
             color: var(--wave-color-solid-accent-fill) !important;
             fill: var(--wave-color-solid-accent-fill) !important;
         }
-        ._sectionHeader_ca54638,
-        ._sectionHeader_f4932eb {
+        ._sectionHeader_ca54638 {
+            margin-top: 20px;
             background: var(--wave-color-solid-base-brighter) !important;
-        }
-
-        ._container_e8e75ca {
-            background: var(--background-default) !important;
-        }
-
-        ._container_e8e75ca ._close_43f593d,
-        ._container_e8e75ca ._marketText_1lyag_1 {
-            color: var(--text-default) !important;
-        }
-
-        ._container_e8e75ca ._ctaButton_69060b0 {
-            background: var(--button-light) !important;
-            color: var(--text-default) !important;
         }
 
         ._logoIcon_895f95f,
@@ -251,7 +241,9 @@
         ._navigationItem_4e9deae:not(._selected_29027d1),
         ._arrowRight_f57b400,
         ._submenuItem_3d0e609,
-        ._icon_46e8aba {
+        ._icon_46e8aba,
+        ._icon_77f3f89,
+        ._small_1664p_11 {
             color: var(--icon-solid) !important;
             fill: var(--icon-solid) !important;
         }
@@ -264,7 +256,8 @@
         }
 
         ._newSidebar_f871cc1,
-        ._sectionHeader_5f11aab {
+        ._sectionHeader_5f11aab,
+        ._sectionHeader_f4932eb {
             background: var(--wave-color-solid-base-brighter) !important;
         }
 
@@ -272,7 +265,9 @@
         ._selected_29027d1,
         ._thumbnail_4ac432b,
         ._actionList_1cd4298,
-        ._selected_81b1546 {
+        ._selected_81b1546,
+        ._thumbnail_f82abfa,
+        ._contentItem_684cbbe {
             background: transparent !important;
             background-color: transparent !important;
         }
@@ -284,8 +279,13 @@
         ._navigationItem_4e9deae:hover,
         ._submenuItem_3d0e609:hover,
         ._playlistNavigationItem_a7cfc49:hover,
-        ._actionList_1cd4298:hover {
+        ._actionList_1cd4298:hover,
+        ._contentItem_684cbbe:hover {
             background-color: var(--wave-color-solid-base-brightest) !important;
+        }
+
+        ._contentItem_684cbbe._selected_ae83ba5 ._textContent_462c76e ._marketText_1lyag_1._medium20_1lyag_192._title_8b245d1 {
+            color: var(--text-accent) !important;
         }
 
         .wave-text-caption-demi,
@@ -298,7 +298,11 @@
         }
 
         ._sectionHeader_fec3951 {
-            color: var(--text-secondary) !important
+            color: var(--text-secondary) !important;
+        }
+
+        ._badgeCounter_bd84d2f {
+            color: var(--text-light) !important;
         }
 
         /*expand sidebar*/
@@ -307,6 +311,11 @@
             background: var(--wave-color-solid-base-brighter) !important;
             width: 30px;
             transition: background .2s var(--market-core-animation-enter-transition-easing);
+        }
+
+
+        ._logoButton_50502fc:not(:hover) > svg._icon_77f3f89:nth-child(2) > use:nth-child(1) {
+            fill: transparent;
         }
 
         /*HEADER*/
@@ -334,7 +343,8 @@
         ._collapseButton_1c3c5e5[aria-expanded="true"],
         ._searchField_4b7fbda::placeholder,
         ._searchField_4b7fbda::-moz-placeholder,
-        ._icon_3618b7a {
+        ._icon_3618b7a,
+        ._searchIcon_4f33772 {
             fill: var(--icon-solid) !important;
             color: var(--icon-solid) !important;
         }
@@ -442,7 +452,10 @@
         }
 
         :is(._dataContainer_66f4f40 ._coverArtContainer_2eafdf9) ._creditsOverlay_b234d8c,
-        .css-u7yq00 {
+        .css-u7yq00,
+        ._overlay_aab3645,
+        ._playButtonContainer_ef70457,
+        ._imageOverlay_57f17c9::before {
             background: #fdfdfd80 !important;
         }
 
@@ -451,10 +464,14 @@
             background: var(--wave-color-solid-base-brighter);
         }
 
-        .css-bzw2lh:hover {
-            background: #ffffff96
+        ._actionText_d77b98b:hover {
+            background: var(--wave-color-solid-base-brightest);
+            border-radius: 10px;
         }
 
+        /*.css-bzw2lh:hover {
+            background: #ffffff96
+        }*/
         /*artist hover*/
         .css-179fhoi,
         .css-fvlky0 {
@@ -508,6 +525,11 @@
         .bottomGradient--BngZe,
         ._bottomGradient_104d99b {
             background-image: none;
+        }
+
+        ._headerIcon_aa2bc4e {
+            color: var(--text-default) !important;
+            fill: var(--text-default) !important;
         }
 
         #playQueueSidebar {
@@ -646,13 +668,13 @@
             background-color: var(--wave-color-opacity-contrast-fill-regular);
         }
 
-        ._button_b988d60 {
+        ._button_b988d60,
+        [class^="_smallHeader_"]:before {
             background: var(--wave-color-solid-base-bright) !important;
         }
 
         ._link_6a45a19,
-        ._button_b988d60,
-        ._smallHeader_f2c3791._solidBackground_dfbd8db::before {
+        ._button_b988d60 {
             background: transparent !important;
         }
 
@@ -681,7 +703,8 @@
         _label_124rt_1,
         ._marketButtovn_1l1bl_1._primary_1l1bl_6._medium_1l1bl_4._button_b988d60,
         ._marketButton_1l1bl_1._secondary_1l1bl_7._medium_1l1bl_4._button_b988d60,
-        ._button_f1c7fcb {
+        ._button_f1c7fcb,
+        button._marketButton_1l1bl_1 {
             color: var(--icon-solid) !important;
             background: var(--wave-color-solid-base-brighter) !important;
         }
@@ -692,18 +715,17 @@
             background: var(--wave-color-solid-base-brightest) !important;
         }
 
-        ._marketButton_1l1bl_1._primary_1l1bl_6._small_1l1bl_3,
-        ._marketButton_1l1bl_1._secondary_1l1bl_7._small_1l1bl_3 {
-            background: var(--button-light) !important;
-            color: var(--text-default) !important;
-        }
-
         /*right side buttons*/
         ._buttons_ff12873 > ._button_b988d60:hover ._icon_77f3f89,
         ._buttons_ff12873 > ._button_b988d60:hover .wave-text-body-medium,
         ._buttons_ff12873 > ._button_b988d60:hover ._text_0e64cb5 {
             fill: var(--icon-button-hover) !important;
             color: var(--icon-button-hover) !important;
+        }
+
+        div._buttons_ff12873 > div > button,
+        div._buttons_ff12873 > button {
+            background: transparent !important;
         }
 
         /*bio*/
@@ -749,6 +771,11 @@
             color: var(--text-secondary) !important;
         }
 
+        .css-75d7zy,
+        ._playButtonContainer_5ab95ff > button {
+            border-radius: 100%;
+        }
+
 
         .albumImage--i2CqD {
             box-shadow: 0 20px 50px 5px #b6b6b638, 0 20px 40px 0 #00000024;
@@ -758,8 +785,23 @@
             color: var(--text-default);
         }
 
-        ._button_f1c7fcb {
+        ._favoriteButtonContainer_9320e1a > button {
+            background: transparent !important;
+        }
+
+        ._favoriteButtonContainer_9320e1a:hover > button {
+            background: var(--background-default);
+            filter: drop-shadow(0 2.2px 5.5px rgb(0 0 0 / .1));
+        }
+
+        ._button_f1c7fcb,
+        ._favoriteButtonContainer_9320e1a > button:hover {
             background: var(--wave-color-solid-base-brighter) !important;
+        }
+
+        .css-bzw2lh:hover {
+            background: var(--wave-color-solid-base-brighter) !important;
+            filter: drop-shadow(0 2.2px 5.5px rgb(0 0 0 / .1));
         }
 
         ._button_f1c7fcb:hover {
@@ -809,8 +851,7 @@
         }
 
 
-        ._smallHeader_cb3dc61._solidBackground_6bc8f1e:before,
-        ._smallHeader_1c02955._solidBackground_8bd3e3c:before {
+        [class^="_smallHeader_"][class*="_showHeader_"]:before {
             background-color: #ffffff !important;
             filter: blur(70px) !important;
         }
@@ -843,11 +884,6 @@
             background-color: var(--button-light);
         }
 
-        ._button_3357ce6._link_6a45a19 {
-            background: var(--button-light) !important;
-            color: var(--text-default) !important;
-        }
-
         .wave-text-body-demi {
             color: var(--text-default);
         }
@@ -878,6 +914,18 @@
         /*letterboxes*/
         video-view {
             background: var(--wave-color-opacity-base-bright-thick) !important;
+        }
+
+        /*UPLOAD*/
+        ._card_43a5bcb {
+            background: transparent;
+        }
+
+        ._cardButton_c739c60,
+        ._cardButton_c739c60,
+        div._card_43a5bcb > div > a > button > span,
+        #general__add > path {
+            color: var(--icon-solid);
         }
 
         /*DIALOUGES*/
@@ -1023,14 +1071,9 @@
         }
 
         /*SETTINGS*/
-        ._container_b4f1e20._fillDark_a1e5896,
         ._container_b4f1e20._fillDark_a1e5896 > div,
         ._container_9a0abb9 {
             background: #f1f1f1 !important;
-        }
-
-        ._container_b4f1e20._fillDark_a1e5896 ._socialIcon_9f6cee9 {
-            fill: var(--icon-solid) !important;
         }
 
         ._select_ef84104 {
@@ -1051,6 +1094,10 @@
 
         body > pre {
             color: var(--text-default) !important;
+        }
+
+        ._label_12bd8cc._checked_3422d33 {
+            background: var(--button-medium);
         }
 
         /*scrollbars*/
