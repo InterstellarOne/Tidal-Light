@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://codeberg.org/Interstellar_1/Tidal-Light
-@version        2.1.0
+@version        2.1.1
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://codeberg.org/Interstellar_1/Tidal-Light/
@@ -94,9 +94,14 @@
         }
 
         /*BUTTONS*/
-        ._activeTab_f47dafa {
+        ._activeTab_f47dafa,
+        .css-lzppjz{
             background: var(--wave-color-opacity-contrast-fill-thin);
             color: var(--wave-color-solid-contrast-fill) !important;
+        }
+        
+        .css-lzppjz:hover {
+            background: var(--wave-color-opacity-contrast-fill-regular);
         }
 
         ._activeTab_f47dafa span {
@@ -317,6 +322,7 @@
         ._logoButton_50502fc:not(:hover) > svg._icon_77f3f89:nth-child(2) > use:nth-child(1) {
             fill: transparent;
         }
+
 
         /*HEADER*/
         ._header_3fe665f._solidHeader_2b3f298 {
@@ -813,9 +819,12 @@
         }
 
         ._buttonStates_91bed47[aria-checked="true"],
-        [data-test="favorite-button"] ._buttonTextOffset_a700b81 {
+        [data-test="favorite-button"] ._buttonTextOffset_a700b81,
+        ._whiteIcon_dc7a766 {
             color: var(--text-accent) !important;
+            fill: var(--wave-color-solid-accent-fill) !important;
         }
+
 
         /*albums page*/
         ._icon_028d232 {
