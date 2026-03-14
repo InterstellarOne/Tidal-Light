@@ -1,9 +1,9 @@
 /*
- * { *
- * "name": "Tidal Light",
- * "author": "Interstellar_1",
- * "description": "A light theme for Tidal. v2.1.0a"
- * "license": "MIT License"
+ { * *
+ "name": "Tidal Light",
+ "author": "Interstellar_1, aya",
+ "description": "A light theme for Tidal. Radiant Lyrics support thanks to aya. v2.1.1"
+ "license": "MIT License"
  * }
  */
 
@@ -58,6 +58,7 @@
             --wave-color-text-secondary: #434343 !important;
             --wave-color-solid-contrast-darker: #383838 !important;
             --wave-color-opacity-contrast-fill-ultra-thick: #383838 !important;
+            --cl-glow1: var(--text-default) !important;
 
             /*icons*/
             --icon-solid: #000 !important;
@@ -92,9 +93,14 @@
         }
 
         /*BUTTONS*/
-        ._activeTab_f47dafa {
+        ._activeTab_f47dafa,
+        .css-lzppjz{
             background: var(--wave-color-opacity-contrast-fill-thin);
             color: var(--wave-color-solid-contrast-fill) !important;
+        }
+        
+        .css-lzppjz:hover {
+            background: var(--wave-color-opacity-contrast-fill-regular);
         }
 
         ._activeTab_f47dafa span {
@@ -255,8 +261,25 @@
 
         ._newSidebar_f871cc1,
         ._sectionHeader_5f11aab,
-        ._sectionHeader_f4932eb {
+        ._sectionHeader_f4932eb,
+        ._sidebarWrapper_2f256ce {
             background: var(--wave-color-solid-base-brighter) !important;
+        }
+
+        ._sectionHeader_ca54638 {
+            z-index: 1 !important;
+        }
+
+        ._sectionHeader_ca54638::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--wave-color-solid-base-brighter) !important;
+            z-index: -1;
+            pointer-events: none;
         }
 
         ._active_3451dba:is(a._sidebarItem_730d27e, button._sidebarItem_730d27e),
@@ -386,6 +409,10 @@
 
         ._button_98ab3d0:hover svg {
             fill: #69bab3 !important;
+        }
+
+        ._searchField_4b7fbda {
+            color: var(--text-default) !important;
         }
 
         /*search page*/
@@ -590,6 +617,11 @@
 
         #nowPlaying {
             background-image: none !important;
+        } 
+
+        /*sync lyrics*/
+        ._button_84b8ffe {
+            background: var(--wave-color-solid-base-brighter) !important;
         }
 
         /*thumbnail*/
@@ -816,8 +848,10 @@
         }
 
         ._buttonStates_91bed47[aria-checked="true"],
-        [data-test="favorite-button"] ._buttonTextOffset_a700b81 {
+        [data-test="favorite-button"] ._buttonTextOffset_a700b81,
+        ._whiteIcon_dc7a766 {
             color: var(--text-accent) !important;
+            fill: var(--wave-color-solid-accent-fill) !important;
         }
 
         /*albums page*/
@@ -1119,7 +1153,6 @@
             background-color: #d4d4d4 !important;
             border: none !important;
         }
-    }
 
     /*WINDOWS TITLEBAR*/
     [class^="_bar_"] {
@@ -1155,4 +1188,146 @@
     to {
         opacity: 1;
         transform: scale(1);
+    }
+
+       /*radiant*/
+
+       .rl-wbw-line.rl-wbw-line-active .rl-wbw-bg-container{
+    font-size: .6em!important;
+}
+.rl-dual-side .rl-wbw-line.rl-singer-right{
+    padding-left: 0em;
+}
+.rl-dual-side .rl-wbw-line.rl-singer-left{
+    padding-right: 0em;
+}
+.rl-dual-side .rl-wbw-line.rl-singer-right.rl-wbw-line-active {
+    padding-right: .2em!important;
+}
+[class="rl-wbw-active"]{
+       padding-bottom: 233em!important;
+}
+
+.sticky-lyrics-trigger{
+    color: var(--text-default);
+}
+[class="global-spinning-gradient-overlay"]{
+    background:#ffffffdd!important;
+}
+[class="hide-ui-button"]{
+      background-color: transparent!important;
+    background-image: linear-gradient(var(--rotate), #a0a5ff69, #a992ff70);
+    color: #170024;
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 2.5em #ffc8fe0a;
+}
+[class="hide-ui-button"]:hover{
+        background-image: linear-gradient(120deg, #050125c6, #08021cca)!important;
+color: #ffffff!important;
+  box-shadow: 0px 0px 2.5em #ffc8fe43!important;
+}
+
+.sticky-lyrics-trigger {
+    color: var(--icon-solid) !important;
+}
+
+.sticky-lyrics-trigger:hover {
+    color: var(--icon-button-hover);
+}
+
+[class="now-playing-background-image"]{
+    display: none!important;
+}
+
+._nowPlayingContainer_378ac1a{
+    background-color: #0000!important;
+        background-image: none!important;
+}
+
+
+[class*="_stickyHeader"]{
+    backdrop-filter: none!important;
+}
+
+.rl-wbw-word{
+    color: rgba(16, 16, 16, 0.432)!important;
+}
+
+.rl-wbw-word.rl-syl-finished{
+    color: #020202!important;
+    text-shadow: 0px 0px 4px #c7c7c7a0!important;
+  transition: 2500ms!important;
+   transition-delay: -1200ms!important;
+}
+.rl-wbw-word.rl-syl-active{
+     color: #88888867!important;
+    text-shadow: 0px 0px 3px #35353583!important;
+    transition: 100ms!important;
+        background-image: linear-gradient(90deg, transparent 0, var(--cl-glow1, #000000) 60%, transparent 100%),
+         linear-gradient(90deg, var(--cl-glow1, #000000) 100%, transparent 100%),
+         linear-gradient(90deg, #00000081, #0000004b)!important;
+
+}
+
+
+[class*="_lyricsText"]>div>span[data-current=true]{
+    color: #0a0a0ae6!important;
+        text-shadow: 0 0 var(--rl-glow-inner, 2px) var(--cl-glow1, #ffffffc4),
+         0 0 var(--rl-glow-outer, 20px) var(--cl-glow2, #ffffffb1) !important;
+
+}
+[class="now-playing-black-bg"]{
+    background-color: rgb(243, 243, 243)!important;
+}
+[class="now-playing-gradient-overlay"]{
+    display: none;
+}
+
+
+
+
+#sidebar > div._container_4454af7 > div > div:nth-child(1) > div._collectionSection_d0e664b > div{
+    display: none!important;
+}
+._activeButton_326e9ad{
+    background-color: rgba(55, 55, 55, 0.233);
+    padding-top: .7em!important;
+     padding-bottom: .6em!important;
+          padding-left: .4em!important;
+          padding-right: .4em!important;
+}
+[class*="_lyricsText"]>div>span:hover
+,.rl-wbw-line:not(.rl-wbw-line-active)>.rl-wbw-word.rl-wbw-word-hover, .rl-wbw-line:not(.rl-wbw-line-active)>.rl-wbw-word:hover {
+    color: #0a011d9b !important;
+        text-shadow: 0 0 var(--rl-glow-inner, 2px) #01010114, 0 0 var(--rl-glow-outer, 20px) #0c0c0c1b !important;
+}
+.rl-wbw-word.rl-wbw-active{
+        color: #000000e6!important;
+      text-shadow: 0 0 var(--rl-glow-inner, 2px) var(--cl-glow1, #5a5a5a), 0 0 var(--rl-glow-outer, 20px) var(--cl-glow2, #7c7c7c88) !important;
+}
+
+/*nextup*/
+.upnext-container{
+  background-color: #00000015!important;
+    border-style: none!important;
+}
+.upnext-container:hover{
+  background-color: #000000!important;
+}
+.upnext-artist,.upnext-label{
+    color: rgb(0, 0, 0)!important;
+}
+.upnext-title{
+    color: rgb(0, 0, 0)!important;
+}
+
+/*songdownload*/
+.download-button::before{
+    background-color: rgba(208, 239, 255, 0.522)!important;
+}
+
+/*horizontalvolume*/
+.horizontal-volume-slider,#footerPlayer > div._moreContainer_f6162c8 > input._toggleButton_809eee8{
+ filter: invert();
+}
     }
