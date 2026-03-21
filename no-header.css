@@ -1,8 +1,8 @@
 /*
  { * *
  "name": "Tidal Light",
- "author": "Interstellar_1, aya",
- "description": "A light theme for Tidal. Radiant Lyrics support thanks to aya. v2.1.1"
+ "author": "Interstellar_1",
+ "description": "A light theme for Tidal. Radiant Lyrics support thanks to aya. v2.1.2"
  "license": "MIT License"
  * }
  */
@@ -1238,12 +1238,6 @@ color: #ffffff!important;
 [class="now-playing-background-image"]{
     display: none!important;
 }
-
-._nowPlayingContainer_378ac1a{
-    background-color: #0000!important;
-        background-image: none!important;
-}
-
 
 [class*="_stickyHeader"]{
     backdrop-filter: none!important;
