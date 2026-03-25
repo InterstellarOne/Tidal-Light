@@ -2,11 +2,10 @@
  { * *
  "name": "Tidal Light",
  "author": "Interstellar_1",
- "description": "A light theme for Tidal. Radiant Lyrics support thanks to aya. v2.1.2"
+ "description": "A light theme for Tidal. Radiant Lyrics support thanks to aya. v2.2.0"
  "license": "MIT License"
  * }
  */
-
     @media (prefers-color-scheme: light) {
         :root {
             /*background color*/
@@ -17,6 +16,7 @@
             --wave-color-solid-base-bright: #f1f1f1 !important;
             --wave-color-opacity-base-bright-thick: #000 !important;
             --wave-color-solid-base-fill: var(--background-default) !important;
+            --transparent-panel-bg: #ffffff46 !important;
 
             /*hover*/
             --wave-color-solid-base-brightest: #e0e2e2 !important;
@@ -565,6 +565,27 @@
         }
 
         /*PLAYER PANE*/
+
+        ._notFullscreen_1b39238,
+        ._avatars_fec8398 {
+            background: var(--transparent-panel-bg) !important;
+            border: 2px #00000007 solid;
+        }
+
+        .has-new-player ._container_b3e8f28 {
+            background: linear-gradient(0deg, #ececec44, #dfdfdf65) !important;
+        }
+
+        [aria-checked="true"]:is(._shuffleButton_7f510f8, ._repeatButton_c2ab8d6),
+        ._activeButton_3bf50e6 {
+            background-color: var(--transparent-play-hover);
+        }
+
+        ._scrubberTimeText_f81f77f,
+        ._scrubberTime_7833b57 {
+            color: var(--text-default) !important;
+        }
+
         .range--JNSfg {
             background-color: #0000003d;
         }
@@ -574,7 +595,35 @@
         }
 
         ._range_ce0e571 {
-            background-color: var(--wave-color-opacity-contrast-fill-regular);
+            background-color: var(--transparent-panel-bg);
+        }
+
+        ._badge_6dd31c7 {
+        background-image: radial-gradient(
+            ellipse 62.77006610920382% 172.5546653998795%
+            at 59.895336286607595% 107.38421926638554%,
+            rgb(230, 230, 230) 0%,
+            rgb(255, 255, 255) 50%,
+            rgb(238, 238, 238) 100%
+        );
+
+            background-origin: border-box;
+            border-color: #ffffff05;
+        border-style: solid;
+        border-width: 1px;
+        box-shadow:
+            inset 0px -2px 4px #0000001f,
+            inset 0px 4px 4px #cac8c82f,
+            0px 4px 12.3px #00000029;
+        box-sizing: border-box;
+        filter: blur(0.1px);
+        height: 40px;
+        width: 121px;   
+
+        }
+
+        ._gradientMax_14a308b {
+            background: radial-gradient(ellipse at right bottom, rgb(from var(--market-core-yellow-text-color) r g b / .2) 10%, transparent 40%);
         }
 
         /*album hover*/
@@ -613,6 +662,17 @@
 
         ._tabItem_8436610:hover {
             color: var(--wave-color-solid-contrast-fill) !important;
+        }
+
+        #nowPlaying > header > div._buttons_51e2ab3 > div._contentButtons_e48c3b0 > button:nth-child(1),
+        #nowPlaying > header > div._buttons_51e2ab3 > div._contentButtons_e48c3b0 > button:nth-child(2) {
+            background: var(--transparent-panel-bg) !important;
+            border: 2px #00000007 solid;
+        }
+
+        #nowPlaying > header > div._buttons_51e2ab3 > div._actionButtons_afb56ea > button._marketButton_1l1bl_1._tertiary_1l1bl_8._small_1l1bl_3._iconOnly_1l1bl_1._iconButton_9a294f9._fullscreenButton_bdc27b5,
+        #nowPlaying > header > div._buttons_51e2ab3 > div._actionButtons_afb56ea > button:nth-child(2) {
+            background: transparent !important;
         }
 
         #nowPlaying {
