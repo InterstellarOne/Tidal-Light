@@ -2,7 +2,7 @@
  { * *
  "name": "Tidal Light",
  "author": "Interstellar_1",
- "description": "A light theme for Tidal. Radiant Lyrics support thanks to aya. v2.2.0"
+ "description": "A light theme for Tidal. Radiant Lyrics support thanks to aya. v2.2.1"
  "license": "MIT License"
  * }
  */
@@ -32,6 +32,7 @@
 
             /*border*/
             --wave-color-opacity-contrast-fill-ultra-thin: #00000017 !important;
+            --transparent-border: 2px #00000007 solid !important;
 
             /*button color*/
             --wave-color-opacity-contrast-fill-thin: #0000001c !important;
@@ -569,7 +570,7 @@
         ._notFullscreen_1b39238,
         ._avatars_fec8398 {
             background: var(--transparent-panel-bg) !important;
-            border: 2px #00000007 solid;
+            border: var(--transparent-border);
         }
 
         .has-new-player ._container_b3e8f28 {
@@ -578,7 +579,8 @@
 
         [aria-checked="true"]:is(._shuffleButton_7f510f8, ._repeatButton_c2ab8d6),
         ._activeButton_3bf50e6 {
-            background-color: var(--transparent-play-hover);
+            background-color: var(--transparent-panel-bg);
+            border: var(--transparent-border);
         }
 
         ._scrubberTimeText_f81f77f,
@@ -664,20 +666,34 @@
             color: var(--wave-color-solid-contrast-fill) !important;
         }
 
-        #nowPlaying > header > div._buttons_51e2ab3 > div._contentButtons_e48c3b0 > button:nth-child(1),
-        #nowPlaying > header > div._buttons_51e2ab3 > div._contentButtons_e48c3b0 > button:nth-child(2) {
+        #nowPlaying > header > div._buttons_51e2ab3 > div._contentButtons_e48c3b0 > button:not([aria-pressed="true"]) {
             background: var(--transparent-panel-bg) !important;
-            border: 2px #00000007 solid;
+            border: var(--transparent-border);
         }
 
         #nowPlaying > header > div._buttons_51e2ab3 > div._actionButtons_afb56ea > button._marketButton_1l1bl_1._tertiary_1l1bl_8._small_1l1bl_3._iconOnly_1l1bl_1._iconButton_9a294f9._fullscreenButton_bdc27b5,
         #nowPlaying > header > div._buttons_51e2ab3 > div._actionButtons_afb56ea > button:nth-child(2) {
-            background: transparent !important;
+            width: 44px !important;
+            height: 44px !important;
+            background: var(--transparent-panel-bg) !important;
+            border: var(--transparent-border);
+        }
+
+        ._background_babe4a6 {
+            filter: brightness(200%) saturate(80%);
         }
 
         #nowPlaying {
             background-image: none !important;
         } 
+
+        ._card_52ef6f0 {
+            background: var(--wave-color-solid-base-bright);
+        }
+
+        ._menuButton_ce0fbdd {
+            color: var(--icon-solid) !important;
+        }
 
         /*sync lyrics*/
         ._button_84b8ffe {
