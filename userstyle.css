@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://codeberg.org/Interstellar_1/Tidal-Light
-@version        2.2.0
+@version        2.2.1
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://codeberg.org/Interstellar_1/Tidal-Light/
@@ -400,7 +400,8 @@
         }
 
         /*search page*/
-        .wave-text-body-medium[data-wave-color="textBlack"] {
+        .wave-text-body-medium[data-wave-color="textBlack"],
+        div._searchField_b2eb7f7 input {
             color: var(--text-default)
         }
 
