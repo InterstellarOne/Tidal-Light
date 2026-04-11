@@ -402,7 +402,8 @@
         /*search page*/
         .wave-text-body-medium[data-wave-color="textBlack"],
         div._searchField_b2eb7f7 input,
-        div._searchField_b2eb7f7 input:hover {
+        div._searchField_b2eb7f7 input:hover,
+        #\:r8\: {
             color: var(--text-default)
         }
 
