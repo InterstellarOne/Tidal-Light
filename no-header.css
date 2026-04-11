@@ -2,7 +2,7 @@
  { * *
  "name": "Tidal Light",
  "author": "Interstellar_1",
- "description": "A light theme for Tidal. Radiant Lyrics support thanks to aya. v2.2.2"
+ "description": "A light theme for Tidal. Radiant Lyrics support thanks to aya. v2.2.3"
  "license": "MIT License"
  * }
  */
@@ -351,7 +351,7 @@
         div.searchField--fgDKc:focus,
         ._container_f1be359 {
             background-color: #ffffffba !important;
-            box-shadow: none
+            box-shadow: none !important;
         }
 
         ._container_79ca9c5 {
@@ -612,24 +612,24 @@
             background-image: radial-gradient( ellipse 62.77006610920382% 172.5546653998795% at 59.895336286607595% 107.38421926638554%,
             rgb(230, 230, 230) 0%,
             rgb(255, 255, 255) 50%,
-            rgb(238, 238, 238) 100%);
+            rgb(238, 238, 238) 100%) !important;
 
-            background-origin: border-box;
-            border-color: #ffffff05;
-            border-style: solid;
-            border-width: 1px;
+            background-origin: border-box !important;
+            border-color: #ffffff05 !important;
+            border-style: solid !important;
+            border-width: 1px !important;
             box-shadow: inset 0px -2px 4px #0000001f,
             inset 0px 4px 4px #cac8c82f,
-            0px 4px 12.3px #00000029;
-            box-sizing: border-box;
-            filter: blur(0.1px);
-            height: 40px;
-            width: 121px;
+            0px 4px 12.3px #00000029 !important;
+            box-sizing: border-box !important;
+            filter: blur(0.1px) !important;
+            height: 40px !important;
+            width: 121px !important;
         }
 
         ._gradientMax_9111fba,
         ._gradientMax_14a308b {
-            background: radial-gradient(ellipse at right bottom, rgb(from var(--market-core-yellow-text-color) r g b / .2) 10%, transparent 40%);
+            background: radial-gradient(ellipse at right bottom, rgb(from var(--market-core-yellow-text-color) r g b / .2) 10%, transparent 40%) !important;
         }
 
         /*album hover*/
