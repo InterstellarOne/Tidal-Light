@@ -1,4 +1,4 @@
-<img width="2541" height="1517" alt="image" src="https://github.com/user-attachments/assets/aca906c4-4f36-4bbe-8fe1-22c90e896ef4" />
+<img width="2720" height="1760" alt="image" src="https://github.com/user-attachments/assets/3e5af5b5-84ea-49bb-8288-2c5349eb0017" />
 
 A simple light theme for Tidal. The theme will automatically toggle on and off with the system dark/light mode. 
 
