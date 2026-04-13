@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://codeberg.org/Interstellar_1/Tidal-Light
-@version        2.2.2
+@version        2.3.0
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://codeberg.org/Interstellar_1/Tidal-Light/
@@ -20,6 +20,7 @@
             --wave-color-opacity-base-bright-thick: #000 !important;
             --wave-color-solid-base-fill: var(--background-default) !important;
             --transparent-panel-bg: #ffffff46 !important;
+            --transparent-panel-bg-dark: #c9c9c940 !important;
 
             /*hover*/
             --wave-color-solid-base-brightest: #e0e2e2 !important;
@@ -127,11 +128,6 @@
         .viewAllButton--Nb87U:hover,
         .css-7l8ggf:hover {
             background: #cbcbcb;
-        }
-
-        ._header_3fe665f {
-            background: var(--wave-color-solid-base-brighter) !important;
-            background-color: var(--wave-color-solid-base-brighter) !important;
         }
 
         /*heart button*/
@@ -330,21 +326,57 @@
 
         /*HEADER*/
         ._header_3fe665f._solidHeader_2b3f298 {
-            background: var(--wave-color-solid-base-brighter);
+            background: transparent;
+        }
+        
+               ._header_3fe665f {
+            background: transparent;
+        }
+
+        [role="main"] {
+            transform: translateY(-71px);
+            padding-top: 50px;
+            margin-top: 71px;
+            height: 100%;
         }
 
         /*search*/
         .container--cl4MJ,
         div.searchField--fgDKc,
-        div.searchField--fgDKc:focus,
-        ._container_f1be359 {
+        div.searchField--fgDKc:focus {
             background-color: #ffffffba !important;
-            box-shadow: none
+            box-shadow: none;
+        }
+        
+        ._container_f1be359, ._container_f1be359:focus {
+            background: none !important;
+            box-shadow: none;
+            border: transparent !important;
+        }
+        
+        ._button_6808704 {
+            background-color: var(--transparent-panel-bg-dark);
+            border: var(--transparent-border);
+            width: 32px !important;
+            height: 32px !important;
+            border-radius: 30px;
+            backdrop-filter: blur(8px);
         }
 
         ._container_79ca9c5 {
             border: none;
             box-shadow: 0 4px 20px #0000004d;
+        }
+
+        ._searchField_4b7fbda {
+            background-color: var(--transparent-panel-bg-dark);
+            border: var(--transparent-border);
+            border-radius: 30px;
+            backdrop-filter: blur(8px);
+        }
+
+        ._searchIcon_4f33772 {
+            z-index: 70
         }
 
         ._searchField_4b7fbda,
@@ -402,9 +434,13 @@
         /*search page*/
         .wave-text-body-medium[data-wave-color="textBlack"],
         div._searchField_b2eb7f7 input,
-        div._searchField_b2eb7f7 input:hover,
-        #\:r8\: {
-            color: var(--text-default)
+        div._searchField_b2eb7f7 input:hover {
+            color: var(--text-default);
+        }
+
+        ._container_711d272 {
+            position: relative;
+            margin-top: -50px;
         }
 
         /*player shadow*/
@@ -1169,10 +1205,6 @@
         @media (max-width: 576px) {
             ._player_1d16b04._notFullscreen_a82939e {
                 z-index: 0 !important;
-            }
-
-            ._header_3fe665f._solidHeader_2b3f298 {
-                background: var(--background-default) !important;
             }
         }
 
