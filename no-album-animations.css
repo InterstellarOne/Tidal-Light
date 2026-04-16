@@ -1,0 +1,9 @@
+/* Hide fancy album animation */
+
+[class*="tilt"] {
+	transform: none !important;
+}
+
+[class*="glare"] {
+	display: none !important;
+}
