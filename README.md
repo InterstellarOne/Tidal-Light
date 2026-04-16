@@ -1,4 +1,4 @@
-<img width="2720" height="1760" alt="image" src="https://github.com/user-attachments/assets/3e5af5b5-84ea-49bb-8288-2c5349eb0017" />
+<img width="273" height="392" alt="image" src="https://github.com/user-attachments/assets/18e54f14-af4e-40de-aa62-f8d9cf55170e" /><img width="2720" height="1760" alt="image" src="https://github.com/user-attachments/assets/3e5af5b5-84ea-49bb-8288-2c5349eb0017" />
 
 A simple light theme for Tidal. The theme will automatically toggle on and off with the system dark/light mode. 
 
@@ -19,19 +19,18 @@ A simple light theme for Tidal. The theme will automatically toggle on and off w
 5. Press the menu button on the right side of the toolbar, then press *Add to Home screen*.
 6. Place the shortcut where you want it.
 
-### Windows & MacOS Desktop App
+### Windows, MacOS, & Linux Desktop App (TidaLuna)
 
 1. Run the [Luna](https://github.com/Inrixia/TidaLuna) client mod installer. \
 [Download Luna installer](https://github.com/jxnxsdev/TidaLuna-Installer/releases)
-2. After installing, open Tidal, open the three-dot menu next to your profile, and click on Luna settings.
-   ![image](https://github.com/user-attachments/assets/fb9ca55a-644c-478e-bfe2-b02ebf53569c)
+2. After installing, open Tidal, click your profile, and click on Luna settings.
+<img width="273" height="392" alt="image" src="https://github.com/user-attachments/assets/7c5c8f90-cc3a-4d96-b223-f3fcae4c03a3" />
 
-3. Click on the Plugin Store tab, then scroll down and click to install Themer.
-4. Press Ctrl+E to open the theme input. 
-5. Go to https://github.com/InterstellarOne/Tidal-Light/blob/main/no-header.css, click the copy button to copy the theme, then paste that into the window opened in the previous step.
-![image](https://github.com/user-attachments/assets/7f37ba29-8cc5-4268-940b-b38daf636213)
-
-6. Close and reopen the app.
+3. Click on the Themes tab.
+4. Copy the link below, paste it into the "Install from URL" text box, then press Enter.
+```
+https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/no-header.css
+```
 
 ### Linux Desktop App (Tidal Hi-Fi)
 1. Press Ctrl+= to open settings. Go to the Theming tab.
