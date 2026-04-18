@@ -2,7 +2,7 @@
  { * *
  "name": "Tidal Light",
  "author": "Interstellar_1",
- "description": "A light theme for Tidal. v2.3.2"
+ "description": "A light theme for Tidal. v2.3.4"
  "license": "MIT License"
  * }
  */
@@ -450,7 +450,7 @@
             fill: #69bab3 !important;
         }
 
-        ._searchField_4b7fbda, div._searchField_b2eb7f7 input {
+        ._searchField_4b7fbda::placeholder {
             color: var(--text-default) !important;
         }
 
