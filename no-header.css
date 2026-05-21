@@ -2,7 +2,7 @@
  { * *
  "name": "Tidal Light",
  "author": "Interstellar_1",
- "description": "A light theme for Tidal. v2.3.5"
+ "description": "A light theme for Tidal. v2.3.6"
  "license": "MIT License"
  * }
  */
@@ -114,6 +114,15 @@
             color: var(--background-default) !important;
             border-radius: 50%;
             box-shadow: 0 0 10px 4px #0000000f
+        }
+
+        [data-test="vibe-switcher"] ._marketButton_1l1bl_1._small_1l1bl_3._primary_1l1bl_6 {
+            background: #d7d7d7 !important;
+        }
+
+        [data-test="vibe-switcher"] ._marketButton_1l1bl_1._small_1l1bl_3._secondary_1l1bl_7 {
+            background: var(--wave-color-solid-base-bright) !important;
+            border-color: var(--wave-color-solid-base-brighter);
         }
 
         /*canvas nav buttons*/
@@ -672,6 +681,15 @@
             background: radial-gradient(ellipse at right bottom, rgb(from var(--market-core-yellow-text-color) r g b / .2) 10%, transparent 40%) !important;
         }
 
+        ._card_81a423e {
+            background: var(--wave-color-solid-base-brighter);
+        }
+
+        #nowPlaying > header > div._leftContent_e95a7a1 > div > div._card_81a423e._open_12b11fa > div._actions_c87bc2d > button {
+            background: var(--button-light) !important;
+        }
+
+
         /*album hover*/
         ._artworkContainer_3cdbf46 button,
         ._notFullscreenOverlay_1442d60 {
@@ -1091,7 +1109,7 @@
         
         /*DIALOUGES*/
         .ReactModal__Content {
-            background: #f1f1f1 !important;
+            background: var(--wave-color-solid-base-bright) !important;
         }
 
         .label--fycqD.unchecked--goEjz {
@@ -1234,7 +1252,7 @@
         /*SETTINGS*/
         ._container_b4f1e20._fillDark_a1e5896 > div,
         ._container_9a0abb9 {
-            background: #f1f1f1 !important;
+            background: var(--wave-color-solid-base-bright) !important;
         }
 
         ._select_ef84104 {
@@ -1354,5 +1372,4 @@
     color: rgb(0, 0, 0)!important;
 }
 
-/
-    }
+}
