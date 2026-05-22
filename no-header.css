@@ -2,7 +2,7 @@
  { * *
  "name": "Tidal Light",
  "author": "Interstellar_1",
- "description": "A light theme for Tidal. v2.3.6"
+ "description": "A light theme for Tidal. v2.3.7"
  "license": "MIT License"
  * }
  */
@@ -60,7 +60,7 @@
             --wave-color-text-secondary: #434343 !important;
             --wave-color-solid-contrast-darker: #383838 !important;
             --wave-color-opacity-contrast-fill-ultra-thick: #383838 !important;
-            --cl-glow1: var(--text-default) !important;
+            --cl-glow1: #fff !important;
 
             /*icons*/
             --icon-solid: #000 !important;
