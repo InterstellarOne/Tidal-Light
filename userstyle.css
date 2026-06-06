@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://codeberg.org/Interstellar_1/Tidal-Light
-@version        2.3.6
+@version        2.3.8
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://codeberg.org/Interstellar_1/Tidal-Light/
@@ -21,6 +21,11 @@
 			--wave-color-solid-base-fill: var(--background-default) !important;
 			--transparent-panel-bg: #ffffff46 !important;
 			--transparent-panel-bg-dark: #c9c9c940 !important;
+
+			/*frosted glass*/
+			--frosted-glass-blur: blur(26px);
+			--frosted-glass-surface: linear-gradient(0deg, #c8c8c859 0%, #bdbdbd59 19%, #afaeae59 34%, #bababa59 47%, #bababa59 56.5%, #bcbcbc59 65%, #b4b4b459 73%, #b4b4b459 100%);
+			--frosted-glass-stroke: 0 0 0 .5px #ffffff0d, inset 0 0 0 1px #ffffff0a;
 
 			/*hover*/
 			--wave-color-solid-base-brightest: #e0e2e2 !important;
@@ -73,6 +78,7 @@
 
 			/*shadow*/
 			--shadow: #00000052 !important;
+			--light-shadow: #00000024 !important;
 
 			/*search*/
 			--wave-color-opacity-base-brighter-ultra-thick: #c3c3c3 !important;
@@ -371,7 +377,7 @@
 			width: 32px !important;
 			height: 32px !important;
 			border-radius: 30px;
-			backdrop-filter: blur(8px);
+			backdrop-filter: var(--frosted-glass-blur) !important;
 		}
 
 		._container_79ca9c5 {
@@ -383,7 +389,7 @@
 			background-color: var(--transparent-panel-bg-dark);
 			border: var(--transparent-border);
 			border-radius: 30px;
-			backdrop-filter: blur(8px);
+			backdrop-filter: var(--frosted-glass-blur) !important;
 		}
 
 		._searchIcon_4f33772 {
@@ -829,6 +835,11 @@
 			background: var(--wave-color-solid-base-bright) !important;
 		}
 
+		:is(._coverArtContainer_2eafdf9 ._coverArt_79d862c) img,
+		:is(._coverArtContainer_2eafdf9 ._coverArt_79d862c) video {
+			box-shadow: 0 16px 32px 0 var(--light-shadow) !important;
+		}
+
 		._link_6a45a19,
 		._button_b988d60 {
 			background: transparent !important;
@@ -968,14 +979,13 @@
 			color: #252525;
 		}
 
+		/*
 		._buttonStates_91bed47[aria-checked="true"],
 		[data-test="favorite-button"] ._buttonTextOffset_a700b81,
 		._whiteIcon_dc7a766 {
 			color: var(--text-accent) !important;
 			fill: var(--wave-color-solid-accent-fill) !important;
-		}
-
-
+		}*/
 		/*albums page*/
 		._icon_028d232 {
 			color: var(--icon-solid) !important;
@@ -1014,6 +1024,16 @@
 		[class^="_smallHeader_"][class*="_showHeader_"]:before {
 			background-color: #ffffff !important;
 			filter: blur(70px) !important;
+		}
+
+		[class^="_smallHeader_"] {
+			background-color: #ffffff8c !important;
+		}
+
+		[class^="_coverArt_"],
+		[class^="_smallHeader_"][class^="_coverArt_"],
+		._smallHeader_f2c3791 ._coverArt_79d862c {
+			box-shadow: 0 16px 32px 0 var(--light-shadow) !important;
 		}
 
 
