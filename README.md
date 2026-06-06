@@ -38,7 +38,7 @@ https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/no
 ![image](https://github.com/user-attachments/assets/7f37ba29-8cc5-4268-940b-b38daf636213)
 3. Restart the app.
 
-## Extra Addons
+## Addons
 ### Radiant Lyrics Support
 This theme has support for the TidaLuna plugin Radiant lyrics via a separate theme. Install it via the Themes tab. 
 ```
