@@ -60,7 +60,7 @@
             --wave-color-text-secondary: #434343 !important;
             --wave-color-solid-contrast-darker: #383838 !important;
             --wave-color-opacity-contrast-fill-ultra-thick: #383838 !important;
-            --cl-glow1: #fff !important;
+            --cl-glow1: #000 !important;
 
             /*icons*/
             --icon-solid: #000 !important;
