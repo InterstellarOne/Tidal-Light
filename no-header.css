@@ -1,8 +1,8 @@
 /*
  { * *
  "name": "Tidal Light",
- "author": "Interstellar_1",
- "description": "A light theme for Tidal. v2.3.7"
+ "author": "Interstellar_1"
+ "description": "A light theme for Tidal. v2.3.8"
  "license": "MIT License"
  * }
  */
@@ -18,6 +18,11 @@
             --wave-color-solid-base-fill: var(--background-default) !important;
             --transparent-panel-bg: #ffffff46 !important;
             --transparent-panel-bg-dark: #c9c9c940 !important;
+
+            /*frosted glass*/
+            --frosted-glass-blur: blur(26px);
+            --frosted-glass-surface: linear-gradient(0deg, #c8c8c859 0%, #bdbdbd59 19%, #afaeae59 34%, #bababa59 47%, #bababa59 56.5%, #bcbcbc59 65%, #b4b4b459 73%, #b4b4b459 100%);
+            --frosted-glass-stroke: 0 0 0 .5px #ffffff0d, inset 0 0 0 1px #ffffff0a;
 
             /*hover*/
             --wave-color-solid-base-brightest: #e0e2e2 !important;
@@ -70,6 +75,7 @@
 
             /*shadow*/
             --shadow: #00000052 !important;
+            --light-shadow: #00000024 !important;
 
             /*search*/
             --wave-color-opacity-base-brighter-ultra-thick: #c3c3c3 !important;
@@ -387,7 +393,7 @@
             width: 32px !important;
             height: 32px !important;
             border-radius: 30px;
-            backdrop-filter: blur(8px)!important;
+            backdrop-filter: var(--frosted-glass-blur) !important;
         }
 
         ._container_79ca9c5 {
@@ -399,7 +405,7 @@
             background-color: var(--transparent-panel-bg-dark)!important;
             border: var(--transparent-border)!important;
             border-radius: 30px!important;
-            backdrop-filter: blur(8px)!important;
+            backdrop-filter: var(--frosted-glass-blur) !important;
         }
 
         ._searchIcon_4f33772 {
@@ -574,19 +580,6 @@
         }
 
         /*arrows*/
-        ._button_6808704:not([disabled]) {
-            color: var(--icon-solid) !important;
-            fill: var(--icon-solid) !important;
-        }
-
-        ._button_6808704[disabled] {
-            color: var(--button-light) !important
-        }
-
-        ._button_6808704:hover::after,
-        .css-1xlzpjd:hover {
-            background-color: var(--wave-color-solid-base-brightest) !important
-        }
 
         /*homepage carosel buttons*/
         ._marketText_1lyag_1._text20_1lyag_291:hover {
@@ -850,6 +843,10 @@
             background: var(--wave-color-solid-base-bright) !important;
         }
 
+        :is(._coverArtContainer_2eafdf9 ._coverArt_79d862c) img, :is(._coverArtContainer_2eafdf9 ._coverArt_79d862c) video {
+            box-shadow: 0 16px 32px 0 var(--light-shadow) !important;
+        }
+
         ._link_6a45a19,
         ._button_b988d60 {
             background: transparent !important;
@@ -989,12 +986,13 @@
             color: #252525;
         }
 
+        /*
         ._buttonStates_91bed47[aria-checked="true"],
-        [data-test="favorite-button"] ._buttonTextOffset_a700b81,
+        [class^="_whiteIcon_"] ~ [data-test="favorite-button"] ._buttonTextOffset_a700b81,
         ._whiteIcon_dc7a766 {
             color: var(--text-accent) !important;
             fill: var(--wave-color-solid-accent-fill) !important;
-        }
+        }*/
 
         /*albums page*/
         ._icon_028d232 {
@@ -1033,6 +1031,16 @@
         [class^="_smallHeader_"][class*="_showHeader_"]:before {
             background-color: #ffffff !important;
             filter: blur(70px) !important;
+        }
+
+        [class^="_smallHeader_"] {
+            background-color: #ffffff8c !important;
+        }
+
+        [class^="_coverArt_"], 
+        [class^="_smallHeader_"][class^="_coverArt_"], 
+        ._smallHeader_f2c3791 ._coverArt_79d862c {
+            box-shadow: 0 16px 32px 0 var(--light-shadow) !important;
         }
 
 
