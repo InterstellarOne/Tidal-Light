@@ -1,0 +1,89 @@
+:root {
+    --cl-glow1: #000000 !important;
+    --cl-glow2: #000000 !important;
+}
+ 
+   /*thanks to aya for most of the code here from her theme Cotton candy*/
+
+.sticky-lyrics-trigger{
+    color: black;
+}
+[class="global-spinning-gradient-overlay"]{
+    background:#ffffffdd!important;
+}
+[class="hide-ui-button"]{
+      background-color: #00000000!important;
+    background-image: linear-gradient(var(--rotate), #a0a5ff69, #a992ff70);
+    color: #170024;
+    background-size: 100% 100%;
+    animation: rotate-gradient 22s cubic-bezier(.33,.48,.63,.47) infinite;
+    transform: scale(1.049);
+    box-shadow: 0px 0px 2.5em #ffc8fe0a;
+}
+
+[class="now-playing-background-image"]{
+    display: none!important;
+}
+
+._nowPlayingContainer_378ac1a{
+    background-color: #000000!important;
+        background-image: none!important;
+}
+
+
+[class*="_stickyHeader"]{
+    backdrop-filter: none!important;
+}
+
+[class^="_lyricsContainer"]>div>div>span{
+    transform: scale(.98);
+}
+
+.rl-wbw-word{
+    color: rgba(0, 0, 0, 0.382)!important;
+}
+
+span.rl-wbw-word.rl-syl-finished{
+    color: #000000!important;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4) !important;
+  transition: 2500ms!important;
+   transition-delay: -1700ms!important;
+}
+span.rl-wbw-word.rl-syl-active{
+     color: rgba(0, 0, 0, 0)!important;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4) !important;
+    transition: 100ms!important;
+        background-image: linear-gradient(90deg, black 100%, var(--cl-glow1, #000000) 100%, black 100%),
+         linear-gradient(90deg, var(--cl-glow1, #000000) 100%, transparent 100%),
+         linear-gradient(90deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.111))!important;
+}
+
+
+[class*="_lyricsText"]>div>span[data-current=true]{
+    color: rgba(0, 0, 0, 0.148)!important;
+        text-shadow: 0 0 var(--rl-glow-inner, 2px) var(--cl-glow1, #000000),
+         0 0 var(--rl-glow-outer, 20px) var(--cl-glow2, #000000) !important;
+          padding-left: .2em!important;
+}
+[class="now-playing-black-bg"]{
+    background-color: #00000000 !important;
+}
+[class="now-playing-gradient-overlay"]{
+    display: none;
+}
+
+.hide-ui-button, [data-test="new-now-playing-close"] {
+    width:44px;
+}
+
+[class*="_lyricsText"]>div>span:hover
+,.rl-wbw-line:not(.rl-wbw-line-active)>.rl-wbw-word.rl-wbw-word-hover, .rl-wbw-line:not(.rl-wbw-line-active)>.rl-wbw-word:hover {
+    color: #000000a3 !important;
+        text-shadow: 0 0 var(--rl-glow-inner, 2px) #01010114, 0 0 var(--rl-glow-outer, 20px) #0c0c0c1b !important;
+}
+
+
+.rl-wbw-word.rl-wbw-active{
+        color: #000000e6!important;
+      text-shadow: 0 0 var(--rl-glow-inner, 2px) var(--cl-glow1, #5a5a5a), 0 0 var(--rl-glow-outer, 20px) var(--cl-glow2, #7c7c7c88) !important;
+}
