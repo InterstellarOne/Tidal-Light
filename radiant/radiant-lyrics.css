@@ -1,3 +1,4 @@
+@media (prefers-color-scheme: light) {
 :root {
     --cl-glow1: #000000 !important;
     --cl-glow2: #000000 !important;
@@ -86,4 +87,5 @@ span.rl-wbw-word.rl-syl-active{
 .rl-wbw-word.rl-wbw-active{
         color: #000000e6!important;
       text-shadow: 0 0 var(--rl-glow-inner, 2px) var(--cl-glow1, #5a5a5a), 0 0 var(--rl-glow-outer, 20px) var(--cl-glow2, #7c7c7c88) !important;
+}
 }
