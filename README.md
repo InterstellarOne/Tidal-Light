@@ -37,3 +37,24 @@ https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/no
 2. Go to https://github.com/InterstellarOne/Tidal-Light/blob/main/no-header.css, click the copy button to copy the theme, then paste that into the _Custom CSS_ box.
 ![image](https://github.com/user-attachments/assets/7f37ba29-8cc5-4268-940b-b38daf636213)
 3. Restart the app.
+
+## Extra Addons
+### Radiant Lyrics Support
+This theme has support for the TidaLuna plugin Radiant lyrics via a separate theme. Install it via the Themes tab. 
+```
+https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/radiant/radiant-lyrics.css
+```
+#### Required Setup:
+
+In the plugin's config, set the options as shown:
+
+<img width="570" height="59" alt="Screenshot_2026-06-05-23-18-24" src="https://github.com/user-attachments/assets/b15005d0-1af9-46a4-9a0b-40d01c29d556" />
+
+<img width="556" height="517" alt="Screenshot_2026-06-05-23-18-57" src="https://github.com/user-attachments/assets/186c5df7-d35b-44e1-8b65-d961a167488c" />
+
+### No Album Animations
+Disables the animations shown when hovering over the album cover in the player. 
+Install it via the Themes tab. 
+```
+https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/no-album-animations.css
+```
