@@ -2,7 +2,7 @@
  { * *
  "name": "Tidal Light",
  "author": "Interstellar_1"
- "description": "A light theme for Tidal. v2.3.9"
+ "description": "A light theme for Tidal. v2.3.10"
  "license": "MIT License"
  * }
  */ 
@@ -816,7 +816,10 @@
         background-image: none !important;
     }
 
-
+   
+    [class*="_smallHeader_"] {
+            background-color: rgb(255 255 255 / 30%) !important;
+    }
 
         .buttonText--LMsAT {
             color: var(--text-light) !important;
