@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://codeberg.org/Interstellar_1/Tidal-Light
-@version        2.3.8
+@version        2.3.10
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://codeberg.org/Interstellar_1/Tidal-Light/
@@ -863,6 +863,10 @@
 
 		div._smallButtons_bdfda3f button._buttonStates_91bed47 div.tidal-ui__v-stack.css-j3v5ag svg._icon_77f3f89._accentedIcon_d6d54e4 {
 			fill: var(--icon-solid) !important;
+		}
+		
+		[class*="_smallHeader_"] {
+		        background-color: rgb(255 255 255 / 30%) !important;
 		}
 
 		/*left side buttons*/
