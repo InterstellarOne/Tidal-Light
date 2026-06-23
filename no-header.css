@@ -2,7 +2,7 @@
  { * *
  "name": "Tidal Light",
  "author": "Interstellar_1"
- "description": "A light theme for Tidal. v2.3.10"
+ "description": "A light theme for Tidal. v2.3.11"
  "license": "MIT License"
  * }
  */ 
@@ -596,9 +596,10 @@
 
         #playQueueSidebar {
             box-shadow: 0 20px 25px 5px #00000057;
+            margin-top: 12px;
         }
 
-        /*audio quality popup*/
+        /*audio quality popup*/playQueueSidebar
         ._containerMax_611862e {
             background-color: transparent;
         }
