@@ -1,0 +1,8 @@
+// Disables the scaling applied to media controller buttons on hover
+._player_8c80ae6 button,
+._previousWrapper_17b7a1c,
+._playButton_3afff86,
+._skipButtonWrapper_dc2a3e5,
+._repeatButton_729613e {
+    transform: none !important;
+}
