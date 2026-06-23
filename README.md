@@ -61,6 +61,9 @@ https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/no
 
 ### No Media Controls Scaling
 Disables scaling the media control buttons when hovering over them.
+
+<img width="250" height="47" alt="Screenshot_2026-06-22-19-16-32" src="https://github.com/user-attachments/assets/51412045-4b41-4fa9-a8d8-b9e546f112c9" />
+
 ```
 https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/no-scale-controls.css
 ```
