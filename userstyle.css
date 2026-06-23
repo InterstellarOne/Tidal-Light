@@ -1,11 +1,11 @@
 /* ==UserStyle==
 @name           Tidal Light
-@namespace      https://codeberg.org/Interstellar_1/Tidal-Light
-@version        2.3.10
+@namespace      https://github.com/InterstellarOne/Tidal-Light
+@version        2.3.11
 @description    A light theme for Tidal
 @author         Interstellar_One
-@homepageURL    https://codeberg.org/Interstellar_1/Tidal-Light/
-@supportURL     https://codeberg.org/Interstellar_1/Tidal-Light/issues 
+@homepageURL    https://github.com/InterstellarOne/Tidal-Light
+@supportURL     https://github.com/InterstellarOne/Tidal-Light/issues 
 @license        MIT License
 ==/UserStyle== */
 @-moz-document domain("tidal.com") {
@@ -600,6 +600,7 @@
 
 		#playQueueSidebar {
 			box-shadow: 0 20px 25px 5px #00000057;
+			margin-top: 12px;
 		}
 
 		/*audio quality popup*/
