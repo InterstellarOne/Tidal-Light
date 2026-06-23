@@ -39,8 +39,9 @@ https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/no
 3. Restart the app.
 
 ## Addons
+Installed via the themes tab in TidaLuna.
 ### Radiant Lyrics Support
-This theme has support for the TidaLuna plugin Radiant lyrics via a separate theme. Install it via the Themes tab. 
+This theme has support for the TidaLuna plugin Radiant lyrics via a separate theme.
 ```
 https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/radiant/radiant-lyrics.css
 ```
@@ -54,7 +55,12 @@ In the plugin's config, set the options as shown:
 
 ### No Album Animations
 Disables the animations shown when hovering over the album cover in the player. 
-Install it via the Themes tab. 
 ```
 https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/no-album-animations.css
+```
+
+### No Media Controls Scaling
+Disables scaling the media control buttons when hovering over them.
+```
+https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/no-scale-controls.css
 ```
