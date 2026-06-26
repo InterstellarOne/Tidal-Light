@@ -27,7 +27,7 @@ A simple light theme for Tidal. The theme will automatically toggle on and off w
 <img width="273" height="392" alt="image" src="https://github.com/user-attachments/assets/7c5c8f90-cc3a-4d96-b223-f3fcae4c03a3" />
 
 3. Click on the Themes tab.
-4. Copy the link below, paste it into the "Install from URL" text box, then press Enter.
+4. Copy the link below and paste it into the "Install from URL" text box.
 ```
 https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/no-header.css
 ```
