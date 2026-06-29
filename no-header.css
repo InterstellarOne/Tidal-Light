@@ -2,7 +2,7 @@
  { * *
  "name": "Tidal Light",
  "author": "Interstellar_1"
- "description": "A light theme for Tidal. v2.3.11"
+ "description": "A light theme for Tidal. v2.3.12"
  "license": "MIT License"
  * }
  */ 
@@ -21,6 +21,7 @@
 
             /*frosted glass*/
             --frosted-glass-blur: blur(26px);
+            --frosted-glass-floating-surface: #dbdbdb59 !important;
             --frosted-glass-surface: linear-gradient(0deg, #c8c8c859 0%, #bdbdbd59 19%, #afaeae59 34%, #bababa59 47%, #bababa59 56.5%, #bcbcbc59 65%, #b4b4b459 73%, #b4b4b459 100%);
             --frosted-glass-stroke: 0 0 0 .5px #ffffff0d, inset 0 0 0 1px #ffffff0a;
 
@@ -576,7 +577,7 @@
         }
 
         /*arrows*/
-
+    
         /*homepage carosel buttons*/
         ._marketText_1lyag_1._text20_1lyag_291:hover {
             color: var(--text-default) !important;
@@ -679,6 +680,14 @@
             background: var(--button-light) !important;
         }
 
+        ._player_8c80ae6:before,
+        ._player_8c80ae6.nowPlayingVisible ._veil_9a0b2e0 {
+            display: none;
+        }
+        ._player_8c80ae6:after { 
+            background: transparent; 
+            box-shadow: none;
+        }
 
         /*album hover*/
         ._artworkContainer_3cdbf46 button,
@@ -733,6 +742,7 @@
             height: 44px !important;
             background: var(--transparent-panel-bg) !important;
             border: var(--transparent-border);
+            margin-left: 6px;
         }
 
         ._background_42cea4e {
