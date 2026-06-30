@@ -94,4 +94,13 @@ span.rl-wbw-word.rl-syl-active{
 [class*="_smallHeader_"] {
     background-color: rgb(255 255 255 / 30%) !important;
 }
+    
+._high_4b5525b ._gradientHigh_87f2c3b {
+    opacity: 0;
+}
+
+._high_4b5525b ._badgeText_1c9dd30 {
+    color: var(--market-core-teal-text-color) !important;
+    text-shadow: 0 0 10px rgb(from var(--market-core-teal-text-color) r g b / .7) !important;
+}
 }
