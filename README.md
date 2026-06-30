@@ -43,7 +43,7 @@ Installed via the themes tab in TidaLuna.
 ### Radiant Lyrics Support
 This theme has support for the TidaLuna plugin Radiant lyrics via an addon.
 ```
-https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/radiant/radiant-lyrics.css
+https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/radiant-lyrics.css
 ```
 #### Required Setup:
 
