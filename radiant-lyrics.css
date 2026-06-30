@@ -90,4 +90,8 @@ span.rl-wbw-word.rl-syl-active{
 #nowPlaying > header > div._buttons_6ec911e > div._actionButtons_c44ccc7 > button:nth-child(4) {
     margin-left: 6px;
 }
+
+[class*="_smallHeader_"] {
+    background-color: rgb(255 255 255 / 30%) !important;
+}
 }
