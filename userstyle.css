@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light
-@version        2.3.11
+@version        2.3.13
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light
@@ -24,8 +24,7 @@
 
 			/*frosted glass*/
 			--frosted-glass-blur: blur(26px);
-			--frosted-glass-surface: linear-gradient(0deg, #c8c8c859 0%, #bdbdbd59 19%, #afaeae59 34%, #bababa59 47%, #bababa59 56.5%, #bcbcbc59 65%, #b4b4b459 73%, #b4b4b459 100%);
-			--frosted-glass-stroke: 0 0 0 .5px #ffffff0d, inset 0 0 0 1px #ffffff0a;
+			--frosted-glass-floating-surface: #eaebeb59 --frosted-glass-stroke: 0 0 0 .5px #ffffff0d, inset 0 0 0 1px #ffffff0a;
 
 			/*hover*/
 			--wave-color-solid-base-brightest: #e0e2e2 !important;
@@ -356,6 +355,10 @@
 			height: 100%;
 		}
 
+		._header_3fe665f._scrolled_38d655a::before {
+			opacity: 0;
+		}
+
 		/*search*/
 		.container--cl4MJ,
 		div.searchField--fgDKc,
@@ -675,6 +678,23 @@
 			background: radial-gradient(ellipse at right bottom, rgb(from var(--market-core-yellow-text-color) r g b / .2) 10%, transparent 40%);
 		}
 
+		._player_8c80ae6:before,
+		._player_8c80ae6.nowPlayingVisible ._veil_9a0b2e0 {
+			display: none;
+		}
+
+		._player_8c80ae6:after {
+			background: transparent;
+			box-shadow: none;
+		}
+
+		._player_8c80ae6.nowPlayingVisible {
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+
+
 		/*album hover*/
 		._artworkContainer_3cdbf46 button,
 		._notFullscreenOverlay_1442d60 {
@@ -728,6 +748,7 @@
 			height: 44px !important;
 			background: var(--transparent-panel-bg) !important;
 			border: var(--transparent-border);
+			margin-left: 6px;
 		}
 
 		._background_42cea4e {
@@ -865,9 +886,9 @@
 		div._smallButtons_bdfda3f button._buttonStates_91bed47 div.tidal-ui__v-stack.css-j3v5ag svg._icon_77f3f89._accentedIcon_d6d54e4 {
 			fill: var(--icon-solid) !important;
 		}
-		
+
 		[class*="_smallHeader_"] {
-		        background-color: rgb(255 255 255 / 30%) !important;
+			background-color: rgb(255 255 255 / 30%) !important;
 		}
 
 		/*left side buttons*/
