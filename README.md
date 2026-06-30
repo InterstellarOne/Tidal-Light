@@ -1,4 +1,5 @@
-![](https://github.com/user-attachments/assets/3e5af5b5-84ea-49bb-8288-2c5349eb0017)
+<img width="2612" height="1571" alt="Screenshot from 2026-06-30 11-43-53 (Edit)" src="https://github.com/user-attachments/assets/948d61ee-28db-45d7-9e8c-625949d8dc1a" />
+
 
 A simple light theme for Tidal. The theme will automatically toggle on and off with the system dark/light mode. 
 
