@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light
-@version        2.3.13
+@version        2.3.14
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light
@@ -25,6 +25,7 @@
 			/*frosted glass*/
 			--frosted-glass-blur: blur(26px);
 			--frosted-glass-floating-surface: #eaebeb59 --frosted-glass-stroke: 0 0 0 .5px #ffffff0d, inset 0 0 0 1px #ffffff0a;
+			--frosted-glass-nav-surface: #ffffff8c;
 
 			/*hover*/
 			--wave-color-solid-base-brightest: #e0e2e2 !important;
@@ -125,7 +126,7 @@
 		}
 
 		[data-test="vibe-switcher"] ._marketButton_1l1bl_1._small_1l1bl_3._primary_1l1bl_6 {
-			background: #d7d7d7 !important;
+			background: var(--button-light) !important;
 		}
 
 		[data-test="vibe-switcher"] ._marketButton_1l1bl_1._small_1l1bl_3._secondary_1l1bl_7 {
@@ -457,10 +458,19 @@
 		div._searchField_b2eb7f7 input:hover {
 			color: var(--text-default);
 		}
-
-		._container_711d272 {
-			position: relative;
-			margin-top: -50px;
+		
+		 ._primary_1l1bl_6:not(._disabledFunctionally_1l1bl_1) {
+			background: var(--button-light) !important;
+			border: var(--wave-color-solid-base-brighter) 2px !important;
+		}
+		
+		._marketButton_1l1bl_1._secondary_1l1bl_7._small_1l1bl_3 {
+			background: var(--wave-color-solid-base-bright) !important;
+			border: var(--wave-color-solid-base-brighter) 2px !important;
+		}
+	
+		a._marketButton_1l1bl_1 > span {
+			color: var(--text-default) !important;
 		}
 
 		/*player shadow*/
@@ -735,7 +745,7 @@
 		}
 
 		#nowPlaying > header > div._buttons_51e2ab3 > div._contentButtons_e48c3b0 > button:not([aria-pressed="true"]),
-		._small_1l1bl_3:not([aria-pressed="true"]) {
+		._contentButtons_6b6c8ea ._small_1l1bl_3:not([aria-pressed="true"]) {
 			background: var(--transparent-panel-bg) !important;
 			border: var(--transparent-border);
 		}
