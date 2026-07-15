@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light
-@version        2.3.14
+@version        2.3.15
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light
@@ -159,7 +159,7 @@
 
 		/*explict badge*/
 		._explicitBadge_b93510b {
-			filter: invert(60%) brightness(110%) contrast(140%);
+			filter: invert(60%) brightness(125%) contrast(140%);
 		}
 
 		#explicit-badge {
@@ -236,7 +236,8 @@
 			filter: contrast(150%);
 		}
 
-		svg#uploaded-badge path {
+		svg#uploaded-badge path,
+		._uploadedBadge_5f1ab63 svg {
 			filter: invert();
 		}
 
