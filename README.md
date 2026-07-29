@@ -1,7 +1,7 @@
 <img width="2612" height="1571" alt="Screenshot from 2026-06-30 11-43-53 (Edit)" src="https://github.com/user-attachments/assets/948d61ee-28db-45d7-9e8c-625949d8dc1a" />
 
 
-A simple light theme for Tidal. The theme will automatically toggle on and off with the system dark/light mode. 
+A simple light theme for Tidal. The theme will automatically toggle on and off with the system dark/light mode. In TidalLuna, the Radiant Lyrics plugin is supported and recommended.
 
 ## Installation
 ### Browser
@@ -39,23 +39,16 @@ https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/no
 ![image](https://github.com/user-attachments/assets/7f37ba29-8cc5-4268-940b-b38daf636213)
 3. Restart the app.
 
-## Addons
-Installed via the themes tab in TidaLuna.
-### Radiant Lyrics Support
-This theme has support for the TidaLuna plugin Radiant lyrics via an addon.
-```
-https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/radiant-lyrics.css
-```
-#### Required Setup:
-
+## Radiant Lyrics Support
+For the best experience with the Radiant Lyrics plugin, some setup is required.
 In the plugin's config, set the options as shown:
-
-<img width="570" height="59" alt="Screenshot_2026-06-05-23-18-24" src="https://github.com/user-attachments/assets/b15005d0-1af9-46a4-9a0b-40d01c29d556" />
 
 <img width="570" alt="ss-20260629-165420" src="https://github.com/user-attachments/assets/9ab90288-2723-4d39-92c7-eb238aed2e23" />
 
 <img width="270" alt="ss-20260630-112221" src="https://github.com/user-attachments/assets/0360f472-f783-49b7-a77c-f58042f07efd" />
 
+## Addons
+Installed via the themes tab in TidaLuna.
 
 ### No Album Animations
 Disables the animations shown when hovering over the album cover in the player. 
