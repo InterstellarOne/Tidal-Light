@@ -2,7 +2,7 @@
  * { * *
  * "name": "Tidal Light",
  * "author": "Interstellar_1"
- * "description": "A light theme for Tidal. v2.4.2"
+ * "description": "A light theme for Tidal. v2.4.3"
  * "license": "MIT License"
  * }
  */
@@ -175,6 +175,11 @@
     .videoBadge--Tpdav,
     ._videoBadge_56ccbcb {
         filter: brightness(0.3);
+    }
+
+    /*ARTIST HOVER PREVIEW*/
+    ._card_2b91b88 {
+        background: var(--background-default);
     }
 
     /*FEED*/
@@ -792,17 +797,7 @@
         border: var(--transparent-border);
     }
 
-    #nowPlaying > header > div._buttons_51e2ab3 > div._actionButtons_afb56ea > button._marketButton_1l1bl_1._tertiary_1l1bl_8._small_1l1bl_3._iconOnly_1l1bl_1._iconButton_9a294f9._fullscreenButton_bdc27b5,
-    #nowPlaying > header > div._buttons_51e2ab3 > div._actionButtons_afb56ea > button:nth-child(2),
-    button._tertiary_1l1bl_8:nth-child(1),
-    button._tertiary_1l1bl_8:nth-child(2),
-    [data-test="new-now-playing-close"] {
-        width: 44px !important;
-        height: 44px !important;
-        background: var(--frosted-glass-floating-surface-selected) !important;
-        border: var(--transparent-border);
-        margin-left: 6px;
-    }
+
 
     ._background_42cea4e {
         filter: brightness(200%) saturate(80%);
@@ -847,6 +842,7 @@
     .now-playing-background-image {
     filter: blur(80px) brightness(1.2) contrast(60%) !important;
     }
+    
 
     .now-playing-gradient-overlay {
     background: radial-gradient(circle, transparent 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.6) 90%) !important;
@@ -1035,6 +1031,7 @@
     ._buttonActive_5125b72 > .wave-text-body-medium {
         color: var(--icon-solid);
     }
+
 
     /*ALBUM*/
     .wave-text-title-bold,
