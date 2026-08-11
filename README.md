@@ -22,8 +22,7 @@ A simple light theme for Tidal. The theme will automatically toggle on and off w
 
 ### Windows, MacOS, & Linux Desktop App (TidaLuna)
 
-1. Run the [Luna](https://github.com/Inrixia/TidaLuna) client mod installer. \
-[Download Luna installer](https://github.com/jxnxsdev/TidaLuna-Installer/releases)
+1. Run the [Luna](https://github.com/jxnxsdev/TidaLuna-Installer/releases) client mod installer or install [TidalLunar](https://github.com/Brskt/TidaLuna).
 2. After installing, open Tidal, click your profile, and click on Luna settings.
 <img width="273" height="392" alt="image" src="https://github.com/user-attachments/assets/7c5c8f90-cc3a-4d96-b223-f3fcae4c03a3" />
 
