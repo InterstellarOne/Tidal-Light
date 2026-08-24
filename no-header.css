@@ -2,7 +2,7 @@
  * { * *
  * "name": "Tidal Light",
  * "author": "Interstellar_1"
- * "description": "A light theme for Tidal. v2.4.3"
+ * "description": "A light theme for Tidal. v2.4.4"
  * "license": "MIT License"
  * }
  */
@@ -309,11 +309,14 @@
         background: var(--wave-color-solid-base-brighter) !important;
     }
 
+
+
     ._sectionHeader_ca54638 {
         z-index: 1 !important;
     }
 
-    ._sectionHeader_ca54638::before {
+    ._sectionHeader_ca54638::before,
+    ._sectionHeader_f4932eb::before {
         content: "";
         position: absolute;
         top: 0;
@@ -810,11 +813,11 @@
     /* lyrics */
 
     ._panelContent_912639b {
-        background-color: #ffffff36;
+        background-color: #ffffff50;
         border-radius: 24px;
         padding: 0 10px 0 10px;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
     }
 
     ._panelWrapper_5734a06 {
@@ -916,7 +919,8 @@
     }
 
 
-    [class*="_smallHeader_"] {
+    [class*="_smallHeader_"],
+    ._showHeader_1038dcf {
         background-color: rgb(255 255 255 / 30%) !important;
     }
 
