@@ -2,7 +2,7 @@
  * { * *
  * "name": "Tidal Light",
  * "author": "Interstellar_1"
- * "description": "A light theme for Tidal. v2.4.4"
+ * "description": "A light theme for Tidal. v2.4.5"
  * "license": "MIT License"
  * }
  */
@@ -500,15 +500,17 @@
     .wave-text-body-medium[data-wave-color="textBlack"] {
         color: var(--text-default)
     }
-
-    ._primary_1l1bl_6:not(._disabledFunctionally_1l1bl_1) {
+    
+    ._primary_1d16h_6:not(._disabledFunctionally_1l1bl_1) {
         background: var(--frosted-glass-floating-surface-selected) !important;
         box-shadow: var(--frosted-glass-stroke) !important;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
     }
+    
+    
 
-    ._marketButton_1l1bl_1._secondary_1l1bl_7._small_1l1bl_3 {
+    ._secondary_1d16h_7 {
         background: var(--wave-color-solid-base-bright) !important;
         border: var(--wave-color-solid-base-brighter) 2px !important;
     }
@@ -795,7 +797,8 @@
     }
 
     #nowPlaying > header > div._buttons_51e2ab3 > div._contentButtons_e48c3b0 > button:not([aria-pressed="true"]),
-    ._contentButtons_6b6c8ea ._small_1l1bl_3:not([aria-pressed="true"]) {
+    ._contentButtons_6b6c8ea ._small_1l1bl_3:not([aria-pressed="true"]),
+    ._tertiary_1d16h_8:not([aria-pressed="true"]) {
         background: var(--transparent-panel-bg) !important;
         border: var(--transparent-border);
     }
@@ -814,7 +817,7 @@
 
     ._panelContent_912639b {
         background-color: #ffffff50;
-        border-radius: 24px;
+        border-radius: var(--floating-panel-border-radius);
         padding: 0 10px 0 10px;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -921,7 +924,7 @@
 
     [class*="_smallHeader_"],
     ._showHeader_1038dcf {
-        background-color: rgb(255 255 255 / 30%) !important;
+        background-color: rgba(255, 255, 255, 0) !important;
     }
 
     .buttonText--LMsAT {
@@ -949,8 +952,7 @@
         box-shadow: 0 16px 32px 0 var(--light-shadow) !important;
     }
 
-    ._link_6a45a19,
-    ._button_b988d60 {
+    ._link_6a45a19 {
         background: transparent !important;
     }
 
@@ -1039,7 +1041,8 @@
 
     /*ALBUM*/
     .wave-text-title-bold,
-    ._marketText_1lyag_1._medium20_1lyag_192 {
+    ._marketText_1lyag_1._medium20_1lyag_192,
+    [data-test="invite-collaborator-description"] {
         color: var(--text-default) !important;
     }
 
@@ -1109,7 +1112,9 @@
     }
 
     /*PLAYLIST*/
-    .refreshButton--bRrPi {
+    .refreshButton--bRrPi,
+    ._label_1d16h_1,
+    ._link_6a45a19 {
         color: var(--icon-solid) !important;
     }
 
@@ -1118,7 +1123,16 @@
         border: 1px solid rgba(255, 255, 255, .85) !important;
     }
 
-    ._dialog_148b5df {
+    ._button_d5e0865 {
+        background: var(--wave-color-solid-base-brighter) !important;
+    }
+
+    ._button_d5e0865:hover {
+        background: var(--wave-color-solid-base-brightest) !important;
+    }
+
+    ._dialog_148b5df
+     {
         background-color: var(--wave-color-solid-base-fill) !important;
     }
 
@@ -1144,17 +1158,6 @@
     [class^="_smallHeader_"][class^="_coverArt_"],
     ._smallHeader_f2c3791 ._coverArt_79d862c {
         box-shadow: 0 16px 32px 0 var(--light-shadow) !important;
-    }
-
-
-    /*edit playlist*/
-    textarea._textArea_2c6dc77 {
-        background-color: var(--wave-color-solid-base-fill) !important;
-    }
-
-    ._visibilityRow_0e30adb,
-    ._moderationRow_d5d378d {
-        background-color: var(--wave-color-solid-base-bright)
     }
 
     ._button_94c5125,
@@ -1216,6 +1219,15 @@
     div._card_43a5bcb > div > a > button > span,
     #general__add > path {
     color: var(--icon-solid);
+    }
+
+    /*PURCHASES*/
+    #main > div.e2e__react-router--loaded.mainContent > div > div._emptyStateContainer_8b4b1a4._emptyState_11ba3f7 > a {
+        background: var(--button-light) !important ;
+    }
+
+    ._tabIndicator_f29c871 {
+        background: var(--icon-solid);
     }
 
     /*DIALOUGES*/
@@ -1408,9 +1420,9 @@
     }
 
     /*WINDOWS TITLEBAR*/
-    [class^="_bar_"] {
+    /*[class^="_bar_"] {
         background-color: var(--wave-color-solid-base-brighter) !important;
-    }
+    }*/
 
     ._button_8536ec0 svg {
         fill: black !important;
@@ -1428,6 +1440,7 @@
     }
 
     .css-16hze37,
+    .css-71pw0n,
     #main>div:nth-child(3)>div>div.MuiContainer-root.MuiContainer-maxWidthLg.css-sot3eg>div>div:nth-child(2)>div.MuiStack-root.css-16a8gxx>div {
     color: #e6e6ed !important;
     }
@@ -1482,6 +1495,25 @@
     .upnext-title{
         color: rgb(0, 0, 0)!important;
     }
+
+    /*radiant lyrics*/
+
+
+/* 2. Style and position the overlay */
+[class*="_smallHeader_"]::after {
+  content: "" !important;
+  
+  /* Position and size it to cover the entire parent */
+  position: absolute !important;
+  inset: 0 !important; /* Shorthand for top: 0, right: 0, bottom: 0, left: 0 */
+  
+  /* Visual styling for your overlay box */
+  background-color: rgba(255, 255, 255, 30%) !important;
+  
+  /* Layering and UX behavior */
+  z-index: -1 !important;
+  pointer-events: none !important; /* Allows clicks to pass through to underlying elements */
+}
 
 }
 
