@@ -144,6 +144,11 @@
 		.css-7l8ggf:hover {
 			background: #cbcbcb;
 		}
+		
+	    ._header_3fe665f {
+	        background: var(--wave-color-solid-base-brighter) !important;
+	        background-color: var(--wave-color-solid-base-brighter) !important;
+		}
 
 		/*heart button*/
 		._button_c372e89:not(:hover) svg,
@@ -173,6 +178,11 @@
 			filter: brightness(0.3);
 		}
 
+		/*ARTIST HOVER PREVIEW*/
+	    ._card_2b91b88 {
+	        background: var(--background-default);
+		}
+
 		/*FEED*/
 		._marketText_1lyag_1 {
 			color: var(--text-default) !important;
@@ -184,6 +194,23 @@
 
 
 		/*HOMEPAGE*/
+	    /*navigation buttons*/
+	    ._button_wl3o7_17 {
+	        color: var(--text-default);
+	        opacity: 0.6;
+	    }
+	
+	    ._button_wl3o7_17[aria-selected="true"] {
+	        opacity: 1;
+	    }
+	
+	    ._button_wl3o7_17:after {
+	        background: var(--text-default);
+	    }
+	
+	    ._marketPagingTabList_mibfb_1:after {
+	        background-color: #00000033;
+		}
 		/*shortcuts*/
 		._shortcutItem_6c8e7b4 {
 			box-shadow: none !important;
@@ -278,8 +305,22 @@
 
 		._newSidebar_f871cc1,
 		._sectionHeader_5f11aab,
-		._sectionHeader_f4932eb {
+		._sectionHeader_f4932eb,
+    	._sidebarWrapper_2f256ce {
 			background: var(--wave-color-solid-base-brighter) !important;
+		}
+
+		._sectionHeader_ca54638::before,
+	    ._sectionHeader_f4932eb::before {
+	        content: "";
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        width: 100%;
+	        height: 100%;
+	        background-color: var(--wave-color-solid-base-brighter) !important;
+	        z-index: -1;
+	        pointer-events: none;
 		}
 
 		._active_3451dba:is(a._sidebarItem_730d27e, button._sidebarItem_730d27e),
@@ -348,6 +389,11 @@
 		._header_3fe665f {
 			background: transparent;
 		}
+	
+		._header_3fe665f:before {
+	        mask-image: linear-gradient(#ffffff 0% 32%, #ffffffc7 55%, #ffffff73 75%, #ffffff26 90%, #ffffff00 100%);
+	        background-color: #ffffff3a;
+		}
 
 		[role="main"] {
 			position: relative;
@@ -408,14 +454,15 @@
 		._searchField_4b7fbda::placeholder,
 		._searchField_4b7fbda::-moz-placeholder,
 		._icon_3618b7a,
-		._searchIcon_4f33772 {
+		._searchIcon_4f33772,
+		 #mainHeader > div > div._container_5116191._searchFieldWithPopover_267e090._isLoggedIn_9399dce._active_5dd5be1 > div._container_f1be359.searchFieldWithinSearchFieldWithPopover._searchField_b2eb7f7 {
 			fill: var(--icon-solid) !important;
 			color: var(--icon-solid) !important;
 		}
 
 		._searchField_4b7fbda::placeholder,
 		._searchField_4b7fbda::-moz-placeholder {
-			opacity: 0.7
+			opacity: 0.7;
 		}
 
 		.container--sRPa5 {
@@ -453,21 +500,27 @@
 			fill: #69bab3 !important;
 		}
 
+	    ._searchField_4b7fbda::placeholder,
+	    div._searchField_b2eb7f7 input
+	    {
+	        color: var(--text-default) !important;
+		}
+
 		/*search page*/
-		.wave-text-body-medium[data-wave-color="textBlack"],
-		div._searchField_b2eb7f7 input,
-		div._searchField_b2eb7f7 input:hover {
+		.wave-text-body-medium[data-wave-color="textBlack"] {
 			color: var(--text-default);
 		}
 		
 		 ._primary_1l1bl_6:not(._disabledFunctionally_1l1bl_1) {
-			background: var(--button-light) !important;
-			border: var(--wave-color-solid-base-brighter) 2px !important;
+	        background: var(--frosted-glass-floating-surface-selected) !important;
+	        box-shadow: var(--frosted-glass-stroke) !important;
+	        backdrop-filter: blur(10px);
+	        -webkit-backdrop-filter: blur(10px);
 		}
-		
-		._marketButton_1l1bl_1._secondary_1l1bl_7._small_1l1bl_3 {
-			background: var(--wave-color-solid-base-bright) !important;
-			border: var(--wave-color-solid-base-brighter) 2px !important;
+
+	    ._secondary_1d16h_7 {
+	        background: var(--wave-color-solid-base-bright) !important;
+	        border: var(--wave-color-solid-base-brighter) 2px !important;
 		}
 	
 		a._marketButton_1l1bl_1 > span {
@@ -580,21 +633,6 @@
 			border: 5px var(--wave-color-opacity-contrast-fill-ultra-thin);
 		}
 
-		/*arrows*/
-		._button_6808704:not([disabled]) {
-			color: var(--icon-solid) !important;
-			fill: var(--icon-solid) !important;
-		}
-
-		._button_6808704[disabled] {
-			color: var(--button-light) !important
-		}
-
-		._button_6808704:hover::after,
-		.css-1xlzpjd:hover {
-			background-color: var(--wave-color-solid-base-brightest) !important
-		}
-
 		/*homepage carosel buttons*/
 		._marketText_1lyag_1._text20_1lyag_291:hover {
 			color: var(--text-default) !important;
@@ -632,6 +670,11 @@
 			border: var(--transparent-border);
 		}
 
+	    #footerPlayer {
+		    width:100.3% !important;
+		    transform: translate(-2px, 2px);
+		}
+
 		.has-new-player ._container_b3e8f28,
 		._container_b3e8f28 {
 			background: linear-gradient(0deg, #ececec44, #dfdfdf65) !important;
@@ -658,7 +701,6 @@
 		:is(._player_8c80ae6 button, ._player_1d16b04 button).withBackground[aria-checked="true"] {
 			background-color: #00000013;
 		}
-
 
 		._range_ce0e571 {
 			background-color: var(--transparent-panel-bg);
@@ -687,6 +729,24 @@
 		._gradientMax_9111fba,
 		._gradientMax_14a308b {
 			background: radial-gradient(ellipse at right bottom, rgb(from var(--market-core-yellow-text-color) r g b / .2) 10%, transparent 40%);
+		}
+
+		._gradientHigh_87f2c3b,
+	    #footerPlayer > div._playerContent_8ec26af > div._utilityContainer_4b1f859 > div._qualityBadgeContainer_b9ec6fa > a > div._gradientHigh_87f2c3b {
+	        background: radial-gradient(ellipse at right bottom, rgb(from var(--market-core-teal-text-color) r g b / .2) 10%, transparent 40%) !important;
+	        background-color: radial-gradient(ellipse at right bottom, rgb(from var(--market-core-teal-text-color) r g b / .2) 10%, transparent 40%) !important;
+	    }
+	
+	    ._high_4b5525b ._badgeText_1c9dd30 {
+	        filter: brightness(0.8);
+	    }
+	
+	    ._card_81a423e {
+	        background: var(--wave-color-solid-base-brighter);
+	    }
+	
+	    #nowPlaying > header > div._leftContent_e95a7a1 > div > div._card_81a423e._open_12b11fa > div._actions_c87bc2d > button {
+	    background: var(--button-light) !important;
 		}
 
 		._player_8c80ae6:before,
@@ -751,19 +811,12 @@
 			border: var(--transparent-border);
 		}
 
-		#nowPlaying > header > div._buttons_51e2ab3 > div._actionButtons_afb56ea > button._marketButton_1l1bl_1._tertiary_1l1bl_8._small_1l1bl_3._iconOnly_1l1bl_1._iconButton_9a294f9._fullscreenButton_bdc27b5,
-		#nowPlaying > header > div._buttons_51e2ab3 > div._actionButtons_afb56ea > button:nth-child(2),
-		button._tertiary_1l1bl_8:nth-child(1),
-		button._tertiary_1l1bl_8:nth-child(2) {
-			width: 44px !important;
-			height: 44px !important;
-			background: var(--transparent-panel-bg) !important;
-			border: var(--transparent-border);
-			margin-left: 6px;
-		}
-
 		._background_42cea4e {
 			filter: brightness(200%) saturate(80%);
+		}
+
+	    ._menuButton_ce0fbdd {
+        	color: var(--icon-solid) !important;
 		}
 
 		#nowPlaying {
@@ -785,6 +838,25 @@
 		#nowPlaying > header > div._leftContent_e95a7a1 > div > div._card_81a423e._open_12b11fa > div._actions_c87bc2d > button {
 			background: var(--button-light) !important;
 		}
+
+		   /* lyrics */
+
+    ._panelContent_912639b {
+        background-color: #ffffff50;
+        border-radius: var(--floating-panel-border-radius);
+        padding: 0 10px 0 10px;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    ._panelWrapper_5734a06 {
+        margin-bottom: calc(var(--artwork-margin) + 30px);
+    }
+
+    ._card_52ef6f0 {
+        background: var(--wave-color-solid-base-bright);
+    }
+
 
 		/*sync lyrics*/
 		._button_84b8ffe {
@@ -827,7 +899,7 @@
 			position: absolute;
 		}
 
-		@media (min-width: 577px) {
+		@media (min-width: 576px) {
 			._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97):after {
 				background-image: linear-gradient(to top, white, rgb(255, 255, 255));
 				mask-image: linear-gradient(180deg, #fff0, #fff);
@@ -836,7 +908,7 @@
 			}
 		}
 
-		@media (max-width: 576px) {
+		@media (max-width: 575px) {
 			._mainImage_433f1ff:is(._background_a548b6d ._image_7ba9b97):after {
 				margin-top: 80px;
 				background-image: linear-gradient(to top, white, rgb(255, 255, 255));
@@ -846,6 +918,17 @@
 			}
 		}
 
+		._background_a548b6d ._backgroundBlur_7bd6dbd,
+	    ._background_a548b6d {
+	        backdrop-filter: none !important;
+	        background-image: none !important;
+	    }
+	
+	
+	    [class*="_smallHeader_"],
+	    ._showHeader_1038dcf {
+	        background-color: rgba(255, 255, 255, 0) !important;
+		}
 
 		.buttonText--LMsAT {
 			color: var(--text-light) !important;
@@ -873,8 +956,7 @@
 			box-shadow: 0 16px 32px 0 var(--light-shadow) !important;
 		}
 
-		._link_6a45a19,
-		._button_b988d60 {
+		._link_6a45a19 {
 			background: transparent !important;
 		}
 
@@ -896,10 +978,6 @@
 
 		div._smallButtons_bdfda3f button._buttonStates_91bed47 div.tidal-ui__v-stack.css-j3v5ag svg._icon_77f3f89._accentedIcon_d6d54e4 {
 			fill: var(--icon-solid) !important;
-		}
-
-		[class*="_smallHeader_"] {
-			background-color: rgb(255 255 255 / 30%) !important;
 		}
 
 		/*left side buttons*/
@@ -1035,13 +1113,23 @@
 		}
 
 		/*PLAYLIST*/
-		.refreshButton--bRrPi {
+		.refreshButton--bRrPi,
+	    ._label_1d16h_1,
+	    ._link_6a45a19 {
 			color: var(--icon-solid) !important;
 		}
 
 		._overlay_fc03b57 {
 			background-color: var(--background-default) !important;
 			border: 1px solid rgba(255, 255, 255, .85) !important;
+		}
+	
+	    ._button_d5e0865 {
+	        background: var(--wave-color-solid-base-brighter) !important;
+	    }
+	
+	    ._button_d5e0865:hover {
+	        background: var(--wave-color-solid-base-brightest) !important;
 		}
 
 		._dialog_148b5df {
@@ -1056,7 +1144,6 @@
 		._artistCreatorText_b699bdf {
 			color: var(--text-secondary) !important;
 		}
-
 
 		[class^="_smallHeader_"][class*="_showHeader_"]:before {
 			background-color: #ffffff !important;
@@ -1144,6 +1231,15 @@
 		#general__add > path {
 			color: var(--icon-solid);
 		}
+
+	    /*PURCHASES*/
+	    #main > div.e2e__react-router--loaded.mainContent > div > div._emptyStateContainer_8b4b1a4._emptyState_11ba3f7 > a {
+	        background: var(--button-light) !important ;
+	    }
+	
+	    ._tabIndicator_f29c871 {
+	        background: var(--icon-solid);
+	    }
 
 		/*DIALOUGES*/
 		.ReactModal__Content {
@@ -1281,6 +1377,10 @@
 		@media (max-width: 576px) {
 			._player_1d16b04._notFullscreen_a82939e {
 				z-index: 0 !important;
+			}
+
+		    ._header_3fe665f._solidHeader_2b3f298 {
+            	background: var(--background-default) !important;
 			}
 		}
 
