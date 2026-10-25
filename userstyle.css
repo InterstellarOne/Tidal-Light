@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Tidal Light
 @namespace      https://github.com/InterstellarOne/Tidal-Light
-@version        2.3.15
+@version        2.4.1
 @description    A light theme for Tidal
 @author         Interstellar_One
 @homepageURL    https://github.com/InterstellarOne/Tidal-Light
@@ -144,11 +144,6 @@
 		.css-7l8ggf:hover {
 			background: #cbcbcb;
 		}
-		
-	    ._header_3fe665f {
-	        background: var(--wave-color-solid-base-brighter) !important;
-	        background-color: var(--wave-color-solid-base-brighter) !important;
-		}
 
 		/*heart button*/
 		._button_c372e89:not(:hover) svg,
@@ -194,6 +189,11 @@
 
 
 		/*HOMEPAGE*/
+		/*arrows*/
+		button._button_6808704:nth-child(1) {
+			margin-right: 5px;
+		}
+		
 	    /*navigation buttons*/
 	    ._button_wl3o7_17 {
 	        color: var(--text-default);
@@ -287,7 +287,6 @@
 		._logoIcon_895f95f,
 		._fallbackIcon_d13ffa3,
 		._navigationItem_4e9deae:not(._selected_29027d1),
-		._arrowRight_f57b400,
 		._submenuItem_3d0e609,
 		._icon_46e8aba,
 		._icon_77f3f89,
@@ -806,8 +805,10 @@
 		}
 
 		#nowPlaying > header > div._buttons_51e2ab3 > div._contentButtons_e48c3b0 > button:not([aria-pressed="true"]),
-		._contentButtons_6b6c8ea ._small_1l1bl_3:not([aria-pressed="true"]) {
-			background: var(--transparent-panel-bg) !important;
+		._contentButtons_6b6c8ea ._small_1l1bl_3:not([aria-pressed="true"]),
+		button._toggleButton_934359e:not([aria-pressed="true"]),
+		button._iconOnly_1d16h_1:not([aria-pressed="true"]){
+			background: var(--transparent-panel-bg);
 			border: var(--transparent-border);
 		}
 
@@ -1186,6 +1187,15 @@
 		.variantPrimary--pjymy,
 		._button_3357ce6 {
 			background-color: var(--button-light);
+		}
+
+		[data-test="play-all"] {
+			background-color: var(--wave-color-solid-base-bright)
+		}
+
+		[data-test="play-all"]:hover,
+		[data-test="shuffle-all"]:hover {
+			background-color: var(--wave-color-solid-base-brighter) !important;
 		}
 
 		.wave-text-body-demi {
