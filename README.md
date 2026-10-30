@@ -42,6 +42,9 @@ https://raw.githubusercontent.com/InterstellarOne/Tidal-Light/refs/heads/main/no
 For the best experience with the Radiant Lyrics plugin, some setup is required.
 In the plugin's config, set the options as shown:
 
+<img width="371" height="78" alt="ss-20261030-002455" src="https://github.com/user-attachments/assets/1de78dd2-8b8e-4d32-8988-87623ceb6e0a" />
+
+\
 <img width="570" alt="ss-20260629-165420" src="https://github.com/user-attachments/assets/9ab90288-2723-4d39-92c7-eb238aed2e23" />
 
 <img width="270" alt="ss-20260630-112221" src="https://github.com/user-attachments/assets/0360f472-f783-49b7-a77c-f58042f07efd" />
