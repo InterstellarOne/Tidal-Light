@@ -2,7 +2,7 @@
  * { * *
  * "name": "Tidal Light",
  * "author": "Interstellar_1"
- * "description": "A light theme for Tidal. v2.4.5"
+ * "description": "A light theme for Tidal. v2.5.0"
  * "license": "MIT License"
  * }
  */
@@ -59,6 +59,7 @@
 
         /*primary text*/
         --text-default: #000 !important;
+		--market-core-text-10-color: var(--text-default) !important;
         --market-field-normal-state-float-phase-label-color: #000 !important;
 
         /*secondary text*/
@@ -876,6 +877,14 @@
         background-color: var(--background-default) !important;
     }
 
+	._profileBackdrop_1f536e8 {
+		filter: blur(50px)brightness(1.4)grayscale(50%);
+	}
+
+	._profileBackground_87495fe::after {
+		background: linear-gradient(180deg, transparent 20%, var(--background-default) 100%) !important;
+	}
+
     :is(._background_a548b6d ._image_7ba9b97):not(._mainImage_433f1ff):before,
     ._smallHeader_383424b._solidBackground_a62a269:not(._mainImage_433f1ff)::before {
         background-color: var(--background-default) !important;
@@ -921,11 +930,23 @@
         background-image: none !important;
     }
 
-
-    [class*="_smallHeader_"],
-    ._showHeader_1038dcf {
-        background-color: rgba(255, 255, 255, 0) !important;
-    }
+	._theme_4041340,
+	div._refreshed_0bea8dc:nth-child(1) > button:nth-child(1) {
+		background-color: var(--background-default) !important;
+	}
+	._theme_4041340 [data-wave-color="textDefault"],
+	._theme_4041340 [data-wave-color="textWhite"],
+	._underline_zmuq1_1,
+	._timeColumn_3cd7564,
+	._clamped_c59e908 {
+		color: var(--text-default) !important;
+	}
+	
+	
+	[class*="_smallHeader_"],
+	._showHeader_1038dcf {
+		background-color: rgba(255, 255, 255, 0) !important;
+	}
 
     .buttonText--LMsAT {
         color: var(--text-light) !important;
@@ -942,6 +963,10 @@
     .button--_0I_t:hover {
         background-color: var(--wave-color-opacity-contrast-fill-regular);
     }
+
+	._secondary_1d16h_7 {
+		color: var(--market-icon-button-tertiary-rank-hover-state-icon-color) !important;
+	}
 
     ._button_b988d60,
     [class^="_smallHeader_"]:before {
@@ -1516,4 +1541,5 @@
 }
 
 }
+
 
